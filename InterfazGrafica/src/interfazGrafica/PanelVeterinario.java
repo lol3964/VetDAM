@@ -25,7 +25,6 @@ public class PanelVeterinario extends javax.swing.JFrame {
 
         menuVeterinario.add(Box.createHorizontalGlue());
         menuVeterinario.add(btnDesconectar);
-        //funciona
     }
 
     /**
