@@ -165,4 +165,24 @@ public class operacionesBaseDatos {
         tabla.setModel(dtm);
     }
 
+    public static void añadirAnotación(int idAnimal, String veterinario, String descripción, String tema, String fecha) throws SQLException, ClassNotFoundException {
+        Connection c = Conexion.obtener();
+        Statement sentencia = c.createStatement();
+        String query = "INSERT INTO anotacionesMedicas (idAnimal,veterinario,descripcion,tema,fecha_anotacion) VALUES"
+                + "(" + idAnimal + ",'" + veterinario + "','" + descripción + "','" + tema + "','" + fecha + "'" + ");";
+
+        System.out.println(query);
+
+        Integer result = sentencia.executeUpdate(query);
+    }
+
+    public static void modificarMascota(int idAnimal, String nombre, String raza, float peso, String fecha, String dueño) throws SQLException, ClassNotFoundException {
+        Connection c = Conexion.obtener();
+        Statement sentencia = c.createStatement();
+        String query = "UPDATE animal SET nombre=" + "'" + nombre + "'" + " ,raza=" + "'" + raza + "'" + " ,peso=" + peso + " ,fecha_nacimiento=" + "'" + fecha
+                + "'" + " ,dueño=" + "'" + dueño + "'" + " WHERE idAnimal=" + idAnimal;
+        System.out.println(query);
+        sentencia.executeUpdate(query);
+
+    }
 }
