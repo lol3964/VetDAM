@@ -9,6 +9,9 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import pruebaaccesobasedatos.Conexion;
@@ -117,4 +120,49 @@ public class operacionesBaseDatos {
         }
         tabla.setModel(dtm);
     }
+
+    //Métodos realizados por Manuel Lorenzo
+    public static void eliminarCita(int idAnimal, int idConsulta, String fecha, String hora) throws SQLException, ClassNotFoundException {
+        Connection c = Conexion.obtener();
+        Statement sentencia = c.createStatement();
+        String query = "DELETE FROM citas WHERE consulta=" + idConsulta + " AND hora_cita='" + hora + "'" + " AND fecha_cita='" + fecha
+                + "'" + " AND idAnimal=" + idAnimal;
+        System.out.println(query);
+        sentencia.executeUpdate(query);
+    }
+
+    public static void marcarCitaAtendida(int idAnimal, int idConsulta, String fecha, String hora) throws SQLException, ClassNotFoundException {
+        Connection c = Conexion.obtener();
+        Statement sentencia = c.createStatement();
+        String query = "UPDATE citas SET atendida=true WHERE consulta=" + idConsulta + " AND hora_cita='" + hora + "'" + " AND fecha_cita='" + fecha
+                + "'" + " AND idAnimal=" + idAnimal;
+        System.out.println(query);
+        sentencia.executeUpdate(query);
+    }
+
+    public static void listarTodasCitas(JTable tabla) throws SQLException, ClassNotFoundException {
+        Connection c = Conexion.obtener();
+        Statement sentencia = c.createStatement();
+        String titulos[] = {"Consulta", "Animal", "Veterinario", "Servicio", "Fecha", "Hora", "Estado"};
+        DefaultTableModel dtm = new DefaultTableModel(null, titulos);
+        String fila[] = new String[7];
+        String query = "SELECT * FROM citas";
+        ResultSet r = sentencia.executeQuery(query);
+        while (r.next()) {
+            fila[0] = r.getString("consulta");
+            fila[1] = r.getString("idAnimal");
+            fila[2] = r.getString("veterinario");
+            fila[3] = r.getString("servicio");
+            fila[4] = r.getString("fecha_cita");
+            fila[5] = r.getString("hora_cita");
+            if (r.getString("atendida").equals("1")) {
+                fila[6] = "Atendida";
+            } else {
+                fila[6] = "Sin atender";
+            }
+            dtm.addRow(fila);
+        }
+        tabla.setModel(dtm);
+    }
+
 }
