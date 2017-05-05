@@ -235,6 +235,14 @@ public class operacionesBaseDatos {
 
         return dtm;
     }
+	
+    public static void cambiarContraseña(String dni, String contraseña) throws SQLException, ClassNotFoundException {
+        Connection c = Conexion.obtener();
+        Statement sentencia = c.createStatement();
+        String query = "UPDATE FROM personas SET contraseña=" + "'" + contraseña + "'" + "WHERE dni=" + "'" + dni + "'";
+        System.out.println(query);
+        sentencia.executeUpdate(query);
+    }
 	//FIN METODOS ISMAEL
 
 
