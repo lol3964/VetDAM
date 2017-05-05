@@ -26,7 +26,7 @@ public class operacionesBaseDatos {
         
 
     }
-
+//INICIO METODOS ISMAEL
     public static void añadirAnimal(int id, String nombre, String raza, double peso, String fecha_nacimiento, String dueño) throws SQLException, ClassNotFoundException {
         Connection c = Conexion.obtener();
         Statement sentencia = c.createStatement();
@@ -235,6 +235,8 @@ public class operacionesBaseDatos {
 
         return dtm;
     }
+	//FIN METODOS ISMAEL
+
 
     //Métodos realizados por Manuel Lorenzo
     public static void eliminarCita(int idAnimal, int idConsulta, String fecha, String hora) throws SQLException, ClassNotFoundException {
