@@ -18,15 +18,12 @@ import pruebaaccesobasedatos.Conexion;
 
 /**
  *
- * @author Daniel
+ * @author Ismael
  */
 public class operacionesBaseDatos {
 
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
-        añadirPersona("49132925A", "Ismael", "calle doctor", "692701170", "isma@gmail.com", "", "1234", false);
-        añadirPersona("11111111A", "Laura", "calle antioquia", "666555444", "laur@gmail.com", "doctora", "1234", true);
-        añadirAnimal(1, "yanko", "mestizo", 30.5, "2015-05-26", "49132925A");
-        añadirCita(1, 1, "11111111A", "Revision", "2017/05/29", "13:30", false);
+        
 
     }
 
@@ -73,6 +70,14 @@ public class operacionesBaseDatos {
         System.out.println(query);
         sentencia.executeUpdate(query);
     }
+    
+       public static void eliminarPersona(String dni) throws SQLException, ClassNotFoundException {
+        Connection c = Conexion.obtener();
+        Statement sentencia = c.createStatement();
+        String query = "DELETE FROM persona WHERE dni=" + "'" + dni + "'";
+        System.out.println(query);
+        sentencia.executeUpdate(query);
+    }
 
     public static void modificarPersona(String dni, String nombre, String direccion, String telefono, String email, String especialidad, String contraseña, boolean admin) throws SQLException, ClassNotFoundException {
         Connection c = Conexion.obtener();
@@ -83,42 +88,152 @@ public class operacionesBaseDatos {
 
     }
 
-    public static void verHistorialTotal(JTable tabla) throws SQLException, ClassNotFoundException {
+     public static DefaultTableModel verHistorialTotal() throws SQLException, ClassNotFoundException {
         Connection c = Conexion.obtener();
         Statement sentencia = c.createStatement();
         String titulos[] = {"Animal", "Veterinario", "Tema", "Fecha", "Descripcion"};
         DefaultTableModel dtm = new DefaultTableModel(null, titulos);
         String fila[] = new String[5];
-        String query = "SELECT idAnimal,veterianrio,tema,fecha,descripcion FROM anotacionesMedicas";
+        String query = "SELECT idAnimal,veterinario,tema,fecha_anotacion,descripcion FROM anotacionesMedicas";
         ResultSet r = sentencia.executeQuery(query);
+        System.out.println(r.toString());
         while (r.next()) {
             fila[0] = r.getString("idAnimal");
-            fila[1] = r.getString("veterianrio");
+            fila[1] = r.getString("veterinario");
             fila[2] = r.getString("tema");
-            fila[3] = r.getString("fecha");
+            fila[3] = r.getString("fecha_anotacion");
             fila[4] = r.getString("descripcion");
             dtm.addRow(fila);
         }
-        tabla.setModel(dtm);
+
+        return dtm;
     }
 
-    public static void verHistorialAnimal(int idAnimal, JTable tabla) throws SQLException, ClassNotFoundException {
+    public static DefaultTableModel verHistorialAnimal(int idAnimal) throws SQLException, ClassNotFoundException {
         Connection c = Conexion.obtener();
         Statement sentencia = c.createStatement();
         String titulos[] = {"Animal", "Veterinario", "Tema", "Fecha", "Descripcion"};
         DefaultTableModel dtm = new DefaultTableModel(null, titulos);
         String fila[] = new String[5];
-        String query = "SELECT idAnimal,veterianrio,tema,fecha,descripcion FROM anotacionesMedicas WHERE idAnimal=" + "'" + idAnimal + "'";
+        String query = "SELECT idAnimal,veterinario,tema,fecha_anotacion,descripcion FROM anotacionesMedicas WHERE idAnimal=" + "'" + idAnimal + "'";
         ResultSet r = sentencia.executeQuery(query);
         while (r.next()) {
             fila[0] = r.getString("idAnimal");
-            fila[1] = r.getString("veterianrio");
+            fila[1] = r.getString("veterinario");
             fila[2] = r.getString("tema");
-            fila[3] = r.getString("fecha");
+            fila[3] = r.getString("fecha_anotacion");
             fila[4] = r.getString("descripcion");
             dtm.addRow(fila);
         }
-        tabla.setModel(dtm);
+        return dtm;
+    }
+    
+    public static DefaultTableModel listarClientes() throws SQLException, ClassNotFoundException{
+    Connection c = Conexion.obtener();
+        Statement sentencia = c.createStatement();
+        String titulos[] = {"DNI", "Nombre", "Direccion", "Telefono", "Email"};
+        DefaultTableModel dtm = new DefaultTableModel(null, titulos);
+        String fila[] = new String[5];
+        String query = "SELECT * FROM persona where especialidad ="+"'"+ null+"'";
+        ResultSet r = sentencia.executeQuery(query);
+        System.out.println(r.toString());
+        while (r.next()) {
+            fila[0] = r.getString("dni");
+            fila[1] = r.getString("nombre");
+            fila[2] = r.getString("direccion");
+            fila[3] = r.getString("telefono");
+            fila[4] = r.getString("email");
+            dtm.addRow(fila);
+        }
+
+        return dtm;
+    }
+    
+      public static DefaultTableModel buscarCliente(String dni ) throws SQLException, ClassNotFoundException{
+    Connection c = Conexion.obtener();
+        Statement sentencia = c.createStatement();
+        String titulos[] = {"DNI", "Nombre", "Direccion", "Telefono", "Email"};
+        DefaultTableModel dtm = new DefaultTableModel(null, titulos);
+        String fila[] = new String[5];
+        String query = "SELECT * FROM persona where especialidad ="+"'"+ null+"'"+" and dni="+"'"+dni+"'";
+        ResultSet r = sentencia.executeQuery(query);
+        System.out.println(r.toString());
+        while (r.next()) {
+            fila[0] = r.getString("dni");
+            fila[1] = r.getString("nombre");
+            fila[2] = r.getString("direccion");
+            fila[3] = r.getString("telefono");
+            fila[4] = r.getString("email");
+            dtm.addRow(fila);
+        }
+
+        return dtm;
+    }
+      
+       public static DefaultTableModel listarVeterinario() throws SQLException, ClassNotFoundException{
+    Connection c = Conexion.obtener();
+        Statement sentencia = c.createStatement();
+        String titulos[] = {"DNI", "Nombre", "Direccion", "Telefono", "Email","Especialidad"};
+        DefaultTableModel dtm = new DefaultTableModel(null, titulos);
+        String fila[] = new String[6];
+        String query = "SELECT * FROM persona where especialidad <>"+"'"+ null+"'";
+        ResultSet r = sentencia.executeQuery(query);
+        System.out.println(r.toString());
+        while (r.next()) {
+            fila[0] = r.getString("dni");
+            fila[1] = r.getString("nombre");
+            fila[2] = r.getString("direccion");
+            fila[3] = r.getString("telefono");
+            fila[4] = r.getString("email");
+            fila[5] = r.getString("especialidad");
+            dtm.addRow(fila);
+        }
+
+        return dtm;
+    }
+    
+    public static DefaultTableModel buscarVeterinario(String dni) throws SQLException, ClassNotFoundException {
+        Connection c = Conexion.obtener();
+        Statement sentencia = c.createStatement();
+        String titulos[] = {"DNI", "Nombre", "Direccion", "Telefono", "Email", "Especialidad"};
+        DefaultTableModel dtm = new DefaultTableModel(null, titulos);
+        String fila[] = new String[5];
+        String query = "SELECT * FROM persona where especialidad <>" + "'" + null + "'" + " and dni=" + "'" + dni + "'";
+        ResultSet r = sentencia.executeQuery(query);
+        System.out.println(r.toString());
+        while (r.next()) {
+            fila[0] = r.getString("dni");
+            fila[1] = r.getString("nombre");
+            fila[2] = r.getString("direccion");
+            fila[3] = r.getString("telefono");
+            fila[4] = r.getString("email");
+            fila[5] = r.getString("especialidad");
+            dtm.addRow(fila);
+        }
+
+        return dtm;
+    }
+    
+    public static DefaultTableModel buscarVeterinarioEspecialidad(String especialidad) throws SQLException, ClassNotFoundException {
+        Connection c = Conexion.obtener();
+        Statement sentencia = c.createStatement();
+        String titulos[] = {"DNI", "Nombre", "Direccion", "Telefono", "Email", "Especialidad"};
+        DefaultTableModel dtm = new DefaultTableModel(null, titulos);
+        String fila[] = new String[5];
+        String query = "SELECT * FROM persona where especialidad =" + "'" + especialidad + "'";
+        ResultSet r = sentencia.executeQuery(query);
+        System.out.println(r.toString());
+        while (r.next()) {
+            fila[0] = r.getString("dni");
+            fila[1] = r.getString("nombre");
+            fila[2] = r.getString("direccion");
+            fila[3] = r.getString("telefono");
+            fila[4] = r.getString("email");
+            fila[5] = r.getString("especialidad");
+            dtm.addRow(fila);
+        }
+
+        return dtm;
     }
 
     //Métodos realizados por Manuel Lorenzo
