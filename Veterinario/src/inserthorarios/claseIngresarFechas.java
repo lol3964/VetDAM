@@ -46,15 +46,16 @@ public class claseIngresarFechas {
             "14:30", "15:00", "15:30", "16:00"};
         String[] listaHorasFestivos = {"9:00", "9:30", "10:00", "10:30", "11:00", "11:30", "12:00", "12:30", "13:00"};
         ArrayList<String> listaFestivos = new ArrayList<String>();
-        listaFestivos.add("2017-04-26");
-        listaFestivos.add("2017-02-28");
-        listaFestivos.add("2017-05-01");
-        listaFestivos.add("2018-04-26");
-
+        listaFestivos.add(LocalDate.now().getYear()+"-04-26");
+        listaFestivos.add(LocalDate.now().getYear()+"-02-28");
+        listaFestivos.add(LocalDate.now().getYear()+"-05-09");
+        listaFestivos.add(LocalDate.now().plusYears(1).getYear()+"-04-26");
+        listaFestivos.add(LocalDate.now().plusYears(1).getYear()+"-02-28");
+        listaFestivos.add(LocalDate.now().plusYears(1).getYear()+"-05-09");
         Integer year;
         int contadorFestivos = 0;
         int contadorNormales = 0;
-        String query = "INSERT INTO horarios (consulta,fecha_cita,hora_cita) VALUES";
+        String query = "INSERT INTO horarios (consulta,fecha_cita,hora_cita,ocupada) VALUES";
 
         DateTimeFormatter df = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
@@ -73,12 +74,12 @@ public class claseIngresarFechas {
                         contadorFestivos++;
                         //TODO Concatenar los datos a un String con la query para el insert
                         if (i != year) {
-                            query = query.concat("(" + j + ",'" + day + "','" + hour + "'),\n");
+                            query = query.concat("(" + j + ",'" + day + "','" + hour + "','" + 0 + "'),\n");
                         } else {
                             if (contadorFestivos == listaHorasFestivos.length && j == 2) {
-                                query = query.concat("(" + j + ",'" + day + "','" + hour + "')\n");
+                            query = query.concat("(" + j + ",'" + day + "','" + hour + "','" + 0 + "')\n");
                             } else {
-                                query = query.concat("(" + j + ",'" + day + "','" + hour + "'),\n");
+                            query = query.concat("(" + j + ",'" + day + "','" + hour + "','" + 0 + "'),\n");
                             }
                         }
                         //System.out.println("Insertamos hora para día festivo: " + hour);
@@ -91,12 +92,12 @@ public class claseIngresarFechas {
                         //TODO Concatenar los datos a un String con la query para el insert
                         //System.out.println("Insertamos hora para día normal: " + hour);
                         if (i != year) {
-                            query = query.concat("(" + j + ",'" + day + "','" + hour + "'),\n");
+                            query = query.concat("(" + j + ",'" + day + "','" + hour + "','" + 0 + "'),\n");
                         } else {
                             if (contadorNormales == listaHoras.length && j == 2) {
-                                query = query.concat("(" + j + ",'" + day + "','" + hour + "')\n");
+                            query = query.concat("(" + j + ",'" + day + "','" + hour + "','" + 0 + "')\n");
                             } else {
-                                query = query.concat("(" + j + ",'" + day + "','" + hour + "'),\n");
+                            query = query.concat("(" + j + ",'" + day + "','" + hour + "','" + 0 + "'),\n");
                             }
                         }
 
