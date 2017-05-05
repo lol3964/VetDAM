@@ -300,4 +300,57 @@ public class operacionesBaseDatos {
         sentencia.executeUpdate(query);
 
     }
+    
+    
+    //METODOS REALIZADOS POR SERGIO--EN REVISION
+    //METODO ELIMINAR PERSONA
+    public void eliminarPersona(String dni) throws ClassNotFoundException, SQLException{
+		Connection c = Conexion.obtener();
+		Statement sentencia = c.createStatement();
+		String query = "DELETE FROM persona WHERE dni=" + dni;
+		System.out.println(query);
+		sentencia.executeUpdate(query);
+	}
+    
+    //METODO MODIFICAR CITAS
+     public void modificarCitas(int consulta, int idAnimal,String fecha_cita, String hora_cita) throws SQLException, ClassNotFoundException{
+        Connection c = Conexion.obtener();
+        Statement sentencia = c.createStatement();
+        String query = " UPDATE citas set consulta=" + "'" + consulta + "'" + ",fecha_cita=" + "'" + fecha_cita + "'" + ",hora_cita=" + "'" + hora_cita + "'" + " WHERE idAnimal=" +idAnimal;
+        System.out.println(query);
+        sentencia.executeUpdate(query);
+    } 
+    
+    //METODO BUSQUEDA DEL HISTORIAL
+    //HE REALIZADO TRES METODOS, UNO PARA TEMA, OTRO PARA FECHA Y UNO QUE ENGLOBA LOS DOS
+    
+    //BUSCAR POR TEMA
+    public void buscarhistorial(String tema) throws SQLException, ClassNotFoundException{
+        Connection c = Conexion.obtener();
+        Statement sentencia = c.createStatement();
+        String query = " SELECT * FROM anotacionesMedicas WHERE tema=" + "'" + tema + "'";
+        System.out.println(query);
+        sentencia.executeQuery(query);
+    }
+    
+    //BUSCAR POR FECHA
+     public void buscarhistorial(String fecha) throws SQLException, ClassNotFoundException{
+        Connection c = Conexion.obtener();
+        Statement sentencia = c.createStatement();
+        String query = " SELECT * FROM anotacionesMedicas WHERE fecha_anotacion=" + "'" + fecha + "'";
+        System.out.println(query);
+        sentencia.executeQuery(query);
+    }
+    
+    //AMBOS
+    public void buscarhistorial(String fecha, String tema) throws SQLException, ClassNotFoundException{
+        Connection c = Conexion.obtener();
+        Statement sentencia = c.createStatement();
+        String query = " SELECT * FROM anotacionesMedicas WHERE fecha_anotacion=" + "'" + fecha + "'" +" AND" + " tema=" +"'" + tema + "'";
+        System.out.println(query);
+        sentencia.executeQuery(query);
+    }
+    
+    
+    
 }
