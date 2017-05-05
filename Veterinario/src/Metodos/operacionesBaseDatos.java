@@ -27,13 +27,12 @@ public class operacionesBaseDatos {
 
     }
 //INICIO METODOS ISMAEL
+
     public static void añadirAnimal(int id, String nombre, String raza, double peso, String fecha_nacimiento, String dueño) throws SQLException, ClassNotFoundException {
         Connection c = Conexion.obtener();
         Statement sentencia = c.createStatement();
         String query = "INSERT INTO animal (idAnimal,nombre,raza,peso,fecha_nacimiento,dueño) VALUES"
                 + "(" + id + ",'" + nombre + "','" + raza + "','" + peso + "','" + fecha_nacimiento + "','" + dueño + "');";
-
-        System.out.println(query);
 
         Integer result = sentencia.executeUpdate(query);
     }
@@ -44,8 +43,6 @@ public class operacionesBaseDatos {
         String query = "INSERT INTO persona (dni,nombre,direccion,telefono,email,especialidad,contraseña,admin) VALUES"
                 + "('" + dni + "','" + nombre + "','" + direccion + "','" + telefono + "','" + email + "','" + especialidad + "','" + contraseña + "'," + admin + ");";
 
-        System.out.println(query);
-
         Integer result = sentencia.executeUpdate(query);
     }
 
@@ -55,11 +52,8 @@ public class operacionesBaseDatos {
         String query = "INSERT INTO citas (consulta,idAnimal,veterinario,servicio,fecha_cita,hora_cita,atendida) VALUES"
                 + "(" + consulta + "," + idAnimal + ",'" + veterinario + "','" + servicio + "','" + fecha_cita + "','" + hora_cita + "'," + atendida + ");";
 
-        System.out.println(query);
-
-        Integer result = sentencia.executeUpdate(query);
-        query = "UPDATE horarios SET ocupada=1 WHERE fecha_cita=" + "'" + fecha_cita + "'" + " AND " + " hora_cita=" + "'" + hora_cita + "'" + " and " + " consulta=" + 1;
-        System.out.println(query);
+        sentencia.executeUpdate(query);
+        query = "UPDATE horarios SET ocupada=1 WHERE consulta=" + consulta + " and fecha_cita=" + "'" + fecha_cita + "'" + " and hora_cita=" + "'" + hora_cita + "'";
         sentencia.executeUpdate(query);
     }
 
@@ -70,12 +64,11 @@ public class operacionesBaseDatos {
         System.out.println(query);
         sentencia.executeUpdate(query);
     }
-    
-       public static void eliminarPersona(String dni) throws SQLException, ClassNotFoundException {
+
+    public static void eliminarPersona(String dni) throws SQLException, ClassNotFoundException {
         Connection c = Conexion.obtener();
         Statement sentencia = c.createStatement();
         String query = "DELETE FROM persona WHERE dni=" + "'" + dni + "'";
-        System.out.println(query);
         sentencia.executeUpdate(query);
     }
 
@@ -83,12 +76,11 @@ public class operacionesBaseDatos {
         Connection c = Conexion.obtener();
         Statement sentencia = c.createStatement();
         String query = "UPDATE FROM personas SET nombre=" + "'" + nombre + "'" + " ,direccion=" + "'" + direccion + "'" + " ,telefono=" + "'" + telefono + "'" + " ,email=" + "'" + email + "'" + " ,especialidad=" + "'" + especialidad + "'" + " ,contraseña" + " ,admin=" + admin + "WHERE dni=" + "'" + dni + "'";
-        System.out.println(query);
         sentencia.executeUpdate(query);
 
     }
 
-     public static DefaultTableModel verHistorialTotal() throws SQLException, ClassNotFoundException {
+    public static DefaultTableModel verHistorialTotal() throws SQLException, ClassNotFoundException {
         Connection c = Conexion.obtener();
         Statement sentencia = c.createStatement();
         String titulos[] = {"Animal", "Veterinario", "Tema", "Fecha", "Descripcion"};
@@ -96,7 +88,6 @@ public class operacionesBaseDatos {
         String fila[] = new String[5];
         String query = "SELECT idAnimal,veterinario,tema,fecha_anotacion,descripcion FROM anotacionesMedicas";
         ResultSet r = sentencia.executeQuery(query);
-        System.out.println(r.toString());
         while (r.next()) {
             fila[0] = r.getString("idAnimal");
             fila[1] = r.getString("veterinario");
@@ -127,16 +118,15 @@ public class operacionesBaseDatos {
         }
         return dtm;
     }
-    
-    public static DefaultTableModel listarClientes() throws SQLException, ClassNotFoundException{
-    Connection c = Conexion.obtener();
+
+    public static DefaultTableModel listarClientes() throws SQLException, ClassNotFoundException {
+        Connection c = Conexion.obtener();
         Statement sentencia = c.createStatement();
         String titulos[] = {"DNI", "Nombre", "Direccion", "Telefono", "Email"};
         DefaultTableModel dtm = new DefaultTableModel(null, titulos);
         String fila[] = new String[5];
-        String query = "SELECT * FROM persona where especialidad ="+"'"+ null+"'";
+        String query = "SELECT * FROM persona WHERE especialidad =" + "'" + null + "'";
         ResultSet r = sentencia.executeQuery(query);
-        System.out.println(r.toString());
         while (r.next()) {
             fila[0] = r.getString("dni");
             fila[1] = r.getString("nombre");
@@ -148,16 +138,15 @@ public class operacionesBaseDatos {
 
         return dtm;
     }
-    
-      public static DefaultTableModel buscarCliente(String dni ) throws SQLException, ClassNotFoundException{
-    Connection c = Conexion.obtener();
+
+    public static DefaultTableModel buscarCliente(String dni) throws SQLException, ClassNotFoundException {
+        Connection c = Conexion.obtener();
         Statement sentencia = c.createStatement();
         String titulos[] = {"DNI", "Nombre", "Direccion", "Telefono", "Email"};
         DefaultTableModel dtm = new DefaultTableModel(null, titulos);
         String fila[] = new String[5];
-        String query = "SELECT * FROM persona where especialidad ="+"'"+ null+"'"+" and dni="+"'"+dni+"'";
+        String query = "SELECT * FROM persona WHERE especialidad =" + "'" + null + "'" + " AND dni=" + "'" + dni + "'";
         ResultSet r = sentencia.executeQuery(query);
-        System.out.println(r.toString());
         while (r.next()) {
             fila[0] = r.getString("dni");
             fila[1] = r.getString("nombre");
@@ -169,16 +158,15 @@ public class operacionesBaseDatos {
 
         return dtm;
     }
-      
-       public static DefaultTableModel listarVeterinario() throws SQLException, ClassNotFoundException{
-    Connection c = Conexion.obtener();
+
+    public static DefaultTableModel listarVeterinario() throws SQLException, ClassNotFoundException {
+        Connection c = Conexion.obtener();
         Statement sentencia = c.createStatement();
-        String titulos[] = {"DNI", "Nombre", "Direccion", "Telefono", "Email","Especialidad"};
+        String titulos[] = {"DNI", "Nombre", "Direccion", "Telefono", "Email", "Especialidad"};
         DefaultTableModel dtm = new DefaultTableModel(null, titulos);
         String fila[] = new String[6];
-        String query = "SELECT * FROM persona where especialidad <>"+"'"+ null+"'";
+        String query = "SELECT * FROM persona WHERE especialidad <>" + "'" + null + "'";
         ResultSet r = sentencia.executeQuery(query);
-        System.out.println(r.toString());
         while (r.next()) {
             fila[0] = r.getString("dni");
             fila[1] = r.getString("nombre");
@@ -191,16 +179,15 @@ public class operacionesBaseDatos {
 
         return dtm;
     }
-    
+
     public static DefaultTableModel buscarVeterinario(String dni) throws SQLException, ClassNotFoundException {
         Connection c = Conexion.obtener();
         Statement sentencia = c.createStatement();
         String titulos[] = {"DNI", "Nombre", "Direccion", "Telefono", "Email", "Especialidad"};
         DefaultTableModel dtm = new DefaultTableModel(null, titulos);
         String fila[] = new String[5];
-        String query = "SELECT * FROM persona where especialidad <>" + "'" + null + "'" + " and dni=" + "'" + dni + "'";
+        String query = "SELECT * FROM persona WHERE especialidad <>" + "'" + null + "'" + " AND dni=" + "'" + dni + "'";
         ResultSet r = sentencia.executeQuery(query);
-        System.out.println(r.toString());
         while (r.next()) {
             fila[0] = r.getString("dni");
             fila[1] = r.getString("nombre");
@@ -213,16 +200,15 @@ public class operacionesBaseDatos {
 
         return dtm;
     }
-    
+
     public static DefaultTableModel buscarVeterinarioEspecialidad(String especialidad) throws SQLException, ClassNotFoundException {
         Connection c = Conexion.obtener();
         Statement sentencia = c.createStatement();
         String titulos[] = {"DNI", "Nombre", "Direccion", "Telefono", "Email", "Especialidad"};
         DefaultTableModel dtm = new DefaultTableModel(null, titulos);
         String fila[] = new String[5];
-        String query = "SELECT * FROM persona where especialidad =" + "'" + especialidad + "'";
+        String query = "SELECT * FROM persona WHERE especialidad =" + "'" + especialidad + "'";
         ResultSet r = sentencia.executeQuery(query);
-        System.out.println(r.toString());
         while (r.next()) {
             fila[0] = r.getString("dni");
             fila[1] = r.getString("nombre");
@@ -235,13 +221,31 @@ public class operacionesBaseDatos {
 
         return dtm;
     }
-	
+    //POR ACABAR
+
     public static void cambiarContraseña(String dni, String contraseña) throws SQLException, ClassNotFoundException {
         Connection c = Conexion.obtener();
         Statement sentencia = c.createStatement();
         String query = "UPDATE FROM personas SET contraseña=" + "'" + contraseña + "'" + "WHERE dni=" + "'" + dni + "'";
-        System.out.println(query);
         sentencia.executeUpdate(query);
+    }
+    //POR ACABAR
+
+    public static void listarCitasDisponibles(String fecha, int consulta, JList listaCitas) throws SQLException, ClassNotFoundException {
+        Connection c = Conexion.obtener();
+        Statement sentencia = c.createStatement();
+        String query = "SELECT * FROM horarios WHERE ocupada=0 AND consulta=" + consulta + " AND  fecha_cita=" + "'" + fecha + "'";
+        ResultSet r = sentencia.executeQuery(query);
+        DefaultListModel dlm = new DefaultListModel();
+        while (r.next()) {
+            String s = r.getString("hora_cita");
+
+            dlm.addElement(s);
+
+        }
+
+        //y se lo insertamos a la lista introducida como parametro
+        listaCitas.setModel(dlm);
     }
 	//FIN METODOS ISMAEL
 
