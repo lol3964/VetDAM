@@ -48,24 +48,25 @@ public class PanelVeterinario extends javax.swing.JFrame {
         panelInicio = new javax.swing.JPanel();
         panelVerCitas = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        listaVerCitas = new javax.swing.JList<String>();
+        listaVerCitas = new javax.swing.JList<>();
         btnCancelarCita = new javax.swing.JButton();
         labelCitasTotales = new javax.swing.JLabel();
         txtCitasTotales = new javax.swing.JTextField();
         btnModificarCita = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
+        btnAtenderCita = new javax.swing.JButton();
         panelVerHistorial = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<String>();
+        jList1 = new javax.swing.JList<>();
         jButton1 = new javax.swing.JButton();
         panelDarCita = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
-        listaHoras = new javax.swing.JList<String>();
+        listaHoras = new javax.swing.JList<>();
         jLabel2 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         txtDarCitaAnimal = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<String>();
+        jComboBox1 = new javax.swing.JComboBox<>();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -107,10 +108,10 @@ public class PanelVeterinario extends javax.swing.JFrame {
 
         panelVerCitas.setBackground(panelVeterinario.getBackground());
 
-        listaVerCitas.setModel(new javax.swing.AbstractListModel() {
+        listaVerCitas.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
+            public String getElementAt(int i) { return strings[i]; }
         });
         jScrollPane1.setViewportView(listaVerCitas);
 
@@ -128,6 +129,8 @@ public class PanelVeterinario extends javax.swing.JFrame {
         });
 
         btnModificarCita.setText("Modificar cita seleccionada");
+
+        btnAtenderCita.setText("Marcar cita como atendida");
 
         javax.swing.GroupLayout panelVerCitasLayout = new javax.swing.GroupLayout(panelVerCitas);
         panelVerCitas.setLayout(panelVerCitasLayout);
@@ -148,9 +151,11 @@ public class PanelVeterinario extends javax.swing.JFrame {
                             .addGroup(panelVerCitasLayout.createSequentialGroup()
                                 .addGap(114, 114, 114)
                                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 141, Short.MAX_VALUE)
+                        .addComponent(btnAtenderCita, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnModificarCita, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnCancelarCita, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
@@ -165,7 +170,8 @@ public class PanelVeterinario extends javax.swing.JFrame {
                         .addComponent(btnModificarCita, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(btnCancelarCita, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(txtCitasTotales, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(labelCitasTotales))
+                        .addComponent(labelCitasTotales)
+                        .addComponent(btnAtenderCita, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panelVerCitasLayout.createSequentialGroup()
                         .addGap(32, 32, 32)
                         .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -176,10 +182,10 @@ public class PanelVeterinario extends javax.swing.JFrame {
 
         panelVerHistorial.setBackground(panelVeterinario.getBackground());
 
-        jList1.setModel(new javax.swing.AbstractListModel() {
+        jList1.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
+            public String getElementAt(int i) { return strings[i]; }
         });
         jScrollPane2.setViewportView(jList1);
 
@@ -213,10 +219,10 @@ public class PanelVeterinario extends javax.swing.JFrame {
 
         panelDarCita.setBackground(panelVeterinario.getBackground());
 
-        listaHoras.setModel(new javax.swing.AbstractListModel() {
+        listaHoras.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
+            public String getElementAt(int i) { return strings[i]; }
         });
         jScrollPane3.setViewportView(listaHoras);
 
@@ -233,7 +239,7 @@ public class PanelVeterinario extends javax.swing.JFrame {
         txtDarCitaAnimal.setBackground(panelInicio.getBackground());
         txtDarCitaAnimal.setBorder(null);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jLabel4.setText("Asunto");
 
@@ -260,60 +266,54 @@ public class PanelVeterinario extends javax.swing.JFrame {
         panelDarCitaLayout.setHorizontalGroup(
             panelDarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelDarCitaLayout.createSequentialGroup()
-                .addGroup(panelDarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(47, 47, 47)
+                .addGroup(panelDarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(panelDarCitaLayout.createSequentialGroup()
-                        .addGap(70, 70, 70)
-                        .addGroup(panelDarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panelDarCitaLayout.createSequentialGroup()
-                                .addComponent(jLabel6)
-                                .addGap(18, 18, 18)
-                                .addComponent(jRadioButton1))
-                            .addComponent(btnDarCitaAceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btnDarCitaAceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnDarCitaCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelDarCitaLayout.createSequentialGroup()
+                        .addComponent(jLabel5)
                         .addGap(18, 18, 18)
-                        .addGroup(panelDarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRadioButton2)
-                            .addComponent(btnDarCitaCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(elegirFecha, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(panelDarCitaLayout.createSequentialGroup()
-                        .addGap(52, 52, 52)
-                        .addGroup(panelDarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panelDarCitaLayout.createSequentialGroup()
-                                .addComponent(jLabel5)
-                                .addGap(18, 18, 18)
-                                .addComponent(elegirFecha, javax.swing.GroupLayout.DEFAULT_SIZE, 230, Short.MAX_VALUE))
-                            .addGroup(panelDarCitaLayout.createSequentialGroup()
-                                .addComponent(jLabel4)
-                                .addGap(18, 18, 18)
-                                .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelDarCitaLayout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(panelDarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextField1)
-                                    .addComponent(jSeparator2)))
-                            .addGroup(panelDarCitaLayout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addGap(18, 18, 18)
-                                .addGroup(panelDarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txtDarCitaAnimal, javax.swing.GroupLayout.DEFAULT_SIZE, 211, Short.MAX_VALUE)
-                                    .addComponent(jSeparator3))))))
-                .addGap(81, 81, 81)
+                        .addComponent(jLabel4)
+                        .addGap(18, 18, 18)
+                        .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(panelDarCitaLayout.createSequentialGroup()
+                        .addComponent(jLabel6)
+                        .addGap(18, 18, 18)
+                        .addComponent(jRadioButton1)
+                        .addGap(18, 18, 18)
+                        .addComponent(jRadioButton2))
+                    .addGroup(panelDarCitaLayout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(panelDarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jTextField1)
+                            .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(panelDarCitaLayout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addGap(18, 18, 18)
+                        .addGroup(panelDarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtDarCitaAnimal)
+                            .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 413, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(99, 99, 99))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelDarCitaLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel7)
-                .addGap(302, 302, 302))
+                .addGap(331, 331, 331))
         );
         panelDarCitaLayout.setVerticalGroup(
             panelDarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelDarCitaLayout.createSequentialGroup()
+            .addGroup(panelDarCitaLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panelDarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(panelDarCitaLayout.createSequentialGroup()
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 425, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 425, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(panelDarCitaLayout.createSequentialGroup()
                         .addGroup(panelDarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(panelDarCitaLayout.createSequentialGroup()
@@ -336,20 +336,24 @@ public class PanelVeterinario extends javax.swing.JFrame {
                         .addGroup(panelDarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel4))
-                        .addGap(97, 97, 97)
+                        .addGap(48, 48, 48)
+                        .addGroup(panelDarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel5)
+                            .addComponent(elegirFecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(panelDarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(elegirFecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel5))
-                        .addGap(44, 44, 44)
-                        .addGroup(panelDarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel6)
-                            .addComponent(jRadioButton1)
-                            .addComponent(jRadioButton2))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(panelDarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnDarCitaAceptar)
-                            .addComponent(btnDarCitaCancelar))
-                        .addGap(24, 24, 24))))
+                            .addGroup(panelDarCitaLayout.createSequentialGroup()
+                                .addGap(57, 57, 57)
+                                .addGroup(panelDarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel6)
+                                    .addComponent(jRadioButton1)
+                                    .addComponent(jRadioButton2))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelDarCitaLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(panelDarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(btnDarCitaCancelar)
+                                    .addComponent(btnDarCitaAceptar))))))
+                .addGap(18, 18, 18))
         );
 
         panelVeterinario.add(panelDarCita, "card5");
@@ -453,6 +457,7 @@ public class PanelVeterinario extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu btnAnimales;
+    private javax.swing.JButton btnAtenderCita;
     private javax.swing.JButton btnCancelarCita;
     private javax.swing.JMenu btnCitas;
     private javax.swing.JMenuItem btnDarCita;

@@ -153,7 +153,7 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void panelAccederMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelAccederMouseClicked
-        PanelVeterinario pv = new PanelVeterinario();
+        PanelAdministrador pv = new PanelAdministrador();
         pv.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_panelAccederMouseClicked
