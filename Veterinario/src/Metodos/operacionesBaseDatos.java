@@ -231,15 +231,22 @@ public class operacionesBaseDatos {
         return contraseña;
     }
 
-    public static boolean accesoUsuario(String dni, String contraseña) throws SQLException, ClassNotFoundException {
+    public static int accesoUsuario(String dni, String contraseña) throws SQLException, ClassNotFoundException {
         Connection c = Conexion.obtener();
         Statement sentencia = c.createStatement();
-        String query = "SELECT * FROM persona WHERE dni=" + "'" + dni + "'" + " AND contraseña='" + contraseña + "'";
+        String query = "SELECT contraseña FROM persona WHERE dni=" + "'" + dni + "'";
         ResultSet r = sentencia.executeQuery(query);
-        if (r.absolute(1)) {
-            return true;
+        String rs = "";
+
+        while (r.next()) {
+            rs = r.getString(1);
+        }
+        if (r.absolute(1) && contraseña.equalsIgnoreCase(rs)) {
+            return 1;
+        } else if (r.absolute(1) && !contraseña.equalsIgnoreCase(rs)) {
+            return 2;
         } else {
-            return false;
+            return 3;
         }
 
     }
@@ -363,12 +370,18 @@ public class operacionesBaseDatos {
         sentencia.executeUpdate(query);
     }
 
-    public static void marcarCitaAtendida(int idAnimal, int idConsulta, String fecha, String hora) throws SQLException, ClassNotFoundException {
+    public static void marcarCitaAtendida(int idAnimal, int idConsulta, String fecha, String hora, String tema,String descripcion,String veterinario) throws SQLException, ClassNotFoundException {
         Connection c = Conexion.obtener();
         Statement sentencia = c.createStatement();
         String query = "UPDATE citas SET atendida=true WHERE consulta=" + idConsulta + " AND hora_cita='" + hora + "'" + " AND fecha_cita='" + fecha
                 + "'" + " AND idAnimal=" + idAnimal;
         System.out.println(query);
+        sentencia.executeUpdate(query);
+	query = "INSERT INTO anotacionesMedicas (idAnimal,veterinario,descripcion,tema,fecha_anotacion) VALUES"
+                + "(" + idAnimal + ",'" + veterinario + "','" + descripción + "','" + tema + "','" + fecha + "'" + ");";
+
+        System.out.println(query);
+
         sentencia.executeUpdate(query);
     }
 
@@ -396,18 +409,6 @@ public class operacionesBaseDatos {
         }
         tabla.setModel(dtm);
     }
-
-    public static void añadirAnotación(int idAnimal, String veterinario, String descripción, String tema, String fecha) throws SQLException, ClassNotFoundException {
-        Connection c = Conexion.obtener();
-        Statement sentencia = c.createStatement();
-        String query = "INSERT INTO anotacionesMedicas (idAnimal,veterinario,descripcion,tema,fecha_anotacion) VALUES"
-                + "(" + idAnimal + ",'" + veterinario + "','" + descripción + "','" + tema + "','" + fecha + "'" + ");";
-
-        System.out.println(query);
-
-        Integer result = sentencia.executeUpdate(query);
-    }
-
     public static void modificarMascota(int idAnimal, String nombre, String raza, float peso, String fecha, String dueño) throws SQLException, ClassNotFoundException {
         Connection c = Conexion.obtener();
         Statement sentencia = c.createStatement();
