@@ -125,86 +125,37 @@ public class operacionesBaseDatos {
         String titulos[] = {"DNI", "Nombre", "Direccion", "Telefono", "Email"};
         DefaultTableModel dtm = new DefaultTableModel(null, titulos);
         String fila[] = new String[5];
-        String query;
+        String query="";
         if (!dni.equalsIgnoreCase("") && nombre.equalsIgnoreCase("") && telefono.equalsIgnoreCase("")) {
             query = "SELECT * FROM persona WHERE especialidad =" + "'" + null + "'" + " AND dni like '%" + dni + "%'";
-            ResultSet r = sentencia.executeQuery(query);
-            while (r.next()) {
-                fila[0] = r.getString("dni");
-                fila[1] = r.getString("nombre");
-                fila[2] = r.getString("direccion");
-                fila[3] = r.getString("telefono");
-                fila[4] = r.getString("email");
-                dtm.addRow(fila);
-            }
+
         } else if (dni.equalsIgnoreCase("") && !nombre.equalsIgnoreCase("") && telefono.equalsIgnoreCase("")) {
             query = "SELECT * FROM persona WHERE especialidad =" + "'" + null + "'" + " AND nombre like '%" + nombre + "%'";
-            ResultSet r = sentencia.executeQuery(query);
-            while (r.next()) {
-                fila[0] = r.getString("dni");
-                fila[1] = r.getString("nombre");
-                fila[2] = r.getString("direccion");
-                fila[3] = r.getString("telefono");
-                fila[4] = r.getString("email");
-                dtm.addRow(fila);
-            }
+
         } else if (dni.equalsIgnoreCase("") && nombre.equalsIgnoreCase("") && !telefono.equalsIgnoreCase("")) {
             query = "SELECT * FROM persona WHERE especialidad =" + "'" + null + "'" + " AND telefono like '%" + telefono + "%'";
-            ResultSet r = sentencia.executeQuery(query);
-            while (r.next()) {
-                fila[0] = r.getString("dni");
-                fila[1] = r.getString("nombre");
-                fila[2] = r.getString("direccion");
-                fila[3] = r.getString("telefono");
-                fila[4] = r.getString("email");
-                dtm.addRow(fila);
-            }
+
         } else if (dni.equalsIgnoreCase("") && !nombre.equalsIgnoreCase("") && !telefono.equalsIgnoreCase("")) {
             query = "SELECT * FROM persona WHERE especialidad =" + "'" + null + "'" + " AND nombre like '%" + nombre + "%'" + " AND telefono like '%" + telefono + "%'";
-            ResultSet r = sentencia.executeQuery(query);
-            while (r.next()) {
-                fila[0] = r.getString("dni");
-                fila[1] = r.getString("nombre");
-                fila[2] = r.getString("direccion");
-                fila[3] = r.getString("telefono");
-                fila[4] = r.getString("email");
-                dtm.addRow(fila);
-            }
 
         } else if (dni.equalsIgnoreCase("") && nombre.equalsIgnoreCase("") && telefono.equalsIgnoreCase("")) {
             query = "SELECT * FROM persona WHERE especialidad =" + "'" + null + "'";
-            ResultSet r = sentencia.executeQuery(query);
-            while (r.next()) {
-                fila[0] = r.getString("dni");
-                fila[1] = r.getString("nombre");
-                fila[2] = r.getString("direccion");
-                fila[3] = r.getString("telefono");
-                fila[4] = r.getString("email");
-                dtm.addRow(fila);
-            }
 
         } else if (!dni.equalsIgnoreCase("") && nombre.equalsIgnoreCase("") && !telefono.equalsIgnoreCase("")) {
             query = "SELECT * FROM persona WHERE especialidad =" + "'" + null + "'" + " AND dni like '%" + dni + "%'" + " AND telefono like '%" + telefono + "%'";
-            ResultSet r = sentencia.executeQuery(query);
-            while (r.next()) {
-                fila[0] = r.getString("dni");
-                fila[1] = r.getString("nombre");
-                fila[2] = r.getString("direccion");
-                fila[3] = r.getString("telefono");
-                fila[4] = r.getString("email");
-                dtm.addRow(fila);
-            }
+
         } else if (!dni.equalsIgnoreCase("") && !nombre.equalsIgnoreCase("") && telefono.equalsIgnoreCase("")) {
             query = "SELECT * FROM persona WHERE especialidad =" + "'" + null + "'" + " AND dni like '%" + dni + "%'" + " AND nombre like '%" + nombre + "%'";
-            ResultSet r = sentencia.executeQuery(query);
-            while (r.next()) {
-                fila[0] = r.getString("dni");
-                fila[1] = r.getString("nombre");
-                fila[2] = r.getString("direccion");
-                fila[3] = r.getString("telefono");
-                fila[4] = r.getString("email");
-                dtm.addRow(fila);
-            }
+
+        }
+        ResultSet r = sentencia.executeQuery(query);
+        while (r.next()) {
+            fila[0] = r.getString("dni");
+            fila[1] = r.getString("nombre");
+            fila[2] = r.getString("direccion");
+            fila[3] = r.getString("telefono");
+            fila[4] = r.getString("email");
+            dtm.addRow(fila);
         }
         tabla.setModel(dtm);
 
@@ -220,100 +171,41 @@ public class operacionesBaseDatos {
         if (!dni.equalsIgnoreCase("") && nombre.equalsIgnoreCase("") && especialidad.equalsIgnoreCase("")) {
             query = "SELECT * FROM persona WHERE especialidad <>" + "'" + null + "'" + " AND dni like '%" + dni + "%'";
             System.out.println(query);
-            ResultSet r = sentencia.executeQuery(query);
-            while (r.next()) {
-                fila[0] = r.getString("dni");
-                fila[1] = r.getString("nombre");
-                fila[2] = r.getString("direccion");
-                fila[3] = r.getString("telefono");
-                fila[4] = r.getString("email");
-                fila[5] = r.getString("especialidad");
-                dtm.addRow(fila);
-            }
+
         } else if (dni.equalsIgnoreCase("") && nombre.equalsIgnoreCase("") && !especialidad.equalsIgnoreCase("")) {
             query = "SELECT * FROM persona WHERE especialidad <>" + "'" + null + "'" + " AND especialidad like '%" + especialidad + "%'";
             System.out.println(query);
 
-            ResultSet r = sentencia.executeQuery(query);
-            while (r.next()) {
-                fila[0] = r.getString("dni");
-                fila[1] = r.getString("nombre");
-                fila[2] = r.getString("direccion");
-                fila[3] = r.getString("telefono");
-                fila[4] = r.getString("email");
-                fila[5] = r.getString("especialidad");
-                dtm.addRow(fila);
-            }
         } else if (dni.equalsIgnoreCase("") && !nombre.equalsIgnoreCase("") && especialidad.equalsIgnoreCase("")) {
             query = "SELECT * FROM persona WHERE especialidad <>" + "'" + null + "'" + " AND nombre like '%" + nombre + "%'";
             System.out.println(query);
 
-            ResultSet r = sentencia.executeQuery(query);
-            while (r.next()) {
-                fila[0] = r.getString("dni");
-                fila[1] = r.getString("nombre");
-                fila[2] = r.getString("direccion");
-                fila[3] = r.getString("telefono");
-                fila[4] = r.getString("email");
-                fila[5] = r.getString("especialidad");
-                dtm.addRow(fila);
-            }
         } else if (!dni.equalsIgnoreCase("") && !nombre.equalsIgnoreCase("") && especialidad.equalsIgnoreCase("")) {
             query = "SELECT * FROM persona WHERE especialidad <>" + "'" + null + "'" + " AND dni like '%" + dni + "%'" + " AND nombre like '%" + nombre + "%'";
             System.out.println(query);
 
-            ResultSet r = sentencia.executeQuery(query);
-            while (r.next()) {
-                fila[0] = r.getString("dni");
-                fila[1] = r.getString("nombre");
-                fila[2] = r.getString("direccion");
-                fila[3] = r.getString("telefono");
-                fila[4] = r.getString("email");
-                fila[5] = r.getString("especialidad");
-                dtm.addRow(fila);
-            }
         } else if (!dni.equalsIgnoreCase("") && nombre.equalsIgnoreCase("") && !especialidad.equalsIgnoreCase("")) {
             query = "SELECT * FROM persona WHERE especialidad <>" + "'" + null + "'" + " AND dni like '%" + dni + "%'" + " AND especialidad like '%" + especialidad + "%'";
             System.out.println(query);
 
-            ResultSet r = sentencia.executeQuery(query);
-            while (r.next()) {
-                fila[0] = r.getString("dni");
-                fila[1] = r.getString("nombre");
-                fila[2] = r.getString("direccion");
-                fila[3] = r.getString("telefono");
-                fila[4] = r.getString("email");
-                fila[5] = r.getString("especialidad");
-                dtm.addRow(fila);
-            }
         } else if (dni.equalsIgnoreCase("") && !nombre.equalsIgnoreCase("") && !especialidad.equalsIgnoreCase("")) {
             query = "SELECT * FROM persona WHERE especialidad <>" + "'" + null + "'" + " AND nombre like '%" + nombre + "%'" + " AND especialidad like '%" + especialidad + "%'";
             System.out.println(query);
 
-            ResultSet r = sentencia.executeQuery(query);
-            while (r.next()) {
-                fila[0] = r.getString("dni");
-                fila[1] = r.getString("nombre");
-                fila[2] = r.getString("direccion");
-                fila[3] = r.getString("telefono");
-                fila[4] = r.getString("email");
-                fila[5] = r.getString("especialidad");
-                dtm.addRow(fila);
-            }
         } else {
             query = "SELECT * FROM persona WHERE especialidad <>" + "'" + null + "'";
-            ResultSet r = sentencia.executeQuery(query);
-            while (r.next()) {
-                fila[0] = r.getString("dni");
-                fila[1] = r.getString("nombre");
-                fila[2] = r.getString("direccion");
-                fila[3] = r.getString("telefono");
-                fila[4] = r.getString("email");
-                fila[5] = r.getString("especialidad");
-                dtm.addRow(fila);
-            }
-        }
 
+        }
+        ResultSet r = sentencia.executeQuery(query);
+        while (r.next()) {
+            fila[0] = r.getString("dni");
+            fila[1] = r.getString("nombre");
+            fila[2] = r.getString("direccion");
+            fila[3] = r.getString("telefono");
+            fila[4] = r.getString("email");
+            fila[5] = r.getString("especialidad");
+            dtm.addRow(fila);
+        }
         tabla.setModel(dtm);
 
     }
@@ -386,212 +278,75 @@ public class operacionesBaseDatos {
             query = "SELECT * FROM animal WHERE idAnimal =" + idAnimal;
             System.out.println(query);
 
-            ResultSet r = sentencia.executeQuery(query);
-            while (r.next()) {
-                fila[0] = r.getString("idAnimal");
-                fila[1] = r.getString("nombre");
-                fila[2] = r.getString("especie");
-                fila[3] = r.getString("raza");
-                fila[4] = r.getString("peso");
-                fila[5] = r.getString("fecha_nacimiento");
-                fila[6] = r.getString("dueño");
-                dtm.addRow(fila);
-            }
         } else if (idAnimal != 0 && !dni.equalsIgnoreCase("") && nombre.equalsIgnoreCase("") && telefono.equalsIgnoreCase("")) {
             query = "SELECT * FROM animal WHERE idAnimal =" + idAnimal + " AND dueño like '%" + dni + "%')";
             System.out.println(query);
 
-            ResultSet r = sentencia.executeQuery(query);
-            while (r.next()) {
-                fila[0] = r.getString("idAnimal");
-                fila[1] = r.getString("nombre");
-                fila[2] = r.getString("especie");
-                fila[3] = r.getString("raza");
-                fila[4] = r.getString("peso");
-                fila[5] = r.getString("fecha_nacimiento");
-                fila[6] = r.getString("dueño");
-                dtm.addRow(fila);
-            }
         } else if (idAnimal != 0 && !dni.equalsIgnoreCase("") && !nombre.equalsIgnoreCase("") && telefono.equalsIgnoreCase("")) {
             query = "SELECT * FROM animal WHERE idAnimal =" + idAnimal + "AND dueño IN (SELECT dni FROM persona WHERE nombre like '%" + nombre + "%' AND dueño like '%" + dni + "%')";
             System.out.println(query);
 
-            ResultSet r = sentencia.executeQuery(query);
-            while (r.next()) {
-                fila[0] = r.getString("idAnimal");
-                fila[1] = r.getString("nombre");
-                fila[2] = r.getString("especie");
-                fila[3] = r.getString("raza");
-                fila[4] = r.getString("peso");
-                fila[5] = r.getString("fecha_nacimiento");
-                fila[6] = r.getString("dueño");
-                dtm.addRow(fila);
-            }
         } else if (idAnimal != 0 && !dni.equalsIgnoreCase("") && !nombre.equalsIgnoreCase("") && !telefono.equalsIgnoreCase("")) {
             query = "SELECT * FROM animal WHERE idAnimal =" + idAnimal + "AND dueño IN (SELECT dni FROM persona WHERE nombre like '%" + nombre + "%'" + " AND telefono like '%" + telefono + "%' AND dueño like '%" + dni + "%')";
             System.out.println(query);
 
-            ResultSet r = sentencia.executeQuery(query);
-            while (r.next()) {
-                fila[0] = r.getString("idAnimal");
-                fila[1] = r.getString("nombre");
-                fila[2] = r.getString("especie");
-                fila[3] = r.getString("raza");
-                fila[4] = r.getString("peso");
-                fila[5] = r.getString("fecha_nacimiento");
-                fila[6] = r.getString("dueño");
-                dtm.addRow(fila);
-            }
         } else if (idAnimal == 0 && !dni.equalsIgnoreCase("") && !nombre.equalsIgnoreCase("") && !telefono.equalsIgnoreCase("")) {
             query = "SELECT * FROM animal WHERE  dueño IN (SELECT dni FROM persona WHERE nombre like '%" + nombre + "%'" + " AND telefono like '%" + telefono + "%')";
             System.out.println(query);
 
-            ResultSet r = sentencia.executeQuery(query);
-            while (r.next()) {
-                fila[0] = r.getString("idAnimal");
-                fila[1] = r.getString("nombre");
-                fila[2] = r.getString("especie");
-                fila[3] = r.getString("raza");
-                fila[4] = r.getString("peso");
-                fila[5] = r.getString("fecha_nacimiento");
-                fila[6] = r.getString("dueño");
-                dtm.addRow(fila);
-            }
         } else if (idAnimal == 0 && dni.equalsIgnoreCase("") && !nombre.equalsIgnoreCase("") && !telefono.equalsIgnoreCase("")) {
             query = "SELECT * FROM animal WHERE  dueño IN (SELECT dni FROM persona WHERE nombre like '%" + nombre + "%'" + " AND telefono like '%" + telefono + "%' AND dueño like '%" + dni + "%')";
             System.out.println(query);
 
-            ResultSet r = sentencia.executeQuery(query);
-            while (r.next()) {
-                fila[0] = r.getString("idAnimal");
-                fila[1] = r.getString("nombre");
-                fila[2] = r.getString("especie");
-                fila[3] = r.getString("raza");
-                fila[4] = r.getString("peso");
-                fila[5] = r.getString("fecha_nacimiento");
-                fila[6] = r.getString("dueño");
-                dtm.addRow(fila);
-            }
         } else if (idAnimal == 0 && dni.equalsIgnoreCase("") && nombre.equalsIgnoreCase("") && !telefono.equalsIgnoreCase("")) {
             query = "SELECT * FROM animal WHERE  dueño IN (SELECT dni FROM persona WHERE telefono like '%" + telefono + "%' AND dueño like '%" + dni + "%')";
             System.out.println(query);
 
-            ResultSet r = sentencia.executeQuery(query);
-            while (r.next()) {
-                fila[0] = r.getString("idAnimal");
-                fila[1] = r.getString("nombre");
-                fila[2] = r.getString("especie");
-                fila[3] = r.getString("raza");
-                fila[4] = r.getString("peso");
-                fila[5] = r.getString("fecha_nacimiento");
-                fila[6] = r.getString("dueño");
-                dtm.addRow(fila);
-            }
         } else if (idAnimal == 0 && dni.equalsIgnoreCase("") && !nombre.equalsIgnoreCase("") && telefono.equalsIgnoreCase("")) {
             query = "SELECT * FROM animal WHERE  dueño IN (SELECT dni FROM persona WHERE nombre like '%" + nombre + "%' AND dueño like '%" + dni + "%')";
             System.out.println(query);
 
-            ResultSet r = sentencia.executeQuery(query);
-            while (r.next()) {
-                fila[0] = r.getString("idAnimal");
-                fila[1] = r.getString("nombre");
-                fila[2] = r.getString("especie");
-                fila[3] = r.getString("raza");
-                fila[4] = r.getString("peso");
-                fila[5] = r.getString("fecha_nacimiento");
-                fila[6] = r.getString("dueño");
-                dtm.addRow(fila);
-            }
         } else if (idAnimal == 0 && !dni.equalsIgnoreCase("") && nombre.equalsIgnoreCase("") && telefono.equalsIgnoreCase("")) {
             query = "SELECT * FROM animal WHERE  dueño like '%" + dni + "%'";
             System.out.println(query);
 
-            ResultSet r = sentencia.executeQuery(query);
-            while (r.next()) {
-                fila[0] = r.getString("idAnimal");
-                fila[1] = r.getString("nombre");
-                fila[2] = r.getString("especie");
-                fila[3] = r.getString("raza");
-                fila[4] = r.getString("peso");
-                fila[5] = r.getString("fecha_nacimiento");
-                fila[6] = r.getString("dueño");
-                dtm.addRow(fila);
-            }
         } else if (idAnimal != 0 && dni.equalsIgnoreCase("") && !nombre.equalsIgnoreCase("") && telefono.equalsIgnoreCase("")) {
             query = "SELECT * FROM animal WHERE idAnimal =" + idAnimal + "AND dueño IN (SELECT dni FROM persona WHERE nombre like '%" + nombre + "%' AND dueño like '%" + dni + "%')";
             System.out.println(query);
 
             ResultSet r = sentencia.executeQuery(query);
-            while (r.next()) {
-                fila[0] = r.getString("idAnimal");
-                fila[1] = r.getString("nombre");
-                fila[2] = r.getString("especie");
-                fila[3] = r.getString("raza");
-                fila[4] = r.getString("peso");
-                fila[5] = r.getString("fecha_nacimiento");
-                fila[6] = r.getString("dueño");
-                dtm.addRow(fila);
-            }
+
         } else if (idAnimal != 0 && dni.equalsIgnoreCase("") && nombre.equalsIgnoreCase("") && !telefono.equalsIgnoreCase("")) {
             query = "SELECT * FROM animal WHERE idAnimal =" + idAnimal + "AND dueño IN (SELECT dni FROM persona WHERE telefono like '%" + telefono + "%' AND dueño like '%" + dni + "%')";
             System.out.println(query);
 
             ResultSet r = sentencia.executeQuery(query);
-            while (r.next()) {
-                fila[0] = r.getString("idAnimal");
-                fila[1] = r.getString("nombre");
-                fila[2] = r.getString("especie");
-                fila[3] = r.getString("raza");
-                fila[4] = r.getString("peso");
-                fila[5] = r.getString("fecha_nacimiento");
-                fila[6] = r.getString("dueño");
-                dtm.addRow(fila);
-            }
+
         } else if (idAnimal == 0 && !dni.equalsIgnoreCase("") && !nombre.equalsIgnoreCase("") && telefono.equalsIgnoreCase("")) {
             query = "SELECT * FROM animal WHERE dueño IN (SELECT dni FROM persona WHERE nombre like '%" + nombre + "%' AND dueño like '%" + dni + "%')";
             System.out.println(query);
 
             ResultSet r = sentencia.executeQuery(query);
-            while (r.next()) {
-                fila[0] = r.getString("idAnimal");
-                fila[1] = r.getString("nombre");
-                fila[2] = r.getString("especie");
-                fila[3] = r.getString("raza");
-                fila[4] = r.getString("peso");
-                fila[5] = r.getString("fecha_nacimiento");
-                fila[6] = r.getString("dueño");
-                dtm.addRow(fila);
-            }
+
         } else if (idAnimal == 0 && !dni.equalsIgnoreCase("") && nombre.equalsIgnoreCase("") && !telefono.equalsIgnoreCase("")) {
             query = "SELECT * FROM animal WHERE dueño IN (SELECT dni FROM persona WHERE telefono like '%" + telefono + "%' AND dueño like '%" + dni + "%')";
             System.out.println(query);
 
-            ResultSet r = sentencia.executeQuery(query);
-            while (r.next()) {
-                fila[0] = r.getString("idAnimal");
-                fila[1] = r.getString("nombre");
-                fila[2] = r.getString("especie");
-                fila[3] = r.getString("raza");
-                fila[4] = r.getString("peso");
-                fila[5] = r.getString("fecha_nacimiento");
-                fila[6] = r.getString("dueño");
-                dtm.addRow(fila);
-            }
         } else {
             query = "SELECT * FROM animal";
             System.out.println(query);
 
-            ResultSet r = sentencia.executeQuery(query);
-            while (r.next()) {
-                fila[0] = r.getString("idAnimal");
-                fila[1] = r.getString("nombre");
-                fila[2] = r.getString("especie");
-                fila[3] = r.getString("raza");
-                fila[4] = r.getString("peso");
-                fila[5] = r.getString("fecha_nacimiento");
-                fila[6] = r.getString("dueño");
-                dtm.addRow(fila);
-            }
+        }
+        ResultSet r = sentencia.executeQuery(query);
+        while (r.next()) {
+            fila[0] = r.getString("idAnimal");
+            fila[1] = r.getString("nombre");
+            fila[2] = r.getString("especie");
+            fila[3] = r.getString("raza");
+            fila[4] = r.getString("peso");
+            fila[5] = r.getString("fecha_nacimiento");
+            fila[6] = r.getString("dueño");
+            dtm.addRow(fila);
         }
         tabla.setModel(dtm);
     }
