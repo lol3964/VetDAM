@@ -12,6 +12,8 @@ import java.sql.Statement;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import javax.swing.DefaultListModel;
+import javax.swing.JList;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import pruebaaccesobasedatos.Conexion;
@@ -378,7 +380,7 @@ public class operacionesBaseDatos {
         System.out.println(query);
         sentencia.executeUpdate(query);
 	query = "INSERT INTO anotacionesMedicas (idAnimal,veterinario,descripcion,tema,fecha_anotacion) VALUES"
-                + "(" + idAnimal + ",'" + veterinario + "','" + descripción + "','" + tema + "','" + fecha + "'" + ");";
+                + "(" + idAnimal + ",'" + veterinario + "','" + descripcion + "','" + tema + "','" + fecha + "'" + ");";
 
         System.out.println(query);
 
@@ -420,16 +422,7 @@ public class operacionesBaseDatos {
     }
     
     
-    //METODOS REALIZADOS POR SERGIO--EN REVISION
-    //METODO ELIMINAR PERSONA
-    public void eliminarPersona(String dni) throws ClassNotFoundException, SQLException{
-		Connection c = Conexion.obtener();
-		Statement sentencia = c.createStatement();
-		String query = "DELETE FROM persona WHERE dni=" + dni;
-		System.out.println(query);
-		sentencia.executeUpdate(query);
-	}
-    
+    //METODOS REALIZADOS POR SERGIO--EN REVISION    
     //METODO MODIFICAR CITAS
      public void modificarCitas(int consulta, int idAnimal,String fecha_cita, String hora_cita) throws SQLException, ClassNotFoundException{
         Connection c = Conexion.obtener();
@@ -452,7 +445,7 @@ public class operacionesBaseDatos {
     }
     
     //BUSCAR POR FECHA
-     public void buscarhistorial(String fecha) throws SQLException, ClassNotFoundException{
+     public void buscarhistorialPorFecha(String fecha) throws SQLException, ClassNotFoundException{
         Connection c = Conexion.obtener();
         Statement sentencia = c.createStatement();
         String query = " SELECT * FROM anotacionesMedicas WHERE fecha_anotacion=" + "'" + fecha + "'";
