@@ -50,17 +50,12 @@ public class PanelAdministrador extends javax.swing.JFrame {
         panelAdminInicio = new javax.swing.JPanel();
         panelAdminDarCita = new javax.swing.JPanel();
         scrollAdminHorasDisponibles = new javax.swing.JScrollPane();
-        listAdminHorasDisponibles = new javax.swing.JList<String>();
-        jLabel2 = new javax.swing.JLabel();
+        listAdminHorasDisponibles = new javax.swing.JList<>();
         txtAdminDarCitaVet = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
         txtAdminDarCitaAnimal = new javax.swing.JTextField();
-        comboAdminDarCitaAsunto = new javax.swing.JComboBox<String>();
+        comboAdminDarCitaAsunto = new javax.swing.JComboBox<>();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        radioAdminDarCitaUrgSi = new javax.swing.JRadioButton();
-        radioAdminDarCitaUrgNo = new javax.swing.JRadioButton();
         jLabel7 = new javax.swing.JLabel();
         btnAdminDarCitaAceptar = new javax.swing.JButton();
         btnAdminDarCitaCancelar = new javax.swing.JButton();
@@ -87,9 +82,7 @@ public class PanelAdministrador extends javax.swing.JFrame {
         tablaAdminHistorialMed = new javax.swing.JTable();
         btnAdminVerAnotacion = new javax.swing.JButton();
         panelAdminAñadirUsuario = new javax.swing.JPanel();
-        jLabel8 = new javax.swing.JLabel();
         txtAdminCrearPersonaDni = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
         txtAdminAñadirPersonaNombre = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
         radioAdminAñadirUsuPriviSi = new javax.swing.JRadioButton();
@@ -98,18 +91,14 @@ public class PanelAdministrador extends javax.swing.JFrame {
         btnAdminDarCitaCancelar1 = new javax.swing.JButton();
         jSeparator4 = new javax.swing.JSeparator();
         jSeparator5 = new javax.swing.JSeparator();
-        jLabel14 = new javax.swing.JLabel();
         txtAdminAñadirPersonaDire = new javax.swing.JTextField();
         jSeparator6 = new javax.swing.JSeparator();
-        jLabel15 = new javax.swing.JLabel();
         txtAdminAñadirPersonaTlf = new javax.swing.JTextField();
         jSeparator7 = new javax.swing.JSeparator();
-        jLabel16 = new javax.swing.JLabel();
         txtAdminAñadirPersonaEmail = new javax.swing.JTextField();
         jSeparator8 = new javax.swing.JSeparator();
         jLabel1 = new javax.swing.JLabel();
-        comboAdminAñadirPersonaEspe = new javax.swing.JComboBox<String>();
-        jLabel17 = new javax.swing.JLabel();
+        comboAdminAñadirPersonaEspe = new javax.swing.JComboBox<>();
         jSeparator9 = new javax.swing.JSeparator();
         jPasswordField1 = new javax.swing.JPasswordField();
         panelAdminListarClientes = new javax.swing.JPanel();
@@ -156,7 +145,7 @@ public class PanelAdministrador extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        panelAdmin.setBackground(new java.awt.Color(152, 251, 152));
+        panelAdmin.setBackground(new java.awt.Color(255, 204, 204));
         panelAdmin.setLayout(new java.awt.CardLayout());
 
         panelAdminInicio.setBackground(panelAdmin.getBackground());
@@ -176,41 +165,29 @@ public class PanelAdministrador extends javax.swing.JFrame {
 
         panelAdminDarCita.setBackground(panelAdmin.getBackground());
 
-        listAdminHorasDisponibles.setModel(new javax.swing.AbstractListModel() {
+        listAdminHorasDisponibles.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
+            public String getElementAt(int i) { return strings[i]; }
         });
         scrollAdminHorasDisponibles.setViewportView(listAdminHorasDisponibles);
 
-        jLabel2.setText("Veterinario");
-
         txtAdminDarCitaVet.setEditable(false);
-        txtAdminDarCitaVet.setBackground(panelAdminInicio.getBackground());
+        txtAdminDarCitaVet.setBackground(panelAdmin.getBackground());
+        txtAdminDarCitaVet.setText("Veterinario");
         txtAdminDarCitaVet.setBorder(null);
         txtAdminDarCitaVet.setDisabledTextColor(panelAdminInicio.getBackground());
         txtAdminDarCitaVet.setFocusable(false);
 
-        jLabel3.setText("Animal ");
-
-        txtAdminDarCitaAnimal.setBackground(panelAdminInicio.getBackground());
+        txtAdminDarCitaAnimal.setBackground(panelAdmin.getBackground());
+        txtAdminDarCitaAnimal.setText("Animal");
         txtAdminDarCitaAnimal.setBorder(null);
 
-        comboAdminDarCitaAsunto.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        comboAdminDarCitaAsunto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jLabel4.setText("Asunto");
 
         jLabel5.setText("Día");
-
-        jLabel6.setText("Urgente");
-
-        radioAdminDarCitaUrgSi.setBackground(panelAdmin.getBackground());
-        groupBtnAdminDarCita.add(radioAdminDarCitaUrgSi);
-        radioAdminDarCitaUrgSi.setText("Sí");
-
-        radioAdminDarCitaUrgNo.setBackground(panelAdmin.getBackground());
-        groupBtnAdminDarCita.add(radioAdminDarCitaUrgNo);
-        radioAdminDarCitaUrgNo.setText("No");
 
         jLabel7.setText("Horas disponibles");
 
@@ -225,45 +202,33 @@ public class PanelAdministrador extends javax.swing.JFrame {
         panelAdminDarCitaLayout.setHorizontalGroup(
             panelAdminDarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelAdminDarCitaLayout.createSequentialGroup()
-                .addGap(47, 47, 47)
-                .addGroup(panelAdminDarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(panelAdminDarCitaLayout.createSequentialGroup()
-                        .addComponent(btnAdminDarCitaAceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnAdminDarCitaCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(27, 27, 27)
+                .addGroup(panelAdminDarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtAdminDarCitaAnimal, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(panelAdminDarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(panelAdminDarCitaLayout.createSequentialGroup()
+                            .addComponent(btnAdminDarCitaAceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(63, 63, 63)
+                            .addComponent(btnAdminDarCitaCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(panelAdminDarCitaLayout.createSequentialGroup()
+                            .addComponent(jLabel4)
+                            .addGap(18, 18, 18)
+                            .addComponent(comboAdminDarCitaAsunto, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGap(4, 4, 4)))
                     .addGroup(panelAdminDarCitaLayout.createSequentialGroup()
                         .addComponent(jLabel5)
-                        .addGap(18, 18, 18)
-                        .addComponent(jCalendarAdminDarCita, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(panelAdminDarCitaLayout.createSequentialGroup()
-                        .addComponent(jLabel4)
-                        .addGap(18, 18, 18)
-                        .addComponent(comboAdminDarCitaAsunto, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(panelAdminDarCitaLayout.createSequentialGroup()
-                        .addComponent(jLabel6)
-                        .addGap(18, 18, 18)
-                        .addComponent(radioAdminDarCitaUrgSi)
-                        .addGap(18, 18, 18)
-                        .addComponent(radioAdminDarCitaUrgNo))
-                    .addGroup(panelAdminDarCitaLayout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(panelAdminDarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtAdminDarCitaVet)
-                            .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(panelAdminDarCitaLayout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addGap(18, 18, 18)
-                        .addGroup(panelAdminDarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtAdminDarCitaAnimal)
-                            .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(27, 27, 27)
+                        .addComponent(jCalendarAdminDarCita, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtAdminDarCitaVet, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
                 .addComponent(scrollAdminHorasDisponibles, javax.swing.GroupLayout.PREFERRED_SIZE, 413, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(99, 99, 99))
+                .addGap(63, 63, 63))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelAdminDarCitaLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel7)
-                .addGap(283, 283, 283))
+                .addGap(238, 238, 238))
         );
         panelAdminDarCitaLayout.setVerticalGroup(
             panelAdminDarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -274,44 +239,25 @@ public class PanelAdministrador extends javax.swing.JFrame {
                 .addGroup(panelAdminDarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(scrollAdminHorasDisponibles, javax.swing.GroupLayout.PREFERRED_SIZE, 425, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(panelAdminDarCitaLayout.createSequentialGroup()
-                        .addGroup(panelAdminDarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panelAdminDarCitaLayout.createSequentialGroup()
-                                .addComponent(txtAdminDarCitaVet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(panelAdminDarCitaLayout.createSequentialGroup()
-                                .addGap(8, 8, 8)
-                                .addComponent(jLabel2)))
-                        .addGroup(panelAdminDarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panelAdminDarCitaLayout.createSequentialGroup()
-                                .addGap(29, 29, 29)
-                                .addComponent(txtAdminDarCitaAnimal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(panelAdminDarCitaLayout.createSequentialGroup()
-                                .addGap(37, 37, 37)
-                                .addComponent(jLabel3)))
-                        .addGap(48, 48, 48)
+                        .addComponent(txtAdminDarCitaVet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(29, 29, 29)
+                        .addComponent(txtAdminDarCitaAnimal, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(42, 42, 42)
                         .addGroup(panelAdminDarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(comboAdminDarCitaAsunto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel4))
-                        .addGap(48, 48, 48)
-                        .addGroup(panelAdminDarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel5)
-                            .addComponent(jCalendarAdminDarCita, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(69, 69, 69)
                         .addGroup(panelAdminDarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panelAdminDarCitaLayout.createSequentialGroup()
-                                .addGap(57, 57, 57)
-                                .addGroup(panelAdminDarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel6)
-                                    .addComponent(radioAdminDarCitaUrgSi)
-                                    .addComponent(radioAdminDarCitaUrgNo))
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelAdminDarCitaLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(panelAdminDarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(btnAdminDarCitaCancelar)
-                                    .addComponent(btnAdminDarCitaAceptar))))))
+                            .addComponent(jCalendarAdminDarCita, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel5))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(panelAdminDarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnAdminDarCitaCancelar)
+                            .addComponent(btnAdminDarCitaAceptar))))
                 .addGap(18, 18, 18))
         );
 
@@ -324,7 +270,7 @@ public class PanelAdministrador extends javax.swing.JFrame {
         labelCitasTotales.setText("Citas totales");
 
         txtAdminVerCitasTotales.setEditable(false);
-        txtAdminVerCitasTotales.setBackground(panelAdminInicio.getBackground());
+        txtAdminVerCitasTotales.setBackground(panelAdmin.getBackground());
         txtAdminVerCitasTotales.setBorder(null);
         txtAdminVerCitasTotales.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -333,6 +279,11 @@ public class PanelAdministrador extends javax.swing.JFrame {
         });
 
         btnAdminVerCitasModificarCita.setText("Modificar cita seleccionada");
+        btnAdminVerCitasModificarCita.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAdminVerCitasModificarCitaActionPerformed(evt);
+            }
+        });
 
         btnAdminVerCitasAtenderCita.setText("Atender cita seleccionada");
 
@@ -498,10 +449,9 @@ public class PanelAdministrador extends javax.swing.JFrame {
 
         panelAdminAñadirUsuario.setBackground(panelAdmin.getBackground());
 
-        jLabel8.setText("DNI");
-
         txtAdminCrearPersonaDni.setEditable(false);
-        txtAdminCrearPersonaDni.setBackground(panelAdminInicio.getBackground());
+        txtAdminCrearPersonaDni.setBackground(panelAdmin.getBackground());
+        txtAdminCrearPersonaDni.setText("DNI");
         txtAdminCrearPersonaDni.setBorder(null);
         txtAdminCrearPersonaDni.setDisabledTextColor(panelAdminInicio.getBackground());
         txtAdminCrearPersonaDni.setFocusable(false);
@@ -511,9 +461,8 @@ public class PanelAdministrador extends javax.swing.JFrame {
             }
         });
 
-        jLabel9.setText("Nombre");
-
-        txtAdminAñadirPersonaNombre.setBackground(panelAdminInicio.getBackground());
+        txtAdminAñadirPersonaNombre.setBackground(panelAdmin.getBackground());
+        txtAdminAñadirPersonaNombre.setText("Nombre");
         txtAdminAñadirPersonaNombre.setBorder(null);
 
         jLabel12.setText("Privilegios de administrador");
@@ -530,28 +479,25 @@ public class PanelAdministrador extends javax.swing.JFrame {
 
         btnAdminDarCitaCancelar1.setText("Cancelar");
 
-        jLabel14.setText("Dirección");
-
-        txtAdminAñadirPersonaDire.setBackground(panelAdminInicio.getBackground());
+        txtAdminAñadirPersonaDire.setBackground(panelAdmin.getBackground());
+        txtAdminAñadirPersonaDire.setText("Dirección");
         txtAdminAñadirPersonaDire.setBorder(null);
 
-        jLabel15.setText("Teléfono");
-
-        txtAdminAñadirPersonaTlf.setBackground(panelAdminInicio.getBackground());
+        txtAdminAñadirPersonaTlf.setBackground(panelAdmin.getBackground());
+        txtAdminAñadirPersonaTlf.setText("Teléfono");
         txtAdminAñadirPersonaTlf.setBorder(null);
 
-        jLabel16.setText("Email");
-
-        txtAdminAñadirPersonaEmail.setBackground(panelAdminInicio.getBackground());
+        txtAdminAñadirPersonaEmail.setBackground(panelAdmin.getBackground());
+        txtAdminAñadirPersonaEmail.setText("Email");
         txtAdminAñadirPersonaEmail.setBorder(null);
 
         jLabel1.setText("Especialidad");
 
-        comboAdminAñadirPersonaEspe.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        comboAdminAñadirPersonaEspe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jLabel17.setText("Contraseña");
-
-        jPasswordField1.setBackground(panelAdminInicio.getBackground());
+        jPasswordField1.setBackground(panelAdmin.getBackground());
+        jPasswordField1.setText("Contraseña");
+        jPasswordField1.setToolTipText("");
         jPasswordField1.setBorder(null);
 
         javax.swing.GroupLayout panelAdminAñadirUsuarioLayout = new javax.swing.GroupLayout(panelAdminAñadirUsuario);
@@ -560,88 +506,56 @@ public class PanelAdministrador extends javax.swing.JFrame {
             panelAdminAñadirUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelAdminAñadirUsuarioLayout.createSequentialGroup()
                 .addGap(41, 41, 41)
-                .addGroup(panelAdminAñadirUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jSeparator8, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jSeparator7, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(panelAdminAñadirUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(panelAdminAñadirUsuarioLayout.createSequentialGroup()
-                            .addComponent(jLabel8)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addGroup(panelAdminAñadirUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jSeparator4)
-                                .addComponent(txtAdminCrearPersonaDni)))
-                        .addGroup(panelAdminAñadirUsuarioLayout.createSequentialGroup()
-                            .addComponent(jLabel14)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(txtAdminAñadirPersonaDire))
-                        .addGroup(panelAdminAñadirUsuarioLayout.createSequentialGroup()
-                            .addComponent(jLabel16)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(txtAdminAñadirPersonaEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(panelAdminAñadirUsuarioLayout.createSequentialGroup()
-                            .addComponent(jLabel15)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(txtAdminAñadirPersonaTlf, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(panelAdminAñadirUsuarioLayout.createSequentialGroup()
-                            .addComponent(jLabel12)
-                            .addGap(37, 37, 37)
-                            .addComponent(radioAdminAñadirUsuPriviSi)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(radioAdminAñadirUsuPriviNo))
-                        .addGroup(panelAdminAñadirUsuarioLayout.createSequentialGroup()
-                            .addComponent(jLabel1)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(comboAdminAñadirPersonaEspe, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelAdminAñadirUsuarioLayout.createSequentialGroup()
-                            .addComponent(btnAdminDarCitaAceptar1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnAdminDarCitaCancelar1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(panelAdminAñadirUsuarioLayout.createSequentialGroup()
-                            .addComponent(jLabel17)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addGroup(panelAdminAñadirUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jSeparator9, javax.swing.GroupLayout.DEFAULT_SIZE, 211, Short.MAX_VALUE)
-                                .addComponent(jPasswordField1)))
-                        .addGroup(panelAdminAñadirUsuarioLayout.createSequentialGroup()
-                            .addComponent(jLabel9)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addGroup(panelAdminAñadirUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jSeparator5)
-                                .addComponent(txtAdminAñadirPersonaNombre)))))
+                .addGroup(panelAdminAñadirUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txtAdminAñadirPersonaTlf, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtAdminAñadirPersonaEmail, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(panelAdminAñadirUsuarioLayout.createSequentialGroup()
+                        .addComponent(jLabel12)
+                        .addGap(37, 37, 37)
+                        .addComponent(radioAdminAñadirUsuPriviSi)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(radioAdminAñadirUsuPriviNo))
+                    .addGroup(panelAdminAñadirUsuarioLayout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(comboAdminAñadirPersonaEspe, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelAdminAñadirUsuarioLayout.createSequentialGroup()
+                        .addComponent(btnAdminDarCitaAceptar1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnAdminDarCitaCancelar1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jSeparator8, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jSeparator7, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jSeparator6, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtAdminAñadirPersonaDire, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtAdminAñadirPersonaNombre)
+                    .addComponent(jSeparator5, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtAdminCrearPersonaDni)
+                    .addComponent(jSeparator4, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jSeparator9)
+                    .addComponent(jPasswordField1, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         panelAdminAñadirUsuarioLayout.setVerticalGroup(
             panelAdminAñadirUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelAdminAñadirUsuarioLayout.createSequentialGroup()
                 .addGap(26, 26, 26)
-                .addGroup(panelAdminAñadirUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtAdminCrearPersonaDni, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel8))
+                .addComponent(txtAdminCrearPersonaDni, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(panelAdminAñadirUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel9)
-                    .addComponent(txtAdminAñadirPersonaNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(txtAdminAñadirPersonaNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(11, 11, 11)
-                .addGroup(panelAdminAñadirUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel14)
-                    .addComponent(txtAdminAñadirPersonaDire, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(txtAdminAñadirPersonaDire, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(panelAdminAñadirUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtAdminAñadirPersonaTlf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel15))
+                .addComponent(txtAdminAñadirPersonaTlf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator7, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(panelAdminAñadirUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtAdminAñadirPersonaEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel16))
+                .addComponent(txtAdminAñadirPersonaEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator8, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(14, 14, 14)
@@ -649,9 +563,7 @@ public class PanelAdministrador extends javax.swing.JFrame {
                     .addComponent(jLabel1)
                     .addComponent(comboAdminAñadirPersonaEspe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(30, 30, 30)
-                .addGroup(panelAdminAñadirUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel17)
-                    .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator9, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(34, 34, 34)
@@ -742,12 +654,12 @@ public class PanelAdministrador extends javax.swing.JFrame {
             .addGroup(panelAdminListarVeterinariosLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(panelAdminListarVeterinariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(scrollAdminListarClientes1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelAdminListarVeterinariosLayout.createSequentialGroup()
+                    .addComponent(scrollAdminListarClientes1)
+                    .addGroup(panelAdminListarVeterinariosLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(btnAdminListarVeterinariosMod, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnAdminListarVeterinariosBorrar, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnAdminListarVeterinariosMod, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(29, 29, 29)
+                        .addComponent(btnAdminListarVeterinariosBorrar, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         panelAdminListarVeterinariosLayout.setVerticalGroup(
@@ -798,7 +710,7 @@ public class PanelAdministrador extends javax.swing.JFrame {
 
         jLabel21.setText("Fecha de nacimiento");
 
-        spinnerAdminAñadirAnimalPeso.setModel(new javax.swing.SpinnerNumberModel(Float.valueOf(1.0f), Float.valueOf(1.0f), null, Float.valueOf(1.0f)));
+        spinnerAdminAñadirAnimalPeso.setModel(new javax.swing.SpinnerNumberModel(1.0f, 1.0f, null, 1.0f));
 
         calendarAdminAñadirAnimalNacimiento.setBackground(panelAdminInicio.getBackground());
 
@@ -835,7 +747,7 @@ public class PanelAdministrador extends javax.swing.JFrame {
                         .addGroup(panelAdminAñadirAnimalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(spinnerAdminAñadirAnimalPeso)
                             .addComponent(calendarAdminAñadirAnimalNacimiento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addGap(0, 632, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         panelAdminAñadirAnimalLayout.setVerticalGroup(
             panelAdminAñadirAnimalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -872,7 +784,7 @@ public class PanelAdministrador extends javax.swing.JFrame {
                 .addGroup(panelAdminAñadirAnimalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAdminDarCitaAceptar2)
                     .addComponent(btnAdminDarCitaCancelar2))
-                .addContainerGap(89, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         panelAdmin.add(panelAdminAñadirAnimal, "card5");
@@ -1070,6 +982,10 @@ public class PanelAdministrador extends javax.swing.JFrame {
         panelAdmin.revalidate();
     }//GEN-LAST:event_btnAdminAñadirAnimalActionPerformed
 
+    private void btnAdminVerCitasModificarCitaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdminVerCitasModificarCitaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAdminVerCitasModificarCitaActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu btnAdminAnimales;
@@ -1110,20 +1026,11 @@ public class PanelAdministrador extends javax.swing.JFrame {
     private com.toedter.calendar.JDateChooser jCalendarAdminDarCita;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator10;
@@ -1154,8 +1061,6 @@ public class PanelAdministrador extends javax.swing.JFrame {
     private javax.swing.JPanel panelAdminVerCitas;
     private javax.swing.JRadioButton radioAdminAñadirUsuPriviNo;
     private javax.swing.JRadioButton radioAdminAñadirUsuPriviSi;
-    private javax.swing.JRadioButton radioAdminDarCitaUrgNo;
-    private javax.swing.JRadioButton radioAdminDarCitaUrgSi;
     private javax.swing.JScrollPane scrollAdminHistorialMed;
     private javax.swing.JScrollPane scrollAdminHorasDisponibles;
     private javax.swing.JScrollPane scrollAdminListarAnimales;
