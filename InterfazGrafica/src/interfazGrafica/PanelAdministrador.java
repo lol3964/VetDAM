@@ -122,6 +122,23 @@ public class PanelAdministrador extends javax.swing.JFrame {
         btnAdminListarVeterinariosBorrar = new javax.swing.JButton();
         scrollAdminListarClientes1 = new javax.swing.JScrollPane();
         tableAdminListarVeterinarios = new javax.swing.JTable();
+        panelAdminAñadirAnimal = new javax.swing.JPanel();
+        txtAdminAñadirAnimalId = new javax.swing.JTextField();
+        txtAdminAñadirAnimalNombre = new javax.swing.JTextField();
+        btnAdminDarCitaAceptar2 = new javax.swing.JButton();
+        btnAdminDarCitaCancelar2 = new javax.swing.JButton();
+        jSeparator10 = new javax.swing.JSeparator();
+        jSeparator11 = new javax.swing.JSeparator();
+        txtAdminAñadirAnimalRaza = new javax.swing.JTextField();
+        jSeparator12 = new javax.swing.JSeparator();
+        txtAdminAñadirAnimalEspecie = new javax.swing.JTextField();
+        jSeparator13 = new javax.swing.JSeparator();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jSeparator15 = new javax.swing.JSeparator();
+        spinnerAdminAñadirAnimalPeso = new javax.swing.JSpinner();
+        calendarAdminAñadirAnimalNacimiento = new com.toedter.calendar.JDateChooser();
+        txtAdminAñadirAnimalEspecie1 = new javax.swing.JTextField();
         menuAdmin = new javax.swing.JMenuBar();
         btnAdminCitas = new javax.swing.JMenu();
         btnDarCita = new javax.swing.JMenuItem();
@@ -592,7 +609,7 @@ public class PanelAdministrador extends javax.swing.JFrame {
                             .addGroup(panelAdminAñadirUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jSeparator5)
                                 .addComponent(txtAdminAñadirPersonaNombre)))))
-                .addGap(0, 672, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         panelAdminAñadirUsuarioLayout.setVerticalGroup(
             panelAdminAñadirUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -642,7 +659,7 @@ public class PanelAdministrador extends javax.swing.JFrame {
                     .addComponent(jLabel12)
                     .addComponent(radioAdminAñadirUsuPriviSi)
                     .addComponent(radioAdminAñadirUsuPriviNo))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(panelAdminAñadirUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAdminDarCitaCancelar1)
                     .addComponent(btnAdminDarCitaAceptar1))
@@ -677,7 +694,7 @@ public class PanelAdministrador extends javax.swing.JFrame {
             .addGroup(panelAdminListarClientesLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(panelAdminListarClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(scrollAdminListarClientes, javax.swing.GroupLayout.DEFAULT_SIZE, 970, Short.MAX_VALUE)
+                    .addComponent(scrollAdminListarClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelAdminListarClientesLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(btnAdminListarClientesMod, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -690,7 +707,7 @@ public class PanelAdministrador extends javax.swing.JFrame {
             .addGroup(panelAdminListarClientesLayout.createSequentialGroup()
                 .addGap(19, 19, 19)
                 .addComponent(scrollAdminListarClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 117, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(panelAdminListarClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAdminListarClientesMod, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnAdminListarClientesBorrar, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -725,7 +742,7 @@ public class PanelAdministrador extends javax.swing.JFrame {
             .addGroup(panelAdminListarVeterinariosLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(panelAdminListarVeterinariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(scrollAdminListarClientes1, javax.swing.GroupLayout.DEFAULT_SIZE, 970, Short.MAX_VALUE)
+                    .addComponent(scrollAdminListarClientes1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelAdminListarVeterinariosLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(btnAdminListarVeterinariosMod, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -738,7 +755,7 @@ public class PanelAdministrador extends javax.swing.JFrame {
             .addGroup(panelAdminListarVeterinariosLayout.createSequentialGroup()
                 .addGap(19, 19, 19)
                 .addComponent(scrollAdminListarClientes1, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 117, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(panelAdminListarVeterinariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAdminListarVeterinariosMod, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnAdminListarVeterinariosBorrar, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -746,6 +763,119 @@ public class PanelAdministrador extends javax.swing.JFrame {
         );
 
         panelAdmin.add(panelAdminListarVeterinarios, "card4");
+
+        panelAdminAñadirAnimal.setBackground(panelAdmin.getBackground());
+
+        txtAdminAñadirAnimalId.setEditable(false);
+        txtAdminAñadirAnimalId.setBackground(panelAdminInicio.getBackground());
+        txtAdminAñadirAnimalId.setText("ID");
+        txtAdminAñadirAnimalId.setBorder(null);
+        txtAdminAñadirAnimalId.setDisabledTextColor(panelAdminInicio.getBackground());
+        txtAdminAñadirAnimalId.setFocusable(false);
+        txtAdminAñadirAnimalId.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtAdminAñadirAnimalIdActionPerformed(evt);
+            }
+        });
+
+        txtAdminAñadirAnimalNombre.setBackground(panelAdminInicio.getBackground());
+        txtAdminAñadirAnimalNombre.setText("Nombre");
+        txtAdminAñadirAnimalNombre.setBorder(null);
+
+        btnAdminDarCitaAceptar2.setText("Aceptar");
+
+        btnAdminDarCitaCancelar2.setText("Cancelar");
+
+        txtAdminAñadirAnimalRaza.setBackground(panelAdminInicio.getBackground());
+        txtAdminAñadirAnimalRaza.setText("Raza");
+        txtAdminAñadirAnimalRaza.setBorder(null);
+
+        txtAdminAñadirAnimalEspecie.setBackground(panelAdminInicio.getBackground());
+        txtAdminAñadirAnimalEspecie.setText("Especie");
+        txtAdminAñadirAnimalEspecie.setBorder(null);
+
+        jLabel20.setText("Peso");
+
+        jLabel21.setText("Fecha de nacimiento");
+
+        spinnerAdminAñadirAnimalPeso.setModel(new javax.swing.SpinnerNumberModel(Float.valueOf(1.0f), Float.valueOf(1.0f), null, Float.valueOf(1.0f)));
+
+        calendarAdminAñadirAnimalNacimiento.setBackground(panelAdminInicio.getBackground());
+
+        txtAdminAñadirAnimalEspecie1.setBackground(panelAdminInicio.getBackground());
+        txtAdminAñadirAnimalEspecie1.setText("Dueño");
+        txtAdminAñadirAnimalEspecie1.setBorder(null);
+
+        javax.swing.GroupLayout panelAdminAñadirAnimalLayout = new javax.swing.GroupLayout(panelAdminAñadirAnimal);
+        panelAdminAñadirAnimal.setLayout(panelAdminAñadirAnimalLayout);
+        panelAdminAñadirAnimalLayout.setHorizontalGroup(
+            panelAdminAñadirAnimalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelAdminAñadirAnimalLayout.createSequentialGroup()
+                .addGap(41, 41, 41)
+                .addGroup(panelAdminAñadirAnimalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jSeparator12, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelAdminAñadirAnimalLayout.createSequentialGroup()
+                        .addComponent(btnAdminDarCitaAceptar2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 117, Short.MAX_VALUE)
+                        .addComponent(btnAdminDarCitaCancelar2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jSeparator13, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jSeparator10)
+                    .addComponent(txtAdminAñadirAnimalId)
+                    .addComponent(jSeparator11)
+                    .addComponent(txtAdminAñadirAnimalNombre)
+                    .addComponent(txtAdminAñadirAnimalRaza)
+                    .addComponent(txtAdminAñadirAnimalEspecie)
+                    .addComponent(jSeparator15)
+                    .addComponent(txtAdminAñadirAnimalEspecie1, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelAdminAñadirAnimalLayout.createSequentialGroup()
+                        .addGroup(panelAdminAñadirAnimalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel21)
+                            .addComponent(jLabel20))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(panelAdminAñadirAnimalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(spinnerAdminAñadirAnimalPeso)
+                            .addComponent(calendarAdminAñadirAnimalNacimiento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addGap(0, 632, Short.MAX_VALUE))
+        );
+        panelAdminAñadirAnimalLayout.setVerticalGroup(
+            panelAdminAñadirAnimalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelAdminAñadirAnimalLayout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addComponent(txtAdminAñadirAnimalId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator10, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(txtAdminAñadirAnimalNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator11, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(11, 11, 11)
+                .addComponent(txtAdminAñadirAnimalRaza, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator12, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(txtAdminAñadirAnimalEspecie, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator13, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panelAdminAñadirAnimalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel20)
+                    .addComponent(spinnerAdminAñadirAnimalPeso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(panelAdminAñadirAnimalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel21)
+                    .addComponent(calendarAdminAñadirAnimalNacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(27, 27, 27)
+                .addComponent(txtAdminAñadirAnimalEspecie1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator15, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(46, 46, 46)
+                .addGroup(panelAdminAñadirAnimalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnAdminDarCitaAceptar2)
+                    .addComponent(btnAdminDarCitaCancelar2))
+                .addContainerGap(89, Short.MAX_VALUE))
+        );
+
+        panelAdmin.add(panelAdminAñadirAnimal, "card5");
 
         menuAdmin.setBackground(new java.awt.Color(250, 250, 250));
         menuAdmin.setToolTipText("");
@@ -776,6 +906,11 @@ public class PanelAdministrador extends javax.swing.JFrame {
         btnAdminAnimales.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
         btnAdminAñadirAnimal.setText("Añadir animal");
+        btnAdminAñadirAnimal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAdminAñadirAnimalActionPerformed(evt);
+            }
+        });
         btnAdminAnimales.add(btnAdminAñadirAnimal);
 
         btnAdminListarAnimales.setText("Listar animales");
@@ -924,6 +1059,17 @@ public class PanelAdministrador extends javax.swing.JFrame {
         panelAdmin.revalidate();
     }//GEN-LAST:event_btnAdminListarClientesActionPerformed
 
+    private void txtAdminAñadirAnimalIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAdminAñadirAnimalIdActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtAdminAñadirAnimalIdActionPerformed
+
+    private void btnAdminAñadirAnimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdminAñadirAnimalActionPerformed
+        panelAdmin.removeAll();
+        panelAdmin.add(panelAdminAñadirAnimal);
+        panelAdmin.repaint();
+        panelAdmin.revalidate();
+    }//GEN-LAST:event_btnAdminAñadirAnimalActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu btnAdminAnimales;
@@ -932,8 +1078,10 @@ public class PanelAdministrador extends javax.swing.JFrame {
     private javax.swing.JMenu btnAdminCitas;
     private javax.swing.JButton btnAdminDarCitaAceptar;
     private javax.swing.JButton btnAdminDarCitaAceptar1;
+    private javax.swing.JButton btnAdminDarCitaAceptar2;
     private javax.swing.JButton btnAdminDarCitaCancelar;
     private javax.swing.JButton btnAdminDarCitaCancelar1;
+    private javax.swing.JButton btnAdminDarCitaCancelar2;
     private javax.swing.JMenuItem btnAdminDesconectar;
     private javax.swing.JButton btnAdminListarAniBorrar;
     private javax.swing.JButton btnAdminListarAniHistorial;
@@ -954,6 +1102,7 @@ public class PanelAdministrador extends javax.swing.JFrame {
     private javax.swing.JButton btnAdminVerCitasModificarCita;
     private javax.swing.JMenuItem btnDarCita;
     private javax.swing.JMenuItem btnVerCitas;
+    private com.toedter.calendar.JDateChooser calendarAdminAñadirAnimalNacimiento;
     private javax.swing.JComboBox<String> comboAdminAñadirPersonaEspe;
     private javax.swing.JComboBox<String> comboAdminDarCitaAsunto;
     private javax.swing.ButtonGroup groupBtnAdminAñadirUsuario;
@@ -966,6 +1115,8 @@ public class PanelAdministrador extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -975,6 +1126,11 @@ public class PanelAdministrador extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator10;
+    private javax.swing.JSeparator jSeparator11;
+    private javax.swing.JSeparator jSeparator12;
+    private javax.swing.JSeparator jSeparator13;
+    private javax.swing.JSeparator jSeparator15;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
@@ -987,6 +1143,7 @@ public class PanelAdministrador extends javax.swing.JFrame {
     private javax.swing.JList<String> listAdminHorasDisponibles;
     private javax.swing.JMenuBar menuAdmin;
     private javax.swing.JPanel panelAdmin;
+    private javax.swing.JPanel panelAdminAñadirAnimal;
     private javax.swing.JPanel panelAdminAñadirUsuario;
     private javax.swing.JPanel panelAdminDarCita;
     private javax.swing.JPanel panelAdminHistorialMed;
@@ -1005,11 +1162,17 @@ public class PanelAdministrador extends javax.swing.JFrame {
     private javax.swing.JScrollPane scrollAdminListarClientes;
     private javax.swing.JScrollPane scrollAdminListarClientes1;
     private javax.swing.JScrollPane scrollAdminVerCitas;
+    private javax.swing.JSpinner spinnerAdminAñadirAnimalPeso;
     private javax.swing.JTable tablaAdminHistorialMed;
     private javax.swing.JTable tableAdminListarAnimales;
     private javax.swing.JTable tableAdminListarClientes;
     private javax.swing.JTable tableAdminListarVeterinarios;
     private javax.swing.JTable tableAdminVerCitas;
+    private javax.swing.JTextField txtAdminAñadirAnimalEspecie;
+    private javax.swing.JTextField txtAdminAñadirAnimalEspecie1;
+    private javax.swing.JTextField txtAdminAñadirAnimalId;
+    private javax.swing.JTextField txtAdminAñadirAnimalNombre;
+    private javax.swing.JTextField txtAdminAñadirAnimalRaza;
     private javax.swing.JTextField txtAdminAñadirPersonaDire;
     private javax.swing.JTextField txtAdminAñadirPersonaEmail;
     private javax.swing.JTextField txtAdminAñadirPersonaNombre;

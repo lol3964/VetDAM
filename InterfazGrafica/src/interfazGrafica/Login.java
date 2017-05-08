@@ -44,7 +44,7 @@ public class Login extends javax.swing.JFrame {
         jSeparator2 = new javax.swing.JSeparator();
         panelAcceder = new javax.swing.JPanel();
         txtAcceder = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        passAcceder = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAutoRequestFocus(false);
@@ -59,6 +59,16 @@ public class Login extends javax.swing.JFrame {
         txtUser.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         txtUser.setText("USUARIO");
         txtUser.setBorder(null);
+        txtUser.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txtUserMouseClicked(evt);
+            }
+        });
+        txtUser.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtUserActionPerformed(evt);
+            }
+        });
 
         jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
 
@@ -99,11 +109,20 @@ public class Login extends javax.swing.JFrame {
                 .addContainerGap(52, Short.MAX_VALUE))
         );
 
-        jPasswordField1.setEditable(false);
-        jPasswordField1.setBackground(txtUser.getBackground());
-        jPasswordField1.setText("PASSWORD");
-        jPasswordField1.setToolTipText("");
-        jPasswordField1.setBorder(null);
+        passAcceder.setBackground(txtUser.getBackground());
+        passAcceder.setText("PASSWORD");
+        passAcceder.setToolTipText("");
+        passAcceder.setBorder(null);
+        passAcceder.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                passAccederMouseClicked(evt);
+            }
+        });
+        passAcceder.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                passAccederActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -117,7 +136,7 @@ public class Login extends javax.swing.JFrame {
                     .addComponent(jSeparator2)
                     .addComponent(panelAcceder, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 227, Short.MAX_VALUE)
-                    .addComponent(jPasswordField1))
+                    .addComponent(passAcceder))
                 .addContainerGap(96, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -130,7 +149,7 @@ public class Login extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(25, 25, 25)
-                .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(passAcceder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(54, 54, 54)
@@ -167,6 +186,22 @@ public class Login extends javax.swing.JFrame {
         panelAcceder.setBackground(new Color(60, 179, 113));
         txtAcceder.setBackground(new Color(60, 179, 113));
     }//GEN-LAST:event_panelAccederMouseExited
+
+    private void txtUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUserActionPerformed
+        
+    }//GEN-LAST:event_txtUserActionPerformed
+
+    private void passAccederActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passAccederActionPerformed
+        passAcceder.setText("");
+    }//GEN-LAST:event_passAccederActionPerformed
+
+    private void txtUserMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtUserMouseClicked
+        txtUser.setText("");
+    }//GEN-LAST:event_txtUserMouseClicked
+
+    private void passAccederMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_passAccederMouseClicked
+        passAcceder.setText("");
+    }//GEN-LAST:event_passAccederMouseClicked
 
     /**
      * @param args the command line arguments
@@ -207,10 +242,10 @@ public class Login extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JPanel panelAcceder;
+    private javax.swing.JPasswordField passAcceder;
     private javax.swing.JLabel txtAcceder;
     private javax.swing.JTextField txtUser;
     // End of variables declaration//GEN-END:variables
