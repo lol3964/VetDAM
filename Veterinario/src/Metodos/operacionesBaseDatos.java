@@ -30,7 +30,7 @@ public class operacionesBaseDatos {
     }
 //INICIO METODOS ISMAEL
 
-    public static void añadirAnimal(int id, String nombre, String especie, String raza, double peso, String fecha_nacimiento, String dueño) throws SQLException, ClassNotFoundException {
+    public static void addAnimal(int id, String nombre, String especie, String raza, double peso, String fecha_nacimiento, String dueño) throws SQLException, ClassNotFoundException {
         Connection c = Conexion.obtener();
         Statement sentencia = c.createStatement();
         String query = "INSERT INTO animal (idAnimal,nombre,especie,raza,peso,fecha_nacimiento,dueño) VALUES"
@@ -39,7 +39,7 @@ public class operacionesBaseDatos {
         Integer result = sentencia.executeUpdate(query);
     }
 
-    public static void añadirPersona(String dni, String nombre, String direccion, String telefono, String email, String especialidad, String contraseña, boolean admin) throws SQLException, ClassNotFoundException {
+    public static void addPersona(String dni, String nombre, String direccion, String telefono, String email, String especialidad, String contraseña, boolean admin) throws SQLException, ClassNotFoundException {
         Connection c = Conexion.obtener();
         Statement sentencia = c.createStatement();
         String query = "INSERT INTO persona (dni,nombre,direccion,telefono,email,especialidad,contraseña,admin) VALUES"
@@ -48,7 +48,7 @@ public class operacionesBaseDatos {
         Integer result = sentencia.executeUpdate(query);
     }
 
-    public static void añadirCita(int consulta, int idAnimal, String veterinario, String servicio, String fecha_cita, String hora_cita, boolean atendida) throws SQLException, ClassNotFoundException {
+    public static void addCita(int consulta, int idAnimal, String veterinario, String servicio, String fecha_cita, String hora_cita, boolean atendida) throws SQLException, ClassNotFoundException {
         Connection c = Conexion.obtener();
         Statement sentencia = c.createStatement();
         String query = "INSERT INTO citas (consulta,idAnimal,veterinario,servicio,fecha_cita,hora_cita,atendida) VALUES"
@@ -82,33 +82,34 @@ public class operacionesBaseDatos {
 
     }
 
-    public static void verHistorialTotal(JTable tabla) throws SQLException, ClassNotFoundException {
+    public static void verHistorial(int idAnimal, String fecha, String tema, JTable tabla) throws SQLException, ClassNotFoundException {
         Connection c = Conexion.obtener();
         Statement sentencia = c.createStatement();
         String titulos[] = {"Animal", "Veterinario", "Tema", "Fecha", "Descripcion"};
         DefaultTableModel dtm = new DefaultTableModel(null, titulos);
         String fila[] = new String[5];
-        String query = "SELECT idAnimal,veterinario,tema,fecha_anotacion,descripcion FROM anotacionesMedicas";
-        ResultSet r = sentencia.executeQuery(query);
-        while (r.next()) {
-            fila[0] = r.getString("idAnimal");
-            fila[1] = r.getString("veterinario");
-            fila[2] = r.getString("tema");
-            fila[3] = r.getString("fecha_anotacion");
-            fila[4] = r.getString("descripcion");
-            dtm.addRow(fila);
+        String query;
+
+        if (idAnimal != 0 && fecha.equalsIgnoreCase("") && tema.equalsIgnoreCase("")) {
+            query = query = "SELECT * FROM anotacionesMedicas WHERE idAnimal like '%" + "'" + idAnimal + "%'";
+        } else if (idAnimal == 0 && !fecha.equalsIgnoreCase("") && tema.equalsIgnoreCase("")) {
+            query = " SELECT * FROM anotacionesMedicas WHERE fecha_anotacion=" + "'" + fecha + "'";
+        } else if (idAnimal == 0 && fecha.equalsIgnoreCase("") && !tema.equalsIgnoreCase("")) {
+            query = " SELECT * FROM anotacionesMedicas WHERE tema like '%" + "'" + tema + "%'";
+
+        } else if (idAnimal != 0 && !fecha.equalsIgnoreCase("") && tema.equalsIgnoreCase("")) {
+            query = query = "SELECT * FROM anotacionesMedicas WHERE fecha_anotacion=" + "'" + fecha + "' AND idAnimal like '%" + "'" + idAnimal + "%'";;
+
+        } else if (idAnimal != 0 && fecha.equalsIgnoreCase("") && !tema.equalsIgnoreCase("")) {
+            query = query = "SELECT * FROM anotacionesMedicas WHERE tema like '%" + "'" + tema + "%' AND idAnimal like '%" + "'" + idAnimal + "%'";
+
+        } else if (idAnimal == 0 && !fecha.equalsIgnoreCase("") && !tema.equalsIgnoreCase("")) {
+            query = query = "SELECT * FROM anotacionesMedicas WHERE fecha_anotacion=" + "'" + fecha + "' AND tema like '%" + "'" + tema + "%'";;
+
+        } else {
+            query = "SELECT * FROM anotacionesMedicas";
         }
 
-        tabla.setModel(dtm);
-    }
-
-    public static void verHistorialAnimal(int idAnimal, JTable tabla) throws SQLException, ClassNotFoundException {
-        Connection c = Conexion.obtener();
-        Statement sentencia = c.createStatement();
-        String titulos[] = {"Animal", "Veterinario", "Tema", "Fecha", "Descripcion"};
-        DefaultTableModel dtm = new DefaultTableModel(null, titulos);
-        String fila[] = new String[5];
-        String query = "SELECT idAnimal,veterinario,tema,fecha_anotacion,descripcion FROM anotacionesMedicas WHERE idAnimal=" + "'" + idAnimal + "'";
         ResultSet r = sentencia.executeQuery(query);
         while (r.next()) {
             fila[0] = r.getString("idAnimal");
@@ -127,7 +128,7 @@ public class operacionesBaseDatos {
         String titulos[] = {"DNI", "Nombre", "Direccion", "Telefono", "Email"};
         DefaultTableModel dtm = new DefaultTableModel(null, titulos);
         String fila[] = new String[5];
-        String query="";
+        String query = "";
         if (!dni.equalsIgnoreCase("") && nombre.equalsIgnoreCase("") && telefono.equalsIgnoreCase("")) {
             query = "SELECT * FROM persona WHERE especialidad =" + "'" + null + "'" + " AND dni like '%" + dni + "%'";
 
@@ -233,10 +234,10 @@ public class operacionesBaseDatos {
         return contraseña;
     }
 
-    public static int accesoUsuario(String dni, String contraseña) throws SQLException, ClassNotFoundException {
+    public static boolean accesoUsuario(String dni, String contraseña) throws SQLException, ClassNotFoundException {
         Connection c = Conexion.obtener();
         Statement sentencia = c.createStatement();
-        String query = "SELECT contraseña FROM persona WHERE dni=" + "'" + dni + "'";
+        String query = "SELECT contraseña FROM persona WHERE dni=" + "'" + dni + "' AND especialidad<>'nulls'";
         ResultSet r = sentencia.executeQuery(query);
         String rs = "";
 
@@ -244,8 +245,28 @@ public class operacionesBaseDatos {
             rs = r.getString(1);
         }
         if (r.absolute(1) && contraseña.equalsIgnoreCase(rs)) {
+            return true;
+
+        } else {
+            return false;
+        }
+
+    }
+
+    public static int seleccionarTipo(String dni) throws SQLException, ClassNotFoundException {
+        Connection c = Conexion.obtener();
+        Statement sentencia = c.createStatement();
+        String query = "SELECT especialidad,admin FROM persona WHERE dni=" + "'" + dni + "' AND especialidad<>'nulls'";
+        ResultSet r = sentencia.executeQuery(query);
+        String rs = "";
+        String rs2 = "";
+        while (r.next()) {
+            rs = r.getString("especialidad");
+            rs2 = r.getString("admin");
+        }
+        if (!rs.equalsIgnoreCase("Secretaria") && rs2.equalsIgnoreCase("1")) {
             return 1;
-        } else if (r.absolute(1) && !contraseña.equalsIgnoreCase(rs)) {
+        } else if (rs.equalsIgnoreCase("Secretaria") && rs2.equalsIgnoreCase("1")) {
             return 2;
         } else {
             return 3;
@@ -359,6 +380,39 @@ public class operacionesBaseDatos {
         }
         tabla.setModel(dtm);
     }
+
+    public static boolean comprobarDNI(String dni) throws SQLException, ClassNotFoundException {
+        Connection c = Conexion.obtener();
+        Statement sentencia = c.createStatement();
+        String query;
+        String rs;
+        query = "SELECT * FROM persona WHERE  dni = '" + dni + "'";
+        ResultSet r = sentencia.executeQuery(query);
+
+        if (r.absolute(1)) {
+            return true;
+
+        } else {
+
+            return false;
+        }
+
+    }
+
+    public static void insertarVeterinarioDisponible(String tema, String fecha, String hora, JComboBox cb) throws SQLException, ClassNotFoundException {
+        Connection c = Conexion.obtener();
+        Statement sentencia = c.createStatement();
+        String query;
+        String rs;
+        int con = 0;
+        query = "SELECT nombre FROM persona WHERE  especialidad = '" + tema + "' AND dni NOT IN(SELECT veterinario FROM citas WHERE fecha_cita='" + fecha + "' AND hora_cita='" + hora + "')";
+        ResultSet r = sentencia.executeQuery(query);
+        while (r.next()) {
+            cb.insertItemAt(r.getString(1), con);
+            con++;
+        }
+
+    }
 	//FIN METODOS ISMAEL
 
 
@@ -432,35 +486,7 @@ public class operacionesBaseDatos {
         sentencia.executeUpdate(query);
     } 
     
-    //METODO BUSQUEDA DEL HISTORIAL
-    //HE REALIZADO TRES METODOS, UNO PARA TEMA, OTRO PARA FECHA Y UNO QUE ENGLOBA LOS DOS
     
-    //BUSCAR POR TEMA
-    public void buscarhistorial(String tema) throws SQLException, ClassNotFoundException{
-        Connection c = Conexion.obtener();
-        Statement sentencia = c.createStatement();
-        String query = " SELECT * FROM anotacionesMedicas WHERE tema=" + "'" + tema + "'";
-        System.out.println(query);
-        sentencia.executeQuery(query);
-    }
-    
-    //BUSCAR POR FECHA
-     public void buscarhistorialPorFecha(String fecha) throws SQLException, ClassNotFoundException{
-        Connection c = Conexion.obtener();
-        Statement sentencia = c.createStatement();
-        String query = " SELECT * FROM anotacionesMedicas WHERE fecha_anotacion=" + "'" + fecha + "'";
-        System.out.println(query);
-        sentencia.executeQuery(query);
-    }
-    
-    //AMBOS
-    public void buscarhistorial(String fecha, String tema) throws SQLException, ClassNotFoundException{
-        Connection c = Conexion.obtener();
-        Statement sentencia = c.createStatement();
-        String query = " SELECT * FROM anotacionesMedicas WHERE fecha_anotacion=" + "'" + fecha + "'" +" AND" + " tema=" +"'" + tema + "'";
-        System.out.println(query);
-        sentencia.executeQuery(query);
-    }
     
     
     
