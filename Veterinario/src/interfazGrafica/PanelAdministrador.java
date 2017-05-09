@@ -57,7 +57,6 @@ public class PanelAdministrador extends javax.swing.JFrame {
         panelAdminDarCita = new javax.swing.JPanel();
         scrollAdminHorasDisponibles = new javax.swing.JScrollPane();
         listAdminHorasDisponibles = new javax.swing.JList<String>();
-        txtAdminDarCitaVet = new javax.swing.JTextField();
         txtAdminDarCitaAnimal = new javax.swing.JTextField();
         comboAdminDarCitaAsunto = new javax.swing.JComboBox<String>();
         jLabel4 = new javax.swing.JLabel();
@@ -66,8 +65,9 @@ public class PanelAdministrador extends javax.swing.JFrame {
         btnAdminDarCitaAceptar = new javax.swing.JButton();
         btnAdminDarCitaCancelar = new javax.swing.JButton();
         jCalendarAdminDarCita = new com.toedter.calendar.JDateChooser();
-        jSeparator2 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
+        jLabel2 = new javax.swing.JLabel();
+        comoBoxVet = new javax.swing.JComboBox();
         panelAdminVerCitas = new javax.swing.JPanel();
         btnAdminVerCitasCancelarCita = new javax.swing.JButton();
         labelCitasTotales = new javax.swing.JLabel();
@@ -157,11 +157,11 @@ public class PanelAdministrador extends javax.swing.JFrame {
         btnDarCita = new javax.swing.JMenuItem();
         btnVerCitas = new javax.swing.JMenuItem();
         btnAdminAnimales = new javax.swing.JMenu();
-        btnAdminAñadirAnimal = new javax.swing.JMenuItem();
+        btnAdminAnadirAnimal = new javax.swing.JMenuItem();
         btnAdminListarAnimales = new javax.swing.JMenuItem();
         btnAdminUsuarios = new javax.swing.JMenu();
-        btnAdminAñadirCliente = new javax.swing.JMenuItem();
-        btnAdminAñadirVeterinario = new javax.swing.JMenuItem();
+        btnAdminAnadirCliente = new javax.swing.JMenuItem();
+        btnAdminAnadirVeterinario = new javax.swing.JMenuItem();
         btnAdminListarClientes = new javax.swing.JMenuItem();
         btnAdminListarVeterinarios = new javax.swing.JMenuItem();
         btnAdminOpciones = new javax.swing.JMenu();
@@ -195,25 +195,11 @@ public class PanelAdministrador extends javax.swing.JFrame {
 
         panelAdminDarCita.setBackground(panelAdmin.getBackground());
 
-        listAdminHorasDisponibles.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
-        });
         scrollAdminHorasDisponibles.setViewportView(listAdminHorasDisponibles);
-
-        txtAdminDarCitaVet.setEditable(false);
-        txtAdminDarCitaVet.setBackground(panelAdmin.getBackground());
-        txtAdminDarCitaVet.setText("Veterinario");
-        txtAdminDarCitaVet.setBorder(null);
-        txtAdminDarCitaVet.setDisabledTextColor(panelAdminInicio.getBackground());
-        txtAdminDarCitaVet.setFocusable(false);
 
         txtAdminDarCitaAnimal.setBackground(panelAdmin.getBackground());
         txtAdminDarCitaAnimal.setText("Animal");
         txtAdminDarCitaAnimal.setBorder(null);
-
-        comboAdminDarCitaAsunto.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jLabel4.setText("Asunto");
 
@@ -226,6 +212,8 @@ public class PanelAdministrador extends javax.swing.JFrame {
         btnAdminDarCitaCancelar.setText("Cancelar");
 
         jCalendarAdminDarCita.setBackground(panelAdminInicio.getBackground());
+
+        jLabel2.setText("Veterinario");
 
         javax.swing.GroupLayout panelAdminDarCitaLayout = new javax.swing.GroupLayout(panelAdminDarCita);
         panelAdminDarCita.setLayout(panelAdminDarCitaLayout);
@@ -245,14 +233,17 @@ public class PanelAdministrador extends javax.swing.JFrame {
                             .addGap(18, 18, 18)
                             .addComponent(comboAdminDarCitaAsunto, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGap(4, 4, 4)))
-                    .addGroup(panelAdminDarCitaLayout.createSequentialGroup()
-                        .addComponent(jLabel5)
-                        .addGap(27, 27, 27)
-                        .addComponent(jCalendarAdminDarCita, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtAdminDarCitaVet, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(panelAdminDarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelAdminDarCitaLayout.createSequentialGroup()
+                            .addComponent(jLabel2)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(comoBoxVet, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelAdminDarCitaLayout.createSequentialGroup()
+                            .addComponent(jLabel5)
+                            .addGap(27, 27, 27)
+                            .addComponent(jCalendarAdminDarCita, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 224, Short.MAX_VALUE)
                 .addComponent(scrollAdminHorasDisponibles, javax.swing.GroupLayout.PREFERRED_SIZE, 413, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(63, 63, 63))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelAdminDarCitaLayout.createSequentialGroup()
@@ -263,16 +254,12 @@ public class PanelAdministrador extends javax.swing.JFrame {
         panelAdminDarCitaLayout.setVerticalGroup(
             panelAdminDarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelAdminDarCitaLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(26, Short.MAX_VALUE)
                 .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panelAdminDarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(scrollAdminHorasDisponibles, javax.swing.GroupLayout.PREFERRED_SIZE, 425, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(panelAdminDarCitaLayout.createSequentialGroup()
-                        .addComponent(txtAdminDarCitaVet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(29, 29, 29)
                         .addComponent(txtAdminDarCitaAnimal, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -284,6 +271,10 @@ public class PanelAdministrador extends javax.swing.JFrame {
                         .addGroup(panelAdminDarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jCalendarAdminDarCita, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel5))
+                        .addGap(56, 56, 56)
+                        .addGroup(panelAdminDarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel2)
+                            .addComponent(comoBoxVet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(panelAdminDarCitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnAdminDarCitaCancelar)
@@ -724,11 +715,6 @@ public class PanelAdministrador extends javax.swing.JFrame {
         txtAdminAñadirAnimalId.setBorder(null);
         txtAdminAñadirAnimalId.setDisabledTextColor(panelAdminInicio.getBackground());
         txtAdminAñadirAnimalId.setFocusable(false);
-        txtAdminAñadirAnimalId.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtAdminAñadirAnimalIdActionPerformed(evt);
-            }
-        });
 
         txtAdminAñadirAnimalNombre.setBackground(panelAdminInicio.getBackground());
         txtAdminAñadirAnimalNombre.setText("Nombre");
@@ -978,13 +964,13 @@ public class PanelAdministrador extends javax.swing.JFrame {
         btnAdminAnimales.setText("Animales");
         btnAdminAnimales.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
-        btnAdminAñadirAnimal.setText("Añadir animal");
-        btnAdminAñadirAnimal.addActionListener(new java.awt.event.ActionListener() {
+        btnAdminAnadirAnimal.setText("Añadir animal");
+        btnAdminAnadirAnimal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAdminAñadirAnimalActionPerformed(evt);
+                btnAdminAnadirAnimalActionPerformed(evt);
             }
         });
-        btnAdminAnimales.add(btnAdminAñadirAnimal);
+        btnAdminAnimales.add(btnAdminAnadirAnimal);
 
         btnAdminListarAnimales.setText("Listar animales");
         btnAdminListarAnimales.addActionListener(new java.awt.event.ActionListener() {
@@ -999,21 +985,21 @@ public class PanelAdministrador extends javax.swing.JFrame {
         btnAdminUsuarios.setText("Usuarios");
         btnAdminUsuarios.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
-        btnAdminAñadirCliente.setText("Añadir cliente");
-        btnAdminAñadirCliente.addActionListener(new java.awt.event.ActionListener() {
+        btnAdminAnadirCliente.setText("Añadir cliente");
+        btnAdminAnadirCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAdminAñadirClienteActionPerformed(evt);
+                btnAdminAnadirClienteActionPerformed(evt);
             }
         });
-        btnAdminUsuarios.add(btnAdminAñadirCliente);
+        btnAdminUsuarios.add(btnAdminAnadirCliente);
 
-        btnAdminAñadirVeterinario.setText("Añadir veterinario");
-        btnAdminAñadirVeterinario.addActionListener(new java.awt.event.ActionListener() {
+        btnAdminAnadirVeterinario.setText("Añadir veterinario");
+        btnAdminAnadirVeterinario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAdminAñadirVeterinarioActionPerformed(evt);
+                btnAdminAnadirVeterinarioActionPerformed(evt);
             }
         });
-        btnAdminUsuarios.add(btnAdminAñadirVeterinario);
+        btnAdminUsuarios.add(btnAdminAnadirVeterinario);
 
         btnAdminListarClientes.setText("Listar clientes");
         btnAdminListarClientes.addActionListener(new java.awt.event.ActionListener() {
@@ -1136,7 +1122,7 @@ public class PanelAdministrador extends javax.swing.JFrame {
 
     private void btnAdminAnadirVeterinarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdminAnadirVeterinarioActionPerformed
         panelAdmin.removeAll();
-        panelAdmin.add(panelAdminAnadirVeterinario);
+        panelAdmin.add(panelAdminAñadirVeterinario);
         panelAdmin.repaint();
         panelAdmin.revalidate();
     }//GEN-LAST:event_btnAdminAnadirVeterinarioActionPerformed
@@ -1172,7 +1158,7 @@ public class PanelAdministrador extends javax.swing.JFrame {
 
     private void btnAdminAnadirAnimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdminAnadirAnimalActionPerformed
         panelAdmin.removeAll();
-        panelAdmin.add(panelAdminAnadirAnimal);
+        panelAdmin.add(panelAdminAñadirAnimal);
         panelAdmin.repaint();
         panelAdmin.revalidate();
     }//GEN-LAST:event_btnAdminAnadirAnimalActionPerformed
@@ -1187,7 +1173,7 @@ public class PanelAdministrador extends javax.swing.JFrame {
 
     private void btnAdminAnadirClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdminAnadirClienteActionPerformed
         panelAdmin.removeAll();
-        panelAdmin.add(panelAdminAnadirCliente);
+        panelAdmin.add(panelAdminAñadirCliente);
         panelAdmin.repaint();
         panelAdmin.revalidate();
     }//GEN-LAST:event_btnAdminAnadirClienteActionPerformed
@@ -1219,127 +1205,127 @@ public class PanelAdministrador extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem btnAdminAnadirAnimal;
+    private javax.swing.JMenuItem btnAdminAnadirCliente;
+    private javax.swing.JMenuItem btnAdminAnadirVeterinario;
     private javax.swing.JMenu btnAdminAnimales;
-    private javax.swing.JMenuItem btnAdminAñadirAnimal;
-    private javax.swing.JMenuItem btnAdminAñadirCliente;
-    private javax.swing.JButton btnAdminAñadirUsuarioAceptar;
-    private javax.swing.JButton btnAdminAñadirUsuarioCancelar;
-    private javax.swing.JButton btnAdminAñadirVetAceptar;
-    private javax.swing.JButton btnAdminAñadirVetCancelar;
-    private javax.swing.JMenuItem btnAdminAñadirVeterinario;
+    public javax.swing.JButton btnAdminAñadirUsuarioAceptar;
+    public javax.swing.JButton btnAdminAñadirUsuarioCancelar;
+    public javax.swing.JButton btnAdminAñadirVetAceptar;
+    public javax.swing.JButton btnAdminAñadirVetCancelar;
     private javax.swing.JMenu btnAdminCitas;
-    private javax.swing.JButton btnAdminDarCitaAceptar;
-    private javax.swing.JButton btnAdminDarCitaAceptar2;
-    private javax.swing.JButton btnAdminDarCitaCancelar;
-    private javax.swing.JButton btnAdminDarCitaCancelar2;
+    public javax.swing.JButton btnAdminDarCitaAceptar;
+    public javax.swing.JButton btnAdminDarCitaAceptar2;
+    public javax.swing.JButton btnAdminDarCitaCancelar;
+    public javax.swing.JButton btnAdminDarCitaCancelar2;
     private javax.swing.JMenuItem btnAdminDesconectar;
-    private javax.swing.JButton btnAdminListarAniBorrar;
-    private javax.swing.JButton btnAdminListarAniHistorial;
-    private javax.swing.JButton btnAdminListarAniMod;
+    public javax.swing.JButton btnAdminListarAniBorrar;
+    public javax.swing.JButton btnAdminListarAniHistorial;
+    public javax.swing.JButton btnAdminListarAniMod;
     private javax.swing.JMenuItem btnAdminListarAnimales;
     private javax.swing.JMenuItem btnAdminListarClientes;
-    private javax.swing.JButton btnAdminListarClientesBorrar;
-    private javax.swing.JButton btnAdminListarClientesMod;
+    public javax.swing.JButton btnAdminListarClientesBorrar;
+    public javax.swing.JButton btnAdminListarClientesMod;
     private javax.swing.JMenuItem btnAdminListarVeterinarios;
-    private javax.swing.JButton btnAdminListarVeterinariosBorrar;
-    private javax.swing.JButton btnAdminListarVeterinariosMod;
+    public javax.swing.JButton btnAdminListarVeterinariosBorrar;
+    public javax.swing.JButton btnAdminListarVeterinariosMod;
     private javax.swing.JMenu btnAdminOpciones;
     private javax.swing.JMenuItem btnAdminResContraseña;
     private javax.swing.JMenu btnAdminUsuarios;
-    private javax.swing.JButton btnAdminVerAnotacion;
-    private javax.swing.JButton btnAdminVerCitasAtenderCita;
-    private javax.swing.JButton btnAdminVerCitasCancelarCita;
-    private javax.swing.JButton btnAdminVerCitasModificarCita;
+    public javax.swing.JButton btnAdminVerAnotacion;
+    public javax.swing.JButton btnAdminVerCitasAtenderCita;
+    public javax.swing.JButton btnAdminVerCitasCancelarCita;
+    public javax.swing.JButton btnAdminVerCitasModificarCita;
     private javax.swing.JMenuItem btnDarCita;
     private javax.swing.JMenuItem btnElegirTemaAzul;
     private javax.swing.JMenuItem btnElegirTemaCustom;
     private javax.swing.JMenuItem btnElegirTemaSalmon;
     private javax.swing.JMenuItem btnElegirTemaVerde;
     private javax.swing.JMenuItem btnVerCitas;
-    private com.toedter.calendar.JDateChooser calendarAdminAñadirAnimalNacimiento;
-    private javax.swing.JComboBox<String> comboAdminAñadirVetEspe;
-    private javax.swing.JComboBox<String> comboAdminDarCitaAsunto;
+    public com.toedter.calendar.JDateChooser calendarAdminAñadirAnimalNacimiento;
+    public javax.swing.JComboBox<String> comboAdminAñadirVetEspe;
+    public javax.swing.JComboBox<String> comboAdminDarCitaAsunto;
+    public javax.swing.JComboBox comoBoxVet;
     private javax.swing.ButtonGroup groupBtnAdminAñadirUsuario;
     private javax.swing.ButtonGroup groupBtnAdminDarCita;
-    private com.toedter.calendar.JDateChooser jCalendarAdminDarCita;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JSeparator jSeparator10;
-    private javax.swing.JSeparator jSeparator11;
-    private javax.swing.JSeparator jSeparator12;
-    private javax.swing.JSeparator jSeparator13;
-    private javax.swing.JSeparator jSeparator14;
-    private javax.swing.JSeparator jSeparator15;
-    private javax.swing.JSeparator jSeparator16;
-    private javax.swing.JSeparator jSeparator17;
-    private javax.swing.JSeparator jSeparator18;
-    private javax.swing.JSeparator jSeparator19;
-    private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JSeparator jSeparator20;
-    private javax.swing.JSeparator jSeparator3;
-    private javax.swing.JSeparator jSeparator4;
-    private javax.swing.JSeparator jSeparator5;
-    private javax.swing.JSeparator jSeparator6;
-    private javax.swing.JSeparator jSeparator7;
-    private javax.swing.JSeparator jSeparator8;
-    private javax.swing.JSeparator jSeparator9;
-    private javax.swing.JLabel labelCitasTotales;
-    private javax.swing.JList<String> listAdminHorasDisponibles;
+    public com.toedter.calendar.JDateChooser jCalendarAdminDarCita;
+    public javax.swing.JLabel jLabel1;
+    public javax.swing.JLabel jLabel12;
+    public javax.swing.JLabel jLabel13;
+    public javax.swing.JLabel jLabel2;
+    public javax.swing.JLabel jLabel20;
+    public javax.swing.JLabel jLabel21;
+    public javax.swing.JLabel jLabel4;
+    public javax.swing.JLabel jLabel5;
+    public javax.swing.JLabel jLabel7;
+    public javax.swing.JSeparator jSeparator1;
+    public javax.swing.JSeparator jSeparator10;
+    public javax.swing.JSeparator jSeparator11;
+    public javax.swing.JSeparator jSeparator12;
+    public javax.swing.JSeparator jSeparator13;
+    public javax.swing.JSeparator jSeparator14;
+    public javax.swing.JSeparator jSeparator15;
+    public javax.swing.JSeparator jSeparator16;
+    public javax.swing.JSeparator jSeparator17;
+    public javax.swing.JSeparator jSeparator18;
+    public javax.swing.JSeparator jSeparator19;
+    public javax.swing.JSeparator jSeparator20;
+    public javax.swing.JSeparator jSeparator3;
+    public javax.swing.JSeparator jSeparator4;
+    public javax.swing.JSeparator jSeparator5;
+    public javax.swing.JSeparator jSeparator6;
+    public javax.swing.JSeparator jSeparator7;
+    public javax.swing.JSeparator jSeparator8;
+    public javax.swing.JSeparator jSeparator9;
+    public javax.swing.JLabel labelCitasTotales;
+    public javax.swing.JList<String> listAdminHorasDisponibles;
     private javax.swing.JMenuBar menuAdmin;
     private javax.swing.JMenu menuElegirTema;
     private javax.swing.JPanel panelAdmin;
-    private javax.swing.JPanel panelAdminAñadirAnimal;
-    private javax.swing.JPanel panelAdminAñadirCliente;
-    private javax.swing.JPanel panelAdminAñadirVeterinario;
-    private javax.swing.JPanel panelAdminDarCita;
-    private javax.swing.JPanel panelAdminHistorialMed;
-    private javax.swing.JPanel panelAdminInicio;
-    private javax.swing.JPanel panelAdminListarAnimales;
-    private javax.swing.JPanel panelAdminListarClientes;
-    private javax.swing.JPanel panelAdminListarVeterinarios;
-    private javax.swing.JPanel panelAdminVerCitas;
-    private javax.swing.JPasswordField passAdminAñadirCliente;
-    private javax.swing.JPasswordField passAdminAñadirVet;
-    private javax.swing.JRadioButton radioAdminAñadirClientePriviNo;
-    private javax.swing.JRadioButton radioAdminAñadirClientePriviSi;
-    private javax.swing.JRadioButton radioAdminAñadirVetPriviNo;
-    private javax.swing.JRadioButton radioAdminAñadirVetPriviSi;
-    private javax.swing.JScrollPane scrollAdminHistorialMed;
-    private javax.swing.JScrollPane scrollAdminHorasDisponibles;
-    private javax.swing.JScrollPane scrollAdminListarAnimales;
-    private javax.swing.JScrollPane scrollAdminListarClientes;
-    private javax.swing.JScrollPane scrollAdminListarClientes1;
-    private javax.swing.JScrollPane scrollAdminVerCitas;
-    private javax.swing.JSpinner spinnerAdminAñadirAnimalPeso;
-    private javax.swing.JTable tablaAdminHistorialMed;
-    private javax.swing.JTable tableAdminListarAnimales;
-    private javax.swing.JTable tableAdminListarClientes;
-    private javax.swing.JTable tableAdminListarVeterinarios;
-    private javax.swing.JTable tableAdminVerCitas;
-    private javax.swing.JTextField txtAdminAñadirAnimalEspecie;
-    private javax.swing.JTextField txtAdminAñadirAnimalEspecie1;
-    private javax.swing.JTextField txtAdminAñadirAnimalId;
-    private javax.swing.JTextField txtAdminAñadirAnimalNombre;
-    private javax.swing.JTextField txtAdminAñadirAnimalRaza;
-    private javax.swing.JTextField txtAdminAñadirClienteDire;
-    private javax.swing.JTextField txtAdminAñadirClienteDni;
-    private javax.swing.JTextField txtAdminAñadirClienteEmail;
-    private javax.swing.JTextField txtAdminAñadirClienteNombre;
-    private javax.swing.JTextField txtAdminAñadirClienteTlf;
-    private javax.swing.JTextField txtAdminAñadirVetDire;
-    private javax.swing.JTextField txtAdminAñadirVetDni;
-    private javax.swing.JTextField txtAdminAñadirVetEmail;
-    private javax.swing.JTextField txtAdminAñadirVetNombre;
-    private javax.swing.JTextField txtAdminAñadirVetTlf;
-    private javax.swing.JTextField txtAdminDarCitaAnimal;
-    private javax.swing.JTextField txtAdminDarCitaVet;
-    private javax.swing.JTextField txtAdminVerCitasTotales;
+    public javax.swing.JPanel panelAdminAñadirAnimal;
+    public javax.swing.JPanel panelAdminAñadirCliente;
+    public javax.swing.JPanel panelAdminAñadirVeterinario;
+    public javax.swing.JPanel panelAdminDarCita;
+    public javax.swing.JPanel panelAdminHistorialMed;
+    public javax.swing.JPanel panelAdminInicio;
+    public javax.swing.JPanel panelAdminListarAnimales;
+    public javax.swing.JPanel panelAdminListarClientes;
+    public javax.swing.JPanel panelAdminListarVeterinarios;
+    public javax.swing.JPanel panelAdminVerCitas;
+    public javax.swing.JPasswordField passAdminAñadirCliente;
+    public javax.swing.JPasswordField passAdminAñadirVet;
+    public javax.swing.JRadioButton radioAdminAñadirClientePriviNo;
+    public javax.swing.JRadioButton radioAdminAñadirClientePriviSi;
+    public javax.swing.JRadioButton radioAdminAñadirVetPriviNo;
+    public javax.swing.JRadioButton radioAdminAñadirVetPriviSi;
+    public javax.swing.JScrollPane scrollAdminHistorialMed;
+    public javax.swing.JScrollPane scrollAdminHorasDisponibles;
+    public javax.swing.JScrollPane scrollAdminListarAnimales;
+    public javax.swing.JScrollPane scrollAdminListarClientes;
+    public javax.swing.JScrollPane scrollAdminListarClientes1;
+    public javax.swing.JScrollPane scrollAdminVerCitas;
+    public javax.swing.JSpinner spinnerAdminAñadirAnimalPeso;
+    public javax.swing.JTable tablaAdminHistorialMed;
+    public javax.swing.JTable tableAdminListarAnimales;
+    public javax.swing.JTable tableAdminListarClientes;
+    public javax.swing.JTable tableAdminListarVeterinarios;
+    public javax.swing.JTable tableAdminVerCitas;
+    public javax.swing.JTextField txtAdminAñadirAnimalEspecie;
+    public javax.swing.JTextField txtAdminAñadirAnimalEspecie1;
+    public javax.swing.JTextField txtAdminAñadirAnimalId;
+    public javax.swing.JTextField txtAdminAñadirAnimalNombre;
+    public javax.swing.JTextField txtAdminAñadirAnimalRaza;
+    public javax.swing.JTextField txtAdminAñadirClienteDire;
+    public javax.swing.JTextField txtAdminAñadirClienteDni;
+    public javax.swing.JTextField txtAdminAñadirClienteEmail;
+    public javax.swing.JTextField txtAdminAñadirClienteNombre;
+    public javax.swing.JTextField txtAdminAñadirClienteTlf;
+    public javax.swing.JTextField txtAdminAñadirVetDire;
+    public javax.swing.JTextField txtAdminAñadirVetDni;
+    public javax.swing.JTextField txtAdminAñadirVetEmail;
+    public javax.swing.JTextField txtAdminAñadirVetNombre;
+    public javax.swing.JTextField txtAdminAñadirVetTlf;
+    public javax.swing.JTextField txtAdminDarCitaAnimal;
+    public javax.swing.JTextField txtAdminVerCitasTotales;
     // End of variables declaration//GEN-END:variables
 }
