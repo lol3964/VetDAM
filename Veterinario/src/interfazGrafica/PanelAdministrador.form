@@ -748,35 +748,35 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="txtAdminAñadirPersonaTlf" alignment="1" max="32767" attributes="0"/>
-                          <Component id="txtAdminAñadirPersonaEmail" alignment="1" max="32767" attributes="0"/>
+                          <Component id="txtAdminAñadirVetTlf" alignment="1" max="32767" attributes="0"/>
+                          <Component id="txtAdminAñadirVetEmail" alignment="1" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                              <Component id="radioAdminAñadirUsuPriviSi" min="-2" max="-2" attributes="0"/>
+                              <Component id="radioAdminAñadirVetPriviSi" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
-                              <Component id="radioAdminAñadirUsuPriviNo" min="-2" max="-2" attributes="0"/>
+                              <Component id="radioAdminAñadirVetPriviNo" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="comboAdminAñadirPersonaEspe" min="-2" pref="209" max="-2" attributes="0"/>
+                              <Component id="comboAdminAñadirVetEspe" min="-2" pref="209" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
-                              <Component id="btnAdminDarCitaAceptar1" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="btnAdminAñadirVetAceptar" min="-2" pref="100" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
-                              <Component id="btnAdminDarCitaCancelar1" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="btnAdminAñadirVetCancelar" min="-2" pref="100" max="-2" attributes="0"/>
                           </Group>
                           <Component id="jSeparator8" alignment="1" max="32767" attributes="0"/>
                           <Component id="jSeparator7" alignment="1" max="32767" attributes="0"/>
                           <Component id="jSeparator6" alignment="1" max="32767" attributes="0"/>
-                          <Component id="txtAdminAñadirPersonaDire" alignment="1" max="32767" attributes="0"/>
-                          <Component id="txtAdminAñadirPersonaNombre" max="32767" attributes="0"/>
+                          <Component id="txtAdminAñadirVetDire" alignment="1" max="32767" attributes="0"/>
+                          <Component id="txtAdminAñadirVetNombre" max="32767" attributes="0"/>
                           <Component id="jSeparator5" alignment="1" max="32767" attributes="0"/>
-                          <Component id="txtAdminCrearPersonaDni" max="32767" attributes="0"/>
+                          <Component id="txtAdminAñadirVetDni" max="32767" attributes="0"/>
                           <Component id="jSeparator4" alignment="1" max="32767" attributes="0"/>
                           <Component id="jSeparator9" max="32767" attributes="0"/>
-                          <Component id="jPasswordField1" alignment="1" max="32767" attributes="0"/>
+                          <Component id="passAdminAñadirVet" alignment="1" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
@@ -786,44 +786,44 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                      <Component id="txtAdminCrearPersonaDni" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtAdminAñadirVetDni" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jSeparator4" min="-2" pref="10" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="txtAdminAñadirPersonaNombre" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtAdminAñadirVetNombre" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jSeparator5" min="-2" pref="10" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                      <Component id="txtAdminAñadirPersonaDire" min="-2" pref="14" max="-2" attributes="0"/>
+                      <Component id="txtAdminAñadirVetDire" min="-2" pref="14" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jSeparator6" min="-2" pref="10" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="txtAdminAñadirPersonaTlf" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtAdminAñadirVetTlf" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jSeparator7" min="-2" pref="10" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="txtAdminAñadirPersonaEmail" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtAdminAñadirVetEmail" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jSeparator8" min="-2" pref="10" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="comboAdminAñadirPersonaEspe" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="comboAdminAñadirVetEspe" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                      <Component id="jPasswordField1" min="-2" max="-2" attributes="0"/>
+                      <Component id="passAdminAñadirVet" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jSeparator9" min="-2" pref="10" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="radioAdminAñadirUsuPriviSi" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="radioAdminAñadirUsuPriviNo" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radioAdminAñadirVetPriviSi" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radioAdminAñadirVetPriviNo" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="btnAdminDarCitaCancelar1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnAdminDarCitaAceptar1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnAdminAñadirVetCancelar" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnAdminAñadirVetAceptar" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                   </Group>
@@ -831,7 +831,7 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JTextField" name="txtAdminCrearPersonaDni">
+            <Component class="javax.swing.JTextField" name="txtAdminA&#xf1;adirVetDni">
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
@@ -847,10 +847,10 @@
                 <Property name="focusable" type="boolean" value="false"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtAdminCrearPersonaDniActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtAdminA&#xf1;adirVetDniActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="txtAdminA&#xf1;adirPersonaNombre">
+            <Component class="javax.swing.JTextField" name="txtAdminA&#xf1;adirVetNombre">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection component="panelAdmin" name="background" type="property"/>
@@ -866,7 +866,7 @@
                 <Property name="text" type="java.lang.String" value="Privilegios de administrador"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="radioAdminA&#xf1;adirUsuPriviSi">
+            <Component class="javax.swing.JRadioButton" name="radioAdminA&#xf1;adirVetPriviSi">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection component="panelAdmin" name="background" type="property"/>
@@ -877,7 +877,7 @@
                 <Property name="text" type="java.lang.String" value="S&#xed;"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="radioAdminA&#xf1;adirUsuPriviNo">
+            <Component class="javax.swing.JRadioButton" name="radioAdminA&#xf1;adirVetPriviNo">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection component="panelAdmin" name="background" type="property"/>
@@ -888,12 +888,15 @@
                 <Property name="text" type="java.lang.String" value="No"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="btnAdminDarCitaAceptar1">
+            <Component class="javax.swing.JButton" name="btnAdminA&#xf1;adirVetAceptar">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Aceptar"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAdminA&#xf1;adirVetAceptarActionPerformed"/>
+              </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="btnAdminDarCitaCancelar1">
+            <Component class="javax.swing.JButton" name="btnAdminA&#xf1;adirVetCancelar">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Cancelar"/>
               </Properties>
@@ -902,7 +905,7 @@
             </Component>
             <Component class="javax.swing.JSeparator" name="jSeparator5">
             </Component>
-            <Component class="javax.swing.JTextField" name="txtAdminA&#xf1;adirPersonaDire">
+            <Component class="javax.swing.JTextField" name="txtAdminA&#xf1;adirVetDire">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection component="panelAdmin" name="background" type="property"/>
@@ -912,10 +915,13 @@
                   <Border info="null"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtAdminA&#xf1;adirVetDireActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JSeparator" name="jSeparator6">
             </Component>
-            <Component class="javax.swing.JTextField" name="txtAdminA&#xf1;adirPersonaTlf">
+            <Component class="javax.swing.JTextField" name="txtAdminA&#xf1;adirVetTlf">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection component="panelAdmin" name="background" type="property"/>
@@ -928,7 +934,7 @@
             </Component>
             <Component class="javax.swing.JSeparator" name="jSeparator7">
             </Component>
-            <Component class="javax.swing.JTextField" name="txtAdminA&#xf1;adirPersonaEmail">
+            <Component class="javax.swing.JTextField" name="txtAdminA&#xf1;adirVetEmail">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection component="panelAdmin" name="background" type="property"/>
@@ -946,7 +952,7 @@
                 <Property name="text" type="java.lang.String" value="Especialidad"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JComboBox" name="comboAdminA&#xf1;adirPersonaEspe">
+            <Component class="javax.swing.JComboBox" name="comboAdminA&#xf1;adirVetEspe">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="4">
@@ -963,7 +969,7 @@
             </Component>
             <Component class="javax.swing.JSeparator" name="jSeparator9">
             </Component>
-            <Component class="javax.swing.JPasswordField" name="jPasswordField1">
+            <Component class="javax.swing.JPasswordField" name="passAdminA&#xf1;adirVet">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection component="panelAdmin" name="background" type="property"/>
@@ -1355,32 +1361,32 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="txtAdminAñadirPersonaTlf1" alignment="1" max="32767" attributes="0"/>
-                          <Component id="txtAdminAñadirPersonaEmail1" alignment="1" max="32767" attributes="0"/>
+                          <Component id="txtAdminAñadirClienteTlf" alignment="1" max="32767" attributes="0"/>
+                          <Component id="txtAdminAñadirClienteEmail" alignment="1" max="32767" attributes="0"/>
                           <Group type="102" alignment="1" attributes="0">
-                              <Component id="btnAdminDarCitaAceptar3" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="btnAdminAñadirUsuarioAceptar" min="-2" pref="100" max="-2" attributes="0"/>
                               <EmptySpace pref="77" max="32767" attributes="0"/>
-                              <Component id="btnAdminDarCitaCancelar3" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="btnAdminAñadirUsuarioCancelar" min="-2" pref="100" max="-2" attributes="0"/>
                           </Group>
                           <Component id="jSeparator19" alignment="1" max="32767" attributes="0"/>
                           <Component id="jSeparator18" alignment="1" max="32767" attributes="0"/>
                           <Component id="jSeparator17" alignment="1" max="32767" attributes="0"/>
-                          <Component id="txtAdminAñadirPersonaDire1" alignment="1" max="32767" attributes="0"/>
-                          <Component id="txtAdminAñadirPersonaNombre1" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txtAdminAñadirClienteDire" alignment="1" max="32767" attributes="0"/>
+                          <Component id="txtAdminAñadirClienteNombre" alignment="0" max="32767" attributes="0"/>
                           <Component id="jSeparator16" alignment="1" max="32767" attributes="0"/>
-                          <Component id="txtAdminCrearPersonaDni1" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txtAdminAñadirClienteDni" alignment="0" max="32767" attributes="0"/>
                           <Component id="jSeparator14" alignment="1" max="32767" attributes="0"/>
                           <Component id="jSeparator20" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jPasswordField2" alignment="1" max="32767" attributes="0"/>
+                          <Component id="passAdminAñadirCliente" alignment="1" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                              <Component id="radioAdminAñadirUsuPriviSi1" min="-2" max="-2" attributes="0"/>
+                              <Component id="radioAdminAñadirClientePriviSi" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
-                              <Component id="radioAdminAñadirUsuPriviNo1" min="-2" max="-2" attributes="0"/>
+                              <Component id="radioAdminAñadirClientePriviNo" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="0" pref="672" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1388,39 +1394,39 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                      <Component id="txtAdminCrearPersonaDni1" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtAdminAñadirClienteDni" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jSeparator14" min="-2" pref="10" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="txtAdminAñadirPersonaNombre1" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtAdminAñadirClienteNombre" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jSeparator16" min="-2" pref="10" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                      <Component id="txtAdminAñadirPersonaDire1" min="-2" pref="14" max="-2" attributes="0"/>
+                      <Component id="txtAdminAñadirClienteDire" min="-2" pref="14" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jSeparator17" min="-2" pref="10" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="txtAdminAñadirPersonaTlf1" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtAdminAñadirClienteTlf" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jSeparator18" min="-2" pref="10" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="txtAdminAñadirPersonaEmail1" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtAdminAñadirClienteEmail" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jSeparator19" min="-2" pref="10" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
-                      <Component id="jPasswordField2" min="-2" max="-2" attributes="0"/>
+                      <Component id="passAdminAñadirCliente" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jSeparator20" min="-2" pref="10" max="-2" attributes="0"/>
-                      <EmptySpace pref="50" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel13" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="radioAdminAñadirUsuPriviSi1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="radioAdminAñadirUsuPriviNo1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radioAdminAñadirClientePriviSi" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radioAdminAñadirClientePriviNo" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="btnAdminDarCitaCancelar3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnAdminDarCitaAceptar3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnAdminAñadirUsuarioCancelar" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnAdminAñadirUsuarioAceptar" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                   </Group>
@@ -1428,7 +1434,7 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JTextField" name="txtAdminCrearPersonaDni1">
+            <Component class="javax.swing.JTextField" name="txtAdminA&#xf1;adirClienteDni">
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
@@ -1444,10 +1450,10 @@
                 <Property name="focusable" type="boolean" value="false"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtAdminCrearPersonaDni1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtAdminA&#xf1;adirClienteDniActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="txtAdminA&#xf1;adirPersonaNombre1">
+            <Component class="javax.swing.JTextField" name="txtAdminA&#xf1;adirClienteNombre">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection component="panelAdmin" name="background" type="property"/>
@@ -1463,7 +1469,7 @@
                 <Property name="text" type="java.lang.String" value="Privilegios de administrador"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="radioAdminA&#xf1;adirUsuPriviSi1">
+            <Component class="javax.swing.JRadioButton" name="radioAdminA&#xf1;adirClientePriviSi">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection component="panelAdmin" name="background" type="property"/>
@@ -1474,7 +1480,7 @@
                 <Property name="text" type="java.lang.String" value="S&#xed;"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="radioAdminA&#xf1;adirUsuPriviNo1">
+            <Component class="javax.swing.JRadioButton" name="radioAdminA&#xf1;adirClientePriviNo">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection component="panelAdmin" name="background" type="property"/>
@@ -1485,12 +1491,12 @@
                 <Property name="text" type="java.lang.String" value="No"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="btnAdminDarCitaAceptar3">
+            <Component class="javax.swing.JButton" name="btnAdminA&#xf1;adirUsuarioAceptar">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Aceptar"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="btnAdminDarCitaCancelar3">
+            <Component class="javax.swing.JButton" name="btnAdminA&#xf1;adirUsuarioCancelar">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Cancelar"/>
               </Properties>
@@ -1499,7 +1505,7 @@
             </Component>
             <Component class="javax.swing.JSeparator" name="jSeparator16">
             </Component>
-            <Component class="javax.swing.JTextField" name="txtAdminA&#xf1;adirPersonaDire1">
+            <Component class="javax.swing.JTextField" name="txtAdminA&#xf1;adirClienteDire">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection component="panelAdmin" name="background" type="property"/>
@@ -1512,7 +1518,7 @@
             </Component>
             <Component class="javax.swing.JSeparator" name="jSeparator17">
             </Component>
-            <Component class="javax.swing.JTextField" name="txtAdminA&#xf1;adirPersonaTlf1">
+            <Component class="javax.swing.JTextField" name="txtAdminA&#xf1;adirClienteTlf">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection component="panelAdmin" name="background" type="property"/>
@@ -1525,7 +1531,7 @@
             </Component>
             <Component class="javax.swing.JSeparator" name="jSeparator18">
             </Component>
-            <Component class="javax.swing.JTextField" name="txtAdminA&#xf1;adirPersonaEmail1">
+            <Component class="javax.swing.JTextField" name="txtAdminA&#xf1;adirClienteEmail">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection component="panelAdmin" name="background" type="property"/>
@@ -1540,7 +1546,7 @@
             </Component>
             <Component class="javax.swing.JSeparator" name="jSeparator20">
             </Component>
-            <Component class="javax.swing.JPasswordField" name="jPasswordField2">
+            <Component class="javax.swing.JPasswordField" name="passAdminA&#xf1;adirCliente">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection component="panelAdmin" name="background" type="property"/>

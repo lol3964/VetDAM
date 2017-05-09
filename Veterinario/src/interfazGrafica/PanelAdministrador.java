@@ -50,16 +50,16 @@ public class PanelAdministrador extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        groupBtnAdminAnadirUsuario = new javax.swing.ButtonGroup();
+        groupBtnAdminAñadirUsuario = new javax.swing.ButtonGroup();
         groupBtnAdminDarCita = new javax.swing.ButtonGroup();
         panelAdmin = new javax.swing.JPanel();
         panelAdminInicio = new javax.swing.JPanel();
         panelAdminDarCita = new javax.swing.JPanel();
         scrollAdminHorasDisponibles = new javax.swing.JScrollPane();
-        listAdminHorasDisponibles = new javax.swing.JList<>();
+        listAdminHorasDisponibles = new javax.swing.JList<String>();
         txtAdminDarCitaVet = new javax.swing.JTextField();
         txtAdminDarCitaAnimal = new javax.swing.JTextField();
-        comboAdminDarCitaAsunto = new javax.swing.JComboBox<>();
+        comboAdminDarCitaAsunto = new javax.swing.JComboBox<String>();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -87,26 +87,26 @@ public class PanelAdministrador extends javax.swing.JFrame {
         scrollAdminHistorialMed = new javax.swing.JScrollPane();
         tablaAdminHistorialMed = new javax.swing.JTable();
         btnAdminVerAnotacion = new javax.swing.JButton();
-        panelAdminAnadirVeterinario = new javax.swing.JPanel();
-        txtAdminCrearPersonaDni = new javax.swing.JTextField();
-        txtAdminAnadirPersonaNombre = new javax.swing.JTextField();
+        panelAdminAñadirVeterinario = new javax.swing.JPanel();
+        txtAdminAñadirVetDni = new javax.swing.JTextField();
+        txtAdminAñadirVetNombre = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
-        radioAdminAnadirUsuPriviSi = new javax.swing.JRadioButton();
-        radioAdminAnadirUsuPriviNo = new javax.swing.JRadioButton();
-        btnAdminDarCitaAceptar1 = new javax.swing.JButton();
-        btnAdminDarCitaCancelar1 = new javax.swing.JButton();
+        radioAdminAñadirVetPriviSi = new javax.swing.JRadioButton();
+        radioAdminAñadirVetPriviNo = new javax.swing.JRadioButton();
+        btnAdminAñadirVetAceptar = new javax.swing.JButton();
+        btnAdminAñadirVetCancelar = new javax.swing.JButton();
         jSeparator4 = new javax.swing.JSeparator();
         jSeparator5 = new javax.swing.JSeparator();
-        txtAdminAnadirPersonaDire = new javax.swing.JTextField();
+        txtAdminAñadirVetDire = new javax.swing.JTextField();
         jSeparator6 = new javax.swing.JSeparator();
-        txtAdminAnadirPersonaTlf = new javax.swing.JTextField();
+        txtAdminAñadirVetTlf = new javax.swing.JTextField();
         jSeparator7 = new javax.swing.JSeparator();
-        txtAdminAnadirPersonaEmail = new javax.swing.JTextField();
+        txtAdminAñadirVetEmail = new javax.swing.JTextField();
         jSeparator8 = new javax.swing.JSeparator();
         jLabel1 = new javax.swing.JLabel();
-        comboAdminAnadirPersonaEspe = new javax.swing.JComboBox<>();
+        comboAdminAñadirVetEspe = new javax.swing.JComboBox<String>();
         jSeparator9 = new javax.swing.JSeparator();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        passAdminAñadirVet = new javax.swing.JPasswordField();
         panelAdminListarClientes = new javax.swing.JPanel();
         btnAdminListarClientesMod = new javax.swing.JButton();
         btnAdminListarClientesBorrar = new javax.swing.JButton();
@@ -117,56 +117,56 @@ public class PanelAdministrador extends javax.swing.JFrame {
         btnAdminListarVeterinariosBorrar = new javax.swing.JButton();
         scrollAdminListarClientes1 = new javax.swing.JScrollPane();
         tableAdminListarVeterinarios = new javax.swing.JTable();
-        panelAdminAnadirAnimal = new javax.swing.JPanel();
-        txtAdminAnadirAnimalId = new javax.swing.JTextField();
-        txtAdminAnadirAnimalNombre = new javax.swing.JTextField();
+        panelAdminAñadirAnimal = new javax.swing.JPanel();
+        txtAdminAñadirAnimalId = new javax.swing.JTextField();
+        txtAdminAñadirAnimalNombre = new javax.swing.JTextField();
         btnAdminDarCitaAceptar2 = new javax.swing.JButton();
         btnAdminDarCitaCancelar2 = new javax.swing.JButton();
         jSeparator10 = new javax.swing.JSeparator();
         jSeparator11 = new javax.swing.JSeparator();
-        txtAdminAnadirAnimalRaza = new javax.swing.JTextField();
+        txtAdminAñadirAnimalRaza = new javax.swing.JTextField();
         jSeparator12 = new javax.swing.JSeparator();
-        txtAdminAnadirAnimalEspecie = new javax.swing.JTextField();
+        txtAdminAñadirAnimalEspecie = new javax.swing.JTextField();
         jSeparator13 = new javax.swing.JSeparator();
         jLabel20 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
         jSeparator15 = new javax.swing.JSeparator();
-        spinnerAdminAnadirAnimalPeso = new javax.swing.JSpinner();
-        calendarAdminAnadirAnimalNacimiento = new com.toedter.calendar.JDateChooser();
-        txtAdminAnadirAnimalEspecie1 = new javax.swing.JTextField();
-        panelAdminAnadirCliente = new javax.swing.JPanel();
-        txtAdminCrearPersonaDni1 = new javax.swing.JTextField();
-        txtAdminAnadirPersonaNombre1 = new javax.swing.JTextField();
+        spinnerAdminAñadirAnimalPeso = new javax.swing.JSpinner();
+        calendarAdminAñadirAnimalNacimiento = new com.toedter.calendar.JDateChooser();
+        txtAdminAñadirAnimalEspecie1 = new javax.swing.JTextField();
+        panelAdminAñadirCliente = new javax.swing.JPanel();
+        txtAdminAñadirClienteDni = new javax.swing.JTextField();
+        txtAdminAñadirClienteNombre = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
-        radioAdminAnadirUsuPriviSi1 = new javax.swing.JRadioButton();
-        radioAdminAnadirUsuPriviNo1 = new javax.swing.JRadioButton();
-        btnAdminDarCitaAceptar3 = new javax.swing.JButton();
-        btnAdminDarCitaCancelar3 = new javax.swing.JButton();
+        radioAdminAñadirClientePriviSi = new javax.swing.JRadioButton();
+        radioAdminAñadirClientePriviNo = new javax.swing.JRadioButton();
+        btnAdminAñadirUsuarioAceptar = new javax.swing.JButton();
+        btnAdminAñadirUsuarioCancelar = new javax.swing.JButton();
         jSeparator14 = new javax.swing.JSeparator();
         jSeparator16 = new javax.swing.JSeparator();
-        txtAdminAnadirPersonaDire1 = new javax.swing.JTextField();
+        txtAdminAñadirClienteDire = new javax.swing.JTextField();
         jSeparator17 = new javax.swing.JSeparator();
-        txtAdminAnadirPersonaTlf1 = new javax.swing.JTextField();
+        txtAdminAñadirClienteTlf = new javax.swing.JTextField();
         jSeparator18 = new javax.swing.JSeparator();
-        txtAdminAnadirPersonaEmail1 = new javax.swing.JTextField();
+        txtAdminAñadirClienteEmail = new javax.swing.JTextField();
         jSeparator19 = new javax.swing.JSeparator();
         jSeparator20 = new javax.swing.JSeparator();
-        jPasswordField2 = new javax.swing.JPasswordField();
+        passAdminAñadirCliente = new javax.swing.JPasswordField();
         menuAdmin = new javax.swing.JMenuBar();
         btnAdminCitas = new javax.swing.JMenu();
         btnDarCita = new javax.swing.JMenuItem();
         btnVerCitas = new javax.swing.JMenuItem();
         btnAdminAnimales = new javax.swing.JMenu();
-        btnAdminAnadirAnimal = new javax.swing.JMenuItem();
+        btnAdminAñadirAnimal = new javax.swing.JMenuItem();
         btnAdminListarAnimales = new javax.swing.JMenuItem();
         btnAdminUsuarios = new javax.swing.JMenu();
-        btnAdminAnadirCliente = new javax.swing.JMenuItem();
-        btnAdminAnadirVeterinario = new javax.swing.JMenuItem();
+        btnAdminAñadirCliente = new javax.swing.JMenuItem();
+        btnAdminAñadirVeterinario = new javax.swing.JMenuItem();
         btnAdminListarClientes = new javax.swing.JMenuItem();
         btnAdminListarVeterinarios = new javax.swing.JMenuItem();
         btnAdminOpciones = new javax.swing.JMenu();
         btnAdminDesconectar = new javax.swing.JMenuItem();
-        btnAdminResContrasena = new javax.swing.JMenuItem();
+        btnAdminResContraseña = new javax.swing.JMenuItem();
         menuElegirTema = new javax.swing.JMenu();
         btnElegirTemaSalmon = new javax.swing.JMenuItem();
         btnElegirTemaAzul = new javax.swing.JMenuItem();
@@ -195,10 +195,10 @@ public class PanelAdministrador extends javax.swing.JFrame {
 
         panelAdminDarCita.setBackground(panelAdmin.getBackground());
 
-        listAdminHorasDisponibles.setModel(new javax.swing.AbstractListModel<String>() {
+        listAdminHorasDisponibles.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
+            public Object getElementAt(int i) { return strings[i]; }
         });
         scrollAdminHorasDisponibles.setViewportView(listAdminHorasDisponibles);
 
@@ -213,11 +213,11 @@ public class PanelAdministrador extends javax.swing.JFrame {
         txtAdminDarCitaAnimal.setText("Animal");
         txtAdminDarCitaAnimal.setBorder(null);
 
-        comboAdminDarCitaAsunto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        comboAdminDarCitaAsunto.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jLabel4.setText("Asunto");
 
-        jLabel5.setText("D�a");
+        jLabel5.setText("Día");
 
         jLabel7.setText("Horas disponibles");
 
@@ -379,7 +379,7 @@ public class PanelAdministrador extends javax.swing.JFrame {
 
         panelAdminListarAnimales.setBackground(panelAdmin.getBackground());
 
-        btnAdminListarAniHistorial.setText("Ver historial m�dico del animal");
+        btnAdminListarAniHistorial.setText("Ver historial médico del animal");
         btnAdminListarAniHistorial.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAdminListarAniHistorialActionPerformed(evt);
@@ -450,7 +450,7 @@ public class PanelAdministrador extends javax.swing.JFrame {
         ));
         scrollAdminHistorialMed.setViewportView(tablaAdminHistorialMed);
 
-        btnAdminVerAnotacion.setText("Ver anotaci�n completa");
+        btnAdminVerAnotacion.setText("Ver anotación completa");
 
         javax.swing.GroupLayout panelAdminHistorialMedLayout = new javax.swing.GroupLayout(panelAdminHistorialMed);
         panelAdminHistorialMed.setLayout(panelAdminHistorialMedLayout);
@@ -477,138 +477,148 @@ public class PanelAdministrador extends javax.swing.JFrame {
 
         panelAdmin.add(panelAdminHistorialMed, "card4");
 
-        panelAdminAnadirVeterinario.setBackground(panelAdmin.getBackground());
+        panelAdminAñadirVeterinario.setBackground(panelAdmin.getBackground());
 
-        txtAdminCrearPersonaDni.setEditable(false);
-        txtAdminCrearPersonaDni.setBackground(panelAdmin.getBackground());
-        txtAdminCrearPersonaDni.setText("DNI");
-        txtAdminCrearPersonaDni.setBorder(null);
-        txtAdminCrearPersonaDni.setDisabledTextColor(panelAdminInicio.getBackground());
-        txtAdminCrearPersonaDni.setFocusable(false);
-        txtAdminCrearPersonaDni.addActionListener(new java.awt.event.ActionListener() {
+        txtAdminAñadirVetDni.setEditable(false);
+        txtAdminAñadirVetDni.setBackground(panelAdmin.getBackground());
+        txtAdminAñadirVetDni.setText("DNI");
+        txtAdminAñadirVetDni.setBorder(null);
+        txtAdminAñadirVetDni.setDisabledTextColor(panelAdminInicio.getBackground());
+        txtAdminAñadirVetDni.setFocusable(false);
+        txtAdminAñadirVetDni.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtAdminCrearPersonaDniActionPerformed(evt);
+                txtAdminAñadirVetDniActionPerformed(evt);
             }
         });
 
-        txtAdminAnadirPersonaNombre.setBackground(panelAdmin.getBackground());
-        txtAdminAnadirPersonaNombre.setText("Nombre");
-        txtAdminAnadirPersonaNombre.setBorder(null);
+        txtAdminAñadirVetNombre.setBackground(panelAdmin.getBackground());
+        txtAdminAñadirVetNombre.setText("Nombre");
+        txtAdminAñadirVetNombre.setBorder(null);
 
         jLabel12.setText("Privilegios de administrador");
 
-        radioAdminAnadirUsuPriviSi.setBackground(panelAdmin.getBackground());
-        groupBtnAdminAnadirUsuario.add(radioAdminAnadirUsuPriviSi);
-        radioAdminAnadirUsuPriviSi.setText("S�");
+        radioAdminAñadirVetPriviSi.setBackground(panelAdmin.getBackground());
+        groupBtnAdminAñadirUsuario.add(radioAdminAñadirVetPriviSi);
+        radioAdminAñadirVetPriviSi.setText("Sí");
 
-        radioAdminAnadirUsuPriviNo.setBackground(panelAdmin.getBackground());
-        groupBtnAdminAnadirUsuario.add(radioAdminAnadirUsuPriviNo);
-        radioAdminAnadirUsuPriviNo.setText("No");
+        radioAdminAñadirVetPriviNo.setBackground(panelAdmin.getBackground());
+        groupBtnAdminAñadirUsuario.add(radioAdminAñadirVetPriviNo);
+        radioAdminAñadirVetPriviNo.setText("No");
 
-        btnAdminDarCitaAceptar1.setText("Aceptar");
+        btnAdminAñadirVetAceptar.setText("Aceptar");
+        btnAdminAñadirVetAceptar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAdminAñadirVetAceptarActionPerformed(evt);
+            }
+        });
 
-        btnAdminDarCitaCancelar1.setText("Cancelar");
+        btnAdminAñadirVetCancelar.setText("Cancelar");
 
-        txtAdminAnadirPersonaDire.setBackground(panelAdmin.getBackground());
-        txtAdminAnadirPersonaDire.setText("Direcci�n");
-        txtAdminAnadirPersonaDire.setBorder(null);
+        txtAdminAñadirVetDire.setBackground(panelAdmin.getBackground());
+        txtAdminAñadirVetDire.setText("Dirección");
+        txtAdminAñadirVetDire.setBorder(null);
+        txtAdminAñadirVetDire.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtAdminAñadirVetDireActionPerformed(evt);
+            }
+        });
 
-        txtAdminAnadirPersonaTlf.setBackground(panelAdmin.getBackground());
-        txtAdminAnadirPersonaTlf.setText("Tel�fono");
-        txtAdminAnadirPersonaTlf.setBorder(null);
+        txtAdminAñadirVetTlf.setBackground(panelAdmin.getBackground());
+        txtAdminAñadirVetTlf.setText("Teléfono");
+        txtAdminAñadirVetTlf.setBorder(null);
 
-        txtAdminAnadirPersonaEmail.setBackground(panelAdmin.getBackground());
-        txtAdminAnadirPersonaEmail.setText("Email");
-        txtAdminAnadirPersonaEmail.setBorder(null);
+        txtAdminAñadirVetEmail.setBackground(panelAdmin.getBackground());
+        txtAdminAñadirVetEmail.setText("Email");
+        txtAdminAñadirVetEmail.setBorder(null);
 
         jLabel1.setText("Especialidad");
 
-        comboAdminAnadirPersonaEspe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        comboAdminAñadirVetEspe.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jPasswordField1.setBackground(panelAdmin.getBackground());
-        jPasswordField1.setText("Contrasena");
-        jPasswordField1.setToolTipText("");
-        jPasswordField1.setBorder(null);
+        passAdminAñadirVet.setBackground(panelAdmin.getBackground());
+        passAdminAñadirVet.setText("Contraseña");
+        passAdminAñadirVet.setToolTipText("");
+        passAdminAñadirVet.setBorder(null);
 
-        javax.swing.GroupLayout panelAdminAnadirVeterinarioLayout = new javax.swing.GroupLayout(panelAdminAnadirVeterinario);
-        panelAdminAnadirVeterinario.setLayout(panelAdminAnadirVeterinarioLayout);
-        panelAdminAnadirVeterinarioLayout.setHorizontalGroup(
-            panelAdminAnadirVeterinarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelAdminAnadirVeterinarioLayout.createSequentialGroup()
+        javax.swing.GroupLayout panelAdminAñadirVeterinarioLayout = new javax.swing.GroupLayout(panelAdminAñadirVeterinario);
+        panelAdminAñadirVeterinario.setLayout(panelAdminAñadirVeterinarioLayout);
+        panelAdminAñadirVeterinarioLayout.setHorizontalGroup(
+            panelAdminAñadirVeterinarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelAdminAñadirVeterinarioLayout.createSequentialGroup()
                 .addGap(41, 41, 41)
-                .addGroup(panelAdminAnadirVeterinarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txtAdminAnadirPersonaTlf, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtAdminAnadirPersonaEmail, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(panelAdminAnadirVeterinarioLayout.createSequentialGroup()
+                .addGroup(panelAdminAñadirVeterinarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txtAdminAñadirVetTlf, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtAdminAñadirVetEmail, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(panelAdminAñadirVeterinarioLayout.createSequentialGroup()
                         .addComponent(jLabel12)
                         .addGap(37, 37, 37)
-                        .addComponent(radioAdminAnadirUsuPriviSi)
+                        .addComponent(radioAdminAñadirVetPriviSi)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(radioAdminAnadirUsuPriviNo))
-                    .addGroup(panelAdminAnadirVeterinarioLayout.createSequentialGroup()
+                        .addComponent(radioAdminAñadirVetPriviNo))
+                    .addGroup(panelAdminAñadirVeterinarioLayout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(comboAdminAnadirPersonaEspe, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelAdminAnadirVeterinarioLayout.createSequentialGroup()
-                        .addComponent(btnAdminDarCitaAceptar1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(comboAdminAñadirVetEspe, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelAdminAñadirVeterinarioLayout.createSequentialGroup()
+                        .addComponent(btnAdminAñadirVetAceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnAdminDarCitaCancelar1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btnAdminAñadirVetCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jSeparator8, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jSeparator7, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jSeparator6, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtAdminAnadirPersonaDire, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtAdminAnadirPersonaNombre)
+                    .addComponent(txtAdminAñadirVetDire, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtAdminAñadirVetNombre)
                     .addComponent(jSeparator5, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtAdminCrearPersonaDni)
+                    .addComponent(txtAdminAñadirVetDni)
                     .addComponent(jSeparator4, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jSeparator9)
-                    .addComponent(jPasswordField1, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addComponent(passAdminAñadirVet, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
-        panelAdminAnadirVeterinarioLayout.setVerticalGroup(
-            panelAdminAnadirVeterinarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelAdminAnadirVeterinarioLayout.createSequentialGroup()
+        panelAdminAñadirVeterinarioLayout.setVerticalGroup(
+            panelAdminAñadirVeterinarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelAdminAñadirVeterinarioLayout.createSequentialGroup()
                 .addGap(26, 26, 26)
-                .addComponent(txtAdminCrearPersonaDni, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtAdminAñadirVetDni, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(txtAdminAnadirPersonaNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtAdminAñadirVetNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(11, 11, 11)
-                .addComponent(txtAdminAnadirPersonaDire, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtAdminAñadirVetDire, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(txtAdminAnadirPersonaTlf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtAdminAñadirVetTlf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator7, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtAdminAnadirPersonaEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtAdminAñadirVetEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator8, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(14, 14, 14)
-                .addGroup(panelAdminAnadirVeterinarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(panelAdminAñadirVeterinarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(comboAdminAnadirPersonaEspe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(comboAdminAñadirVetEspe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(30, 30, 30)
-                .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(passAdminAñadirVet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator9, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(panelAdminAnadirVeterinarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(panelAdminAñadirVeterinarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12)
-                    .addComponent(radioAdminAnadirUsuPriviSi)
-                    .addComponent(radioAdminAnadirUsuPriviNo))
+                    .addComponent(radioAdminAñadirVetPriviSi)
+                    .addComponent(radioAdminAñadirVetPriviNo))
                 .addGap(18, 18, 18)
-                .addGroup(panelAdminAnadirVeterinarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAdminDarCitaCancelar1)
-                    .addComponent(btnAdminDarCitaAceptar1))
+                .addGroup(panelAdminAñadirVeterinarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnAdminAñadirVetCancelar)
+                    .addComponent(btnAdminAñadirVetAceptar))
                 .addGap(18, 18, 18))
         );
 
-        panelAdmin.add(panelAdminAnadirVeterinario, "card5");
+        panelAdmin.add(panelAdminAñadirVeterinario, "card5");
 
         panelAdminListarClientes.setBackground(panelAdmin.getBackground());
 
@@ -706,239 +716,239 @@ public class PanelAdministrador extends javax.swing.JFrame {
 
         panelAdmin.add(panelAdminListarVeterinarios, "card4");
 
-        panelAdminAnadirAnimal.setBackground(panelAdmin.getBackground());
+        panelAdminAñadirAnimal.setBackground(panelAdmin.getBackground());
 
-        txtAdminAnadirAnimalId.setEditable(false);
-        txtAdminAnadirAnimalId.setBackground(panelAdminInicio.getBackground());
-        txtAdminAnadirAnimalId.setText("ID");
-        txtAdminAnadirAnimalId.setBorder(null);
-        txtAdminAnadirAnimalId.setDisabledTextColor(panelAdminInicio.getBackground());
-        txtAdminAnadirAnimalId.setFocusable(false);
-        txtAdminAnadirAnimalId.addActionListener(new java.awt.event.ActionListener() {
+        txtAdminAñadirAnimalId.setEditable(false);
+        txtAdminAñadirAnimalId.setBackground(panelAdminInicio.getBackground());
+        txtAdminAñadirAnimalId.setText("ID");
+        txtAdminAñadirAnimalId.setBorder(null);
+        txtAdminAñadirAnimalId.setDisabledTextColor(panelAdminInicio.getBackground());
+        txtAdminAñadirAnimalId.setFocusable(false);
+        txtAdminAñadirAnimalId.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtAdminAnadirAnimalIdActionPerformed(evt);
+                txtAdminAñadirAnimalIdActionPerformed(evt);
             }
         });
 
-        txtAdminAnadirAnimalNombre.setBackground(panelAdminInicio.getBackground());
-        txtAdminAnadirAnimalNombre.setText("Nombre");
-        txtAdminAnadirAnimalNombre.setBorder(null);
+        txtAdminAñadirAnimalNombre.setBackground(panelAdminInicio.getBackground());
+        txtAdminAñadirAnimalNombre.setText("Nombre");
+        txtAdminAñadirAnimalNombre.setBorder(null);
 
         btnAdminDarCitaAceptar2.setText("Aceptar");
 
         btnAdminDarCitaCancelar2.setText("Cancelar");
 
-        txtAdminAnadirAnimalRaza.setBackground(panelAdminInicio.getBackground());
-        txtAdminAnadirAnimalRaza.setText("Raza");
-        txtAdminAnadirAnimalRaza.setBorder(null);
+        txtAdminAñadirAnimalRaza.setBackground(panelAdminInicio.getBackground());
+        txtAdminAñadirAnimalRaza.setText("Raza");
+        txtAdminAñadirAnimalRaza.setBorder(null);
 
-        txtAdminAnadirAnimalEspecie.setBackground(panelAdminInicio.getBackground());
-        txtAdminAnadirAnimalEspecie.setText("Especie");
-        txtAdminAnadirAnimalEspecie.setBorder(null);
+        txtAdminAñadirAnimalEspecie.setBackground(panelAdminInicio.getBackground());
+        txtAdminAñadirAnimalEspecie.setText("Especie");
+        txtAdminAñadirAnimalEspecie.setBorder(null);
 
         jLabel20.setText("Peso");
 
         jLabel21.setText("Fecha de nacimiento");
 
-        spinnerAdminAnadirAnimalPeso.setModel(new javax.swing.SpinnerNumberModel(1.0f, 1.0f, null, 1.0f));
+        spinnerAdminAñadirAnimalPeso.setModel(new javax.swing.SpinnerNumberModel(Float.valueOf(1.0f), Float.valueOf(1.0f), null, Float.valueOf(1.0f)));
 
-        calendarAdminAnadirAnimalNacimiento.setBackground(panelAdminInicio.getBackground());
+        calendarAdminAñadirAnimalNacimiento.setBackground(panelAdminInicio.getBackground());
 
-        txtAdminAnadirAnimalEspecie1.setBackground(panelAdminInicio.getBackground());
-        txtAdminAnadirAnimalEspecie1.setText("Dueno");
-        txtAdminAnadirAnimalEspecie1.setBorder(null);
+        txtAdminAñadirAnimalEspecie1.setBackground(panelAdminInicio.getBackground());
+        txtAdminAñadirAnimalEspecie1.setText("Dueño");
+        txtAdminAñadirAnimalEspecie1.setBorder(null);
 
-        javax.swing.GroupLayout panelAdminAnadirAnimalLayout = new javax.swing.GroupLayout(panelAdminAnadirAnimal);
-        panelAdminAnadirAnimal.setLayout(panelAdminAnadirAnimalLayout);
-        panelAdminAnadirAnimalLayout.setHorizontalGroup(
-            panelAdminAnadirAnimalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelAdminAnadirAnimalLayout.createSequentialGroup()
+        javax.swing.GroupLayout panelAdminAñadirAnimalLayout = new javax.swing.GroupLayout(panelAdminAñadirAnimal);
+        panelAdminAñadirAnimal.setLayout(panelAdminAñadirAnimalLayout);
+        panelAdminAñadirAnimalLayout.setHorizontalGroup(
+            panelAdminAñadirAnimalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelAdminAñadirAnimalLayout.createSequentialGroup()
                 .addGap(41, 41, 41)
-                .addGroup(panelAdminAnadirAnimalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                .addGroup(panelAdminAñadirAnimalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(jSeparator12, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelAdminAnadirAnimalLayout.createSequentialGroup()
+                    .addGroup(panelAdminAñadirAnimalLayout.createSequentialGroup()
                         .addComponent(btnAdminDarCitaAceptar2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 117, Short.MAX_VALUE)
                         .addComponent(btnAdminDarCitaCancelar2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jSeparator13, javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jSeparator10)
-                    .addComponent(txtAdminAnadirAnimalId)
+                    .addComponent(txtAdminAñadirAnimalId)
                     .addComponent(jSeparator11)
-                    .addComponent(txtAdminAnadirAnimalNombre)
-                    .addComponent(txtAdminAnadirAnimalRaza)
-                    .addComponent(txtAdminAnadirAnimalEspecie)
+                    .addComponent(txtAdminAñadirAnimalNombre)
+                    .addComponent(txtAdminAñadirAnimalRaza)
+                    .addComponent(txtAdminAñadirAnimalEspecie)
                     .addComponent(jSeparator15)
-                    .addComponent(txtAdminAnadirAnimalEspecie1, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelAdminAnadirAnimalLayout.createSequentialGroup()
-                        .addGroup(panelAdminAnadirAnimalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtAdminAñadirAnimalEspecie1, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelAdminAñadirAnimalLayout.createSequentialGroup()
+                        .addGroup(panelAdminAñadirAnimalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel21)
                             .addComponent(jLabel20))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(panelAdminAnadirAnimalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(spinnerAdminAnadirAnimalPeso)
-                            .addComponent(calendarAdminAnadirAnimalNacimiento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGroup(panelAdminAñadirAnimalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(spinnerAdminAñadirAnimalPeso)
+                            .addComponent(calendarAdminAñadirAnimalNacimiento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
-        panelAdminAnadirAnimalLayout.setVerticalGroup(
-            panelAdminAnadirAnimalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelAdminAnadirAnimalLayout.createSequentialGroup()
+        panelAdminAñadirAnimalLayout.setVerticalGroup(
+            panelAdminAñadirAnimalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelAdminAñadirAnimalLayout.createSequentialGroup()
                 .addGap(26, 26, 26)
-                .addComponent(txtAdminAnadirAnimalId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtAdminAñadirAnimalId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator10, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(txtAdminAnadirAnimalNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtAdminAñadirAnimalNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator11, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(11, 11, 11)
-                .addComponent(txtAdminAnadirAnimalRaza, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtAdminAñadirAnimalRaza, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator12, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(txtAdminAnadirAnimalEspecie, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtAdminAñadirAnimalEspecie, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator13, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(panelAdminAnadirAnimalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(panelAdminAñadirAnimalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel20)
-                    .addComponent(spinnerAdminAnadirAnimalPeso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(spinnerAdminAñadirAnimalPeso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(30, 30, 30)
-                .addGroup(panelAdminAnadirAnimalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelAdminAñadirAnimalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel21)
-                    .addComponent(calendarAdminAnadirAnimalNacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(calendarAdminAñadirAnimalNacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27)
-                .addComponent(txtAdminAnadirAnimalEspecie1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtAdminAñadirAnimalEspecie1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator15, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(46, 46, 46)
-                .addGroup(panelAdminAnadirAnimalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(panelAdminAñadirAnimalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAdminDarCitaAceptar2)
                     .addComponent(btnAdminDarCitaCancelar2))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        panelAdmin.add(panelAdminAnadirAnimal, "card5");
+        panelAdmin.add(panelAdminAñadirAnimal, "card5");
 
-        panelAdminAnadirCliente.setBackground(panelAdmin.getBackground());
+        panelAdminAñadirCliente.setBackground(panelAdmin.getBackground());
 
-        txtAdminCrearPersonaDni1.setEditable(false);
-        txtAdminCrearPersonaDni1.setBackground(panelAdmin.getBackground());
-        txtAdminCrearPersonaDni1.setText("DNI");
-        txtAdminCrearPersonaDni1.setBorder(null);
-        txtAdminCrearPersonaDni1.setDisabledTextColor(panelAdminInicio.getBackground());
-        txtAdminCrearPersonaDni1.setFocusable(false);
-        txtAdminCrearPersonaDni1.addActionListener(new java.awt.event.ActionListener() {
+        txtAdminAñadirClienteDni.setEditable(false);
+        txtAdminAñadirClienteDni.setBackground(panelAdmin.getBackground());
+        txtAdminAñadirClienteDni.setText("DNI");
+        txtAdminAñadirClienteDni.setBorder(null);
+        txtAdminAñadirClienteDni.setDisabledTextColor(panelAdminInicio.getBackground());
+        txtAdminAñadirClienteDni.setFocusable(false);
+        txtAdminAñadirClienteDni.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtAdminCrearPersonaDni1ActionPerformed(evt);
+                txtAdminAñadirClienteDniActionPerformed(evt);
             }
         });
 
-        txtAdminAnadirPersonaNombre1.setBackground(panelAdmin.getBackground());
-        txtAdminAnadirPersonaNombre1.setText("Nombre");
-        txtAdminAnadirPersonaNombre1.setBorder(null);
+        txtAdminAñadirClienteNombre.setBackground(panelAdmin.getBackground());
+        txtAdminAñadirClienteNombre.setText("Nombre");
+        txtAdminAñadirClienteNombre.setBorder(null);
 
         jLabel13.setText("Privilegios de administrador");
 
-        radioAdminAnadirUsuPriviSi1.setBackground(panelAdmin.getBackground());
-        groupBtnAdminAnadirUsuario.add(radioAdminAnadirUsuPriviSi1);
-        radioAdminAnadirUsuPriviSi1.setText("S�");
+        radioAdminAñadirClientePriviSi.setBackground(panelAdmin.getBackground());
+        groupBtnAdminAñadirUsuario.add(radioAdminAñadirClientePriviSi);
+        radioAdminAñadirClientePriviSi.setText("Sí");
 
-        radioAdminAnadirUsuPriviNo1.setBackground(panelAdmin.getBackground());
-        groupBtnAdminAnadirUsuario.add(radioAdminAnadirUsuPriviNo1);
-        radioAdminAnadirUsuPriviNo1.setText("No");
+        radioAdminAñadirClientePriviNo.setBackground(panelAdmin.getBackground());
+        groupBtnAdminAñadirUsuario.add(radioAdminAñadirClientePriviNo);
+        radioAdminAñadirClientePriviNo.setText("No");
 
-        btnAdminDarCitaAceptar3.setText("Aceptar");
+        btnAdminAñadirUsuarioAceptar.setText("Aceptar");
 
-        btnAdminDarCitaCancelar3.setText("Cancelar");
+        btnAdminAñadirUsuarioCancelar.setText("Cancelar");
 
-        txtAdminAnadirPersonaDire1.setBackground(panelAdmin.getBackground());
-        txtAdminAnadirPersonaDire1.setText("Direcci�n");
-        txtAdminAnadirPersonaDire1.setBorder(null);
+        txtAdminAñadirClienteDire.setBackground(panelAdmin.getBackground());
+        txtAdminAñadirClienteDire.setText("Dirección");
+        txtAdminAñadirClienteDire.setBorder(null);
 
-        txtAdminAnadirPersonaTlf1.setBackground(panelAdmin.getBackground());
-        txtAdminAnadirPersonaTlf1.setText("Tel�fono");
-        txtAdminAnadirPersonaTlf1.setBorder(null);
+        txtAdminAñadirClienteTlf.setBackground(panelAdmin.getBackground());
+        txtAdminAñadirClienteTlf.setText("Teléfono");
+        txtAdminAñadirClienteTlf.setBorder(null);
 
-        txtAdminAnadirPersonaEmail1.setBackground(panelAdmin.getBackground());
-        txtAdminAnadirPersonaEmail1.setText("Email");
-        txtAdminAnadirPersonaEmail1.setBorder(null);
+        txtAdminAñadirClienteEmail.setBackground(panelAdmin.getBackground());
+        txtAdminAñadirClienteEmail.setText("Email");
+        txtAdminAñadirClienteEmail.setBorder(null);
 
-        jPasswordField2.setBackground(panelAdmin.getBackground());
-        jPasswordField2.setText("Contrasena");
-        jPasswordField2.setToolTipText("");
-        jPasswordField2.setBorder(null);
+        passAdminAñadirCliente.setBackground(panelAdmin.getBackground());
+        passAdminAñadirCliente.setText("Contraseña");
+        passAdminAñadirCliente.setToolTipText("");
+        passAdminAñadirCliente.setBorder(null);
 
-        javax.swing.GroupLayout panelAdminAnadirClienteLayout = new javax.swing.GroupLayout(panelAdminAnadirCliente);
-        panelAdminAnadirCliente.setLayout(panelAdminAnadirClienteLayout);
-        panelAdminAnadirClienteLayout.setHorizontalGroup(
-            panelAdminAnadirClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelAdminAnadirClienteLayout.createSequentialGroup()
+        javax.swing.GroupLayout panelAdminAñadirClienteLayout = new javax.swing.GroupLayout(panelAdminAñadirCliente);
+        panelAdminAñadirCliente.setLayout(panelAdminAñadirClienteLayout);
+        panelAdminAñadirClienteLayout.setHorizontalGroup(
+            panelAdminAñadirClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelAdminAñadirClienteLayout.createSequentialGroup()
                 .addGap(41, 41, 41)
-                .addGroup(panelAdminAnadirClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txtAdminAnadirPersonaTlf1, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtAdminAnadirPersonaEmail1, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelAdminAnadirClienteLayout.createSequentialGroup()
-                        .addComponent(btnAdminDarCitaAceptar3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(panelAdminAñadirClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txtAdminAñadirClienteTlf, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtAdminAñadirClienteEmail, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelAdminAñadirClienteLayout.createSequentialGroup()
+                        .addComponent(btnAdminAñadirUsuarioAceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
-                        .addComponent(btnAdminDarCitaCancelar3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btnAdminAñadirUsuarioCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jSeparator19, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jSeparator18, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jSeparator17, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtAdminAnadirPersonaDire1, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtAdminAnadirPersonaNombre1)
+                    .addComponent(txtAdminAñadirClienteDire, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtAdminAñadirClienteNombre)
                     .addComponent(jSeparator16, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtAdminCrearPersonaDni1)
+                    .addComponent(txtAdminAñadirClienteDni)
                     .addComponent(jSeparator14, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jSeparator20)
-                    .addComponent(jPasswordField2, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(panelAdminAnadirClienteLayout.createSequentialGroup()
+                    .addComponent(passAdminAñadirCliente, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(panelAdminAñadirClienteLayout.createSequentialGroup()
                         .addComponent(jLabel13)
                         .addGap(37, 37, 37)
-                        .addComponent(radioAdminAnadirUsuPriviSi1)
+                        .addComponent(radioAdminAñadirClientePriviSi)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(radioAdminAnadirUsuPriviNo1)))
-                .addGap(0, 672, Short.MAX_VALUE))
+                        .addComponent(radioAdminAñadirClientePriviNo)))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
-        panelAdminAnadirClienteLayout.setVerticalGroup(
-            panelAdminAnadirClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelAdminAnadirClienteLayout.createSequentialGroup()
+        panelAdminAñadirClienteLayout.setVerticalGroup(
+            panelAdminAñadirClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelAdminAñadirClienteLayout.createSequentialGroup()
                 .addGap(26, 26, 26)
-                .addComponent(txtAdminCrearPersonaDni1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtAdminAñadirClienteDni, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator14, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(txtAdminAnadirPersonaNombre1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtAdminAñadirClienteNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator16, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(11, 11, 11)
-                .addComponent(txtAdminAnadirPersonaDire1, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtAdminAñadirClienteDire, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator17, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(txtAdminAnadirPersonaTlf1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtAdminAñadirClienteTlf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator18, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtAdminAnadirPersonaEmail1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtAdminAñadirClienteEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator19, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(52, 52, 52)
-                .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(passAdminAñadirCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator20, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
-                .addGroup(panelAdminAnadirClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(panelAdminAñadirClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel13)
-                    .addComponent(radioAdminAnadirUsuPriviSi1)
-                    .addComponent(radioAdminAnadirUsuPriviNo1))
+                    .addComponent(radioAdminAñadirClientePriviSi)
+                    .addComponent(radioAdminAñadirClientePriviNo))
                 .addGap(59, 59, 59)
-                .addGroup(panelAdminAnadirClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAdminDarCitaCancelar3)
-                    .addComponent(btnAdminDarCitaAceptar3))
+                .addGroup(panelAdminAñadirClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnAdminAñadirUsuarioCancelar)
+                    .addComponent(btnAdminAñadirUsuarioAceptar))
                 .addGap(18, 18, 18))
         );
 
-        panelAdmin.add(panelAdminAnadirCliente, "card5");
+        panelAdmin.add(panelAdminAñadirCliente, "card5");
 
         menuAdmin.setBackground(new java.awt.Color(250, 250, 250));
         menuAdmin.setToolTipText("");
@@ -968,13 +978,13 @@ public class PanelAdministrador extends javax.swing.JFrame {
         btnAdminAnimales.setText("Animales");
         btnAdminAnimales.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
-        btnAdminAnadirAnimal.setText("Anadir animal");
-        btnAdminAnadirAnimal.addActionListener(new java.awt.event.ActionListener() {
+        btnAdminAñadirAnimal.setText("Añadir animal");
+        btnAdminAñadirAnimal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAdminAnadirAnimalActionPerformed(evt);
+                btnAdminAñadirAnimalActionPerformed(evt);
             }
         });
-        btnAdminAnimales.add(btnAdminAnadirAnimal);
+        btnAdminAnimales.add(btnAdminAñadirAnimal);
 
         btnAdminListarAnimales.setText("Listar animales");
         btnAdminListarAnimales.addActionListener(new java.awt.event.ActionListener() {
@@ -989,21 +999,21 @@ public class PanelAdministrador extends javax.swing.JFrame {
         btnAdminUsuarios.setText("Usuarios");
         btnAdminUsuarios.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
-        btnAdminAnadirCliente.setText("Anadir cliente");
-        btnAdminAnadirCliente.addActionListener(new java.awt.event.ActionListener() {
+        btnAdminAñadirCliente.setText("Añadir cliente");
+        btnAdminAñadirCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAdminAnadirClienteActionPerformed(evt);
+                btnAdminAñadirClienteActionPerformed(evt);
             }
         });
-        btnAdminUsuarios.add(btnAdminAnadirCliente);
+        btnAdminUsuarios.add(btnAdminAñadirCliente);
 
-        btnAdminAnadirVeterinario.setText("Anadir veterinario");
-        btnAdminAnadirVeterinario.addActionListener(new java.awt.event.ActionListener() {
+        btnAdminAñadirVeterinario.setText("Añadir veterinario");
+        btnAdminAñadirVeterinario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAdminAnadirVeterinarioActionPerformed(evt);
+                btnAdminAñadirVeterinarioActionPerformed(evt);
             }
         });
-        btnAdminUsuarios.add(btnAdminAnadirVeterinario);
+        btnAdminUsuarios.add(btnAdminAñadirVeterinario);
 
         btnAdminListarClientes.setText("Listar clientes");
         btnAdminListarClientes.addActionListener(new java.awt.event.ActionListener() {
@@ -1039,12 +1049,12 @@ public class PanelAdministrador extends javax.swing.JFrame {
         });
         btnAdminOpciones.add(btnAdminDesconectar);
 
-        btnAdminResContrasena.setText("Restablecer contrasena a un usuario");
-        btnAdminOpciones.add(btnAdminResContrasena);
+        btnAdminResContraseña.setText("Restablecer contraseña a un usuario");
+        btnAdminOpciones.add(btnAdminResContraseña);
 
         menuElegirTema.setText("Elegir tema");
 
-        btnElegirTemaSalmon.setText("Salm�n");
+        btnElegirTemaSalmon.setText("Salmón");
         menuElegirTema.add(btnElegirTemaSalmon);
 
         btnElegirTemaAzul.setText("Azul ballena");
@@ -1055,7 +1065,7 @@ public class PanelAdministrador extends javax.swing.JFrame {
         });
         menuElegirTema.add(btnElegirTemaAzul);
 
-        btnElegirTemaVerde.setText("Verde m�dico");
+        btnElegirTemaVerde.setText("Verde médico");
         btnElegirTemaVerde.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnElegirTemaVerdeActionPerformed(evt);
@@ -1131,9 +1141,9 @@ public class PanelAdministrador extends javax.swing.JFrame {
         panelAdmin.revalidate();
     }//GEN-LAST:event_btnAdminAnadirVeterinarioActionPerformed
 
-    private void txtAdminCrearPersonaDniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAdminCrearPersonaDniActionPerformed
+    private void txtAdminAñadirVetDniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAdminAñadirVetDniActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtAdminCrearPersonaDniActionPerformed
+    }//GEN-LAST:event_txtAdminAñadirVetDniActionPerformed
 
     private void btnAdminListarAniHistorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdminListarAniHistorialActionPerformed
         panelAdmin.removeAll();
@@ -1171,9 +1181,9 @@ public class PanelAdministrador extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnAdminVerCitasModificarCitaActionPerformed
 
-    private void txtAdminCrearPersonaDni1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAdminCrearPersonaDni1ActionPerformed
+    private void txtAdminAñadirClienteDniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAdminAñadirClienteDniActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtAdminCrearPersonaDni1ActionPerformed
+    }//GEN-LAST:event_txtAdminAñadirClienteDniActionPerformed
 
     private void btnAdminAnadirClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdminAnadirClienteActionPerformed
         panelAdmin.removeAll();
@@ -1199,21 +1209,29 @@ public class PanelAdministrador extends javax.swing.JFrame {
         panelAdmin.repaint();
     }//GEN-LAST:event_btnElegirTemaVerdeActionPerformed
 
+    private void btnAdminAñadirVetAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdminAñadirVetAceptarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAdminAñadirVetAceptarActionPerformed
+
+    private void txtAdminAñadirVetDireActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAdminAñadirVetDireActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtAdminAñadirVetDireActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu btnAdminAnimales;
-    private javax.swing.JMenuItem btnAdminAnadirAnimal;
-    private javax.swing.JMenuItem btnAdminAnadirCliente;
-    private javax.swing.JMenuItem btnAdminAnadirVeterinario;
+    private javax.swing.JMenuItem btnAdminAñadirAnimal;
+    private javax.swing.JMenuItem btnAdminAñadirCliente;
+    private javax.swing.JButton btnAdminAñadirUsuarioAceptar;
+    private javax.swing.JButton btnAdminAñadirUsuarioCancelar;
+    private javax.swing.JButton btnAdminAñadirVetAceptar;
+    private javax.swing.JButton btnAdminAñadirVetCancelar;
+    private javax.swing.JMenuItem btnAdminAñadirVeterinario;
     private javax.swing.JMenu btnAdminCitas;
     private javax.swing.JButton btnAdminDarCitaAceptar;
-    private javax.swing.JButton btnAdminDarCitaAceptar1;
     private javax.swing.JButton btnAdminDarCitaAceptar2;
-    private javax.swing.JButton btnAdminDarCitaAceptar3;
     private javax.swing.JButton btnAdminDarCitaCancelar;
-    private javax.swing.JButton btnAdminDarCitaCancelar1;
     private javax.swing.JButton btnAdminDarCitaCancelar2;
-    private javax.swing.JButton btnAdminDarCitaCancelar3;
     private javax.swing.JMenuItem btnAdminDesconectar;
     private javax.swing.JButton btnAdminListarAniBorrar;
     private javax.swing.JButton btnAdminListarAniHistorial;
@@ -1226,7 +1244,7 @@ public class PanelAdministrador extends javax.swing.JFrame {
     private javax.swing.JButton btnAdminListarVeterinariosBorrar;
     private javax.swing.JButton btnAdminListarVeterinariosMod;
     private javax.swing.JMenu btnAdminOpciones;
-    private javax.swing.JMenuItem btnAdminResContrasena;
+    private javax.swing.JMenuItem btnAdminResContraseña;
     private javax.swing.JMenu btnAdminUsuarios;
     private javax.swing.JButton btnAdminVerAnotacion;
     private javax.swing.JButton btnAdminVerCitasAtenderCita;
@@ -1238,10 +1256,10 @@ public class PanelAdministrador extends javax.swing.JFrame {
     private javax.swing.JMenuItem btnElegirTemaSalmon;
     private javax.swing.JMenuItem btnElegirTemaVerde;
     private javax.swing.JMenuItem btnVerCitas;
-    private com.toedter.calendar.JDateChooser calendarAdminAnadirAnimalNacimiento;
-    private javax.swing.JComboBox<String> comboAdminAnadirPersonaEspe;
+    private com.toedter.calendar.JDateChooser calendarAdminAñadirAnimalNacimiento;
+    private javax.swing.JComboBox<String> comboAdminAñadirVetEspe;
     private javax.swing.JComboBox<String> comboAdminDarCitaAsunto;
-    private javax.swing.ButtonGroup groupBtnAdminAnadirUsuario;
+    private javax.swing.ButtonGroup groupBtnAdminAñadirUsuario;
     private javax.swing.ButtonGroup groupBtnAdminDarCita;
     private com.toedter.calendar.JDateChooser jCalendarAdminDarCita;
     private javax.swing.JLabel jLabel1;
@@ -1252,8 +1270,6 @@ public class PanelAdministrador extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JPasswordField jPasswordField2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator10;
     private javax.swing.JSeparator jSeparator11;
@@ -1279,9 +1295,9 @@ public class PanelAdministrador extends javax.swing.JFrame {
     private javax.swing.JMenuBar menuAdmin;
     private javax.swing.JMenu menuElegirTema;
     private javax.swing.JPanel panelAdmin;
-    private javax.swing.JPanel panelAdminAnadirAnimal;
-    private javax.swing.JPanel panelAdminAnadirCliente;
-    private javax.swing.JPanel panelAdminAnadirVeterinario;
+    private javax.swing.JPanel panelAdminAñadirAnimal;
+    private javax.swing.JPanel panelAdminAñadirCliente;
+    private javax.swing.JPanel panelAdminAñadirVeterinario;
     private javax.swing.JPanel panelAdminDarCita;
     private javax.swing.JPanel panelAdminHistorialMed;
     private javax.swing.JPanel panelAdminInicio;
@@ -1289,37 +1305,39 @@ public class PanelAdministrador extends javax.swing.JFrame {
     private javax.swing.JPanel panelAdminListarClientes;
     private javax.swing.JPanel panelAdminListarVeterinarios;
     private javax.swing.JPanel panelAdminVerCitas;
-    private javax.swing.JRadioButton radioAdminAnadirUsuPriviNo;
-    private javax.swing.JRadioButton radioAdminAnadirUsuPriviNo1;
-    private javax.swing.JRadioButton radioAdminAnadirUsuPriviSi;
-    private javax.swing.JRadioButton radioAdminAnadirUsuPriviSi1;
+    private javax.swing.JPasswordField passAdminAñadirCliente;
+    private javax.swing.JPasswordField passAdminAñadirVet;
+    private javax.swing.JRadioButton radioAdminAñadirClientePriviNo;
+    private javax.swing.JRadioButton radioAdminAñadirClientePriviSi;
+    private javax.swing.JRadioButton radioAdminAñadirVetPriviNo;
+    private javax.swing.JRadioButton radioAdminAñadirVetPriviSi;
     private javax.swing.JScrollPane scrollAdminHistorialMed;
     private javax.swing.JScrollPane scrollAdminHorasDisponibles;
     private javax.swing.JScrollPane scrollAdminListarAnimales;
     private javax.swing.JScrollPane scrollAdminListarClientes;
     private javax.swing.JScrollPane scrollAdminListarClientes1;
     private javax.swing.JScrollPane scrollAdminVerCitas;
-    private javax.swing.JSpinner spinnerAdminAnadirAnimalPeso;
+    private javax.swing.JSpinner spinnerAdminAñadirAnimalPeso;
     private javax.swing.JTable tablaAdminHistorialMed;
     private javax.swing.JTable tableAdminListarAnimales;
     private javax.swing.JTable tableAdminListarClientes;
     private javax.swing.JTable tableAdminListarVeterinarios;
     private javax.swing.JTable tableAdminVerCitas;
-    private javax.swing.JTextField txtAdminAnadirAnimalEspecie;
-    private javax.swing.JTextField txtAdminAnadirAnimalEspecie1;
-    private javax.swing.JTextField txtAdminAnadirAnimalId;
-    private javax.swing.JTextField txtAdminAnadirAnimalNombre;
-    private javax.swing.JTextField txtAdminAnadirAnimalRaza;
-    private javax.swing.JTextField txtAdminAnadirPersonaDire;
-    private javax.swing.JTextField txtAdminAnadirPersonaDire1;
-    private javax.swing.JTextField txtAdminAnadirPersonaEmail;
-    private javax.swing.JTextField txtAdminAnadirPersonaEmail1;
-    private javax.swing.JTextField txtAdminAnadirPersonaNombre;
-    private javax.swing.JTextField txtAdminAnadirPersonaNombre1;
-    private javax.swing.JTextField txtAdminAnadirPersonaTlf;
-    private javax.swing.JTextField txtAdminAnadirPersonaTlf1;
-    private javax.swing.JTextField txtAdminCrearPersonaDni;
-    private javax.swing.JTextField txtAdminCrearPersonaDni1;
+    private javax.swing.JTextField txtAdminAñadirAnimalEspecie;
+    private javax.swing.JTextField txtAdminAñadirAnimalEspecie1;
+    private javax.swing.JTextField txtAdminAñadirAnimalId;
+    private javax.swing.JTextField txtAdminAñadirAnimalNombre;
+    private javax.swing.JTextField txtAdminAñadirAnimalRaza;
+    private javax.swing.JTextField txtAdminAñadirClienteDire;
+    private javax.swing.JTextField txtAdminAñadirClienteDni;
+    private javax.swing.JTextField txtAdminAñadirClienteEmail;
+    private javax.swing.JTextField txtAdminAñadirClienteNombre;
+    private javax.swing.JTextField txtAdminAñadirClienteTlf;
+    private javax.swing.JTextField txtAdminAñadirVetDire;
+    private javax.swing.JTextField txtAdminAñadirVetDni;
+    private javax.swing.JTextField txtAdminAñadirVetEmail;
+    private javax.swing.JTextField txtAdminAñadirVetNombre;
+    private javax.swing.JTextField txtAdminAñadirVetTlf;
     private javax.swing.JTextField txtAdminDarCitaAnimal;
     private javax.swing.JTextField txtAdminDarCitaVet;
     private javax.swing.JTextField txtAdminVerCitasTotales;
